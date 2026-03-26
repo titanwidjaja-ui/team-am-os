@@ -19,4 +19,12 @@ exports/
 *.tmp
 *.log
 *.bak
+*.swap
 ~$*
+
+# Environment and secrets
+.env
+*.env
+
+# Node (if tooling is ever added)
+node_modules/

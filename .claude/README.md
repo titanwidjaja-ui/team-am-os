@@ -1,5 +1,5 @@
 ---
-status: placeholder
+status: active
 version: 1.0
 purpose: Reserved for Claude Code project configuration and context files.
 governing-file: Team-AM-Repository-Structure-Locked.md

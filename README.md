@@ -1,1 +1,3 @@
 Team AM OS – private single source of truth for the AI stack. All structure, engine logic, prompts, and handoff rules originate here. No external file or AI output supersedes content in this repository.
+
+Current phase: Phase 3 locally complete pending first push and branch protection. The three locked source-of-truth artifacts governing this repository are: Client-Blueprint-12Step-Locked.md, Team-AM-Engine-Core-Locked.md, and Team-AM-Repository-Structure-Locked.md. Sensitive client files, session exports, PII, and any client-instance data do not belong in this repository and must never be committed here.

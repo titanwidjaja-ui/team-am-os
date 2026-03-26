@@ -1,5 +1,5 @@
 ---
-status: placeholder
+status: active
 version: 1.0
 purpose: Reserved for GitHub workflow and repository support files.
 governing-file: Team-AM-Repository-Structure-Locked.md
