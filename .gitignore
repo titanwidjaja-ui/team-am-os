@@ -1,0 +1,22 @@
+# Obsidian workspace state
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Client PII and sensitive exports
+*-PII-*
+*-labs-*
+*-progress-photos-*
+*-signed-*
+exports/
+
+# Temp and local-only files
+*.tmp
+*.log
+*.bak
+~$*

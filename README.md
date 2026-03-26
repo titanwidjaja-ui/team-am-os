@@ -1,0 +1,1 @@
+Team AM OS – private single source of truth for the AI stack. All structure, engine logic, prompts, and handoff rules originate here. No external file or AI output supersedes content in this repository.

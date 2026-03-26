@@ -1,0 +1,6 @@
+# CODEOWNERS – team-am-os
+# Any PR touching /Core/ or /Engine/ requires explicit operator review.
+# See Team-AM-Repository-Structure-Locked.md §Single-Operator PR/Review Model
+
+/Core/ @titanwidjaja-ui
+/Engine/ @titanwidjaja-ui
