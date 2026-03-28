@@ -1,0 +1,34 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'if echo \"$CLAUDE_TOOL_INPUT\" | grep -q \"/Core/\"; then echo \"BLOCKED: Direct writes to /Core/ are prohibited. Escalate to ChatGPT/BERNARD per Escalation-Triggers.md\"; exit 1; fi'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'if echo \"$CLAUDE_TOOL_INPUT\" | grep -q \"git commit\" && ! echo \"$CLAUDE_TOOL_INPUT\" | grep -qE \"(governance|core|engine|wiki|phase|fix|update):\"; then echo \"BLOCKED: Commit message must use a valid prefix (governance:, core:, engine:, wiki:, phase:, fix:, update:)\"; exit 1; fi'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"[$(date +%Y-%m-%d)] Session ended.\" >> ~/team-am-os/CHANGELOG.md'"
+          }
+        ]
+      }
+    ]
+  }
+}
