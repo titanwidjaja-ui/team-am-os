@@ -15,3 +15,4 @@ last-reviewed: 2026-03-26
 - Auto-update Stop hook configured for Current-Build-State.md
 - Current-Build-State.md updated to v1.2 (reflects Stop hook setup, Phase 4 still next)
 - Cleaned CHANGELOG.md spam from recursive Stop hook (55+ duplicate lines removed)
+- Removed CHANGELOG append from Stop hook to prevent recurring spam
