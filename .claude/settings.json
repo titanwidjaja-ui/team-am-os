@@ -26,9 +26,16 @@
           {
             "type": "command",
             "command": "bash -c 'echo \"[$(date +%Y-%m-%d)] Session ended.\" >> ~/team-am-os/CHANGELOG.md'"
+          },
+          {
+            "type": "command",
+            "command": "bash -c 'cd ~/team-am-os && claude --dangerously-skip-permissions -p \"/update-build-state\" 2>/dev/null || true'"
           }
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
   }
 }

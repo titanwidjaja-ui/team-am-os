@@ -34,11 +34,31 @@ Every decision, system, message, or addition must strengthen structure, improve 
 
 | Tool | Owns |
 |---|---|
-| **ChatGPT/BERNARD** | Structure, prompt governance, coordination, plans of action |
-| **Grok** | Technological architecture, pressure-testing |
-| **Claude** | Clarity, usability, refinement, structural coordination |
+| **ChatGPT/BERNARD** | Prompt building, coordination, plans of action — escalates to Claude for final approval |
+| **Grok** | Technological architecture, pressure-testing — fires before every new build, folder, or structural decision |
+| **Claude** | Primary governing authority, final approval, clarity, usability, refinement, structural coordination |
 | **Claude Code** | Technical building, repository implementation |
-| **Copilot** | In-editor implementation support inside VS Code only |
+| **Copilot** | In-editor implementation support, GitHub PR reviews, git operations inside VS Code |
+
+---
+
+## When to Use Grok
+Grok must be consulted before:
+- Any new file type or folder is created
+- Any Engine file is built or modified
+- Any client instance template is designed
+- Obsidian vault structure is planned
+- Inter-AI communication scripts are built
+- Any quarterly engine audit
+
+Send Grok a pressure-test prompt via ChatGPT/BERNARD. Do not build until Grok's report is reviewed by Claude.
+
+## When to Use Copilot
+Copilot handles:
+- Inline code suggestions inside VS Code
+- GitHub PR reviews and comments
+- Git operations and conflict resolution inside VS Code
+- File edits when Claude Code is unavailable
 
 ---
 
@@ -135,7 +155,8 @@ If there is any doubt about whether the session scope is safe for YOLO mode — 
 
 ---
 
-## Escalation Triggers (Stop and Escalate to ChatGPT/BERNARD)
+## Escalation Triggers (Stop and Escalate to Claude First)
+When any of these triggers fire, Claude must stop work and prompt the human operator for a decision; Claude may help structure context but may not self-approve or override operator-only authority.
 1. Any proposed change would alter content inside `/Core/`
 2. Any folder, file name, or placement not matching `Team-AM-Repository-Structure-Locked.md`
 3. Any task requiring one AI to perform the work of another role
@@ -158,3 +179,34 @@ If there is any doubt about whether the session scope is safe for YOLO mode — 
 ---
 
 *Last updated: Phase 4 complete. Gate 8 active — Obsidian as central visible base layer is next.*
+## Installed Plugins & Tools
+
+### Canva MCP
+- Connected via MCP server in Claude Code
+- Use for: design output, coaching decks, onboarding materials, exports
+- Allows Claude Code to create and edit Canva designs directly
+
+### GSD (Get Shit Done) v1.30.0
+- Installed globally via: `npx get-shit-done-cc --claude --global`
+- Solves context rot in long sessions — fresh context per task
+- Key commands:
+  - `/gsd:new-project` — start a new project with full planning phase
+  - `/gsd:discuss-phase` — clarify requirements before building
+  - `/gsd:quick` — small single-task execution
+  - `/gsd:plan-phase` — create implementation plan
+  - `/gsd:progress` — check current progress
+- Use at the start of every new phase or complex build task
+
+### Superpowers
+- Installed via Claude plugin marketplace
+- Enforces structured planning, TDD, and code review before implementation
+- Key commands:
+  - `/brainstorming` — refine requirements before writing code
+  - `/writing-plans` — create detailed implementation plans
+  - `/execute-plan` — run implementation with review checkpoints
+  - `/systematic-debugging` — 4-phase root cause debugging
+- Use before every new build task — do not skip brainstorming phase
+
+---
+
+*Last updated: 2026-03-28 — Added GSD, Superpowers, and Canva MCP to installed plugins.*
