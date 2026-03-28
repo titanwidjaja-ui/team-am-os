@@ -63,7 +63,7 @@ Copilot handles:
 ---
 
 ## Current Structural Stage
-**Phase 4 complete. Gate 8 active — Obsidian as central visible base layer.**
+**Phase 5 open. Phase 4 complete. Two tracks active — Track A (Inter-AI communication scripts, parked pending Grok) and Track B (Obsidian vault build, active).**
 See `Current-Build-State.md` for live snapshot.
 
 ---
@@ -110,12 +110,9 @@ team-am-os/
 3. ✅ Repository structure locked
 4. ✅ Local repo built and cleaned
 5. ✅ Governance and handoff files populated and committed
-6. ⏳ **NEXT: First push + branch protection**
-7. 🔒 Locked until #6 done: Phase 4 implementation work
-8. 🔒 Locked until later: Obsidian as central visible base layer
 6. ✅ First push + branch protection
-7. ✅ Phase 4 implementation work
-8. ⏳ **NEXT: Obsidian as central visible base layer**
+7. ✅ Phase 4 implementation work complete
+8. ⏳ **NEXT: Phase 5 — Track B (Obsidian vault build per PHASE-5-OBSIDIAN-PLAN.md)**
 
 ---
 
@@ -169,6 +166,8 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 ---
 
 ## What NOT to Touch Yet
+- ❌ Track A (Inter-AI communication scripts) — blocked until Grok pressure-test results reviewed by Claude
+- ❌ Client-instance artifacts
 - ❌ New architecture without explicit authorization
 - ❌ Client PII or exports (Google Drive only — never in repo)
 
@@ -181,7 +180,6 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 
 ---
 
-*Last updated: Phase 4 complete. Gate 8 active — Obsidian as central visible base layer is next.*
 ## Installed Plugins & Tools
 
 ### Canva MCP
@@ -212,4 +210,4 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 
 ---
 
-*Last updated: 2026-03-28 — Added GSD, Superpowers, and Canva MCP to installed plugins.*
+*Last updated: 2026-03-28 — Synced to Phase 5 (Phase 4 complete, Track B active).*
