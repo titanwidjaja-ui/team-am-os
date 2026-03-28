@@ -34,9 +34,9 @@ Every decision, system, message, or addition must strengthen structure, improve 
 
 | Tool | Owns |
 |---|---|
-| **ChatGPT/BERNARD** | Prompt building, coordination, plans of action — escalates to Claude for final approval |
+| **ChatGPT/BERNARD** | Prompt building, coordination, plans of action — escalates concerns to operator for final approval |
 | **Grok** | Technological architecture, pressure-testing |
-| **Claude** | Primary governing authority, final approval, clarity, usability, refinement, structural coordination |
+| **Claude** | Clarity, usability, refinement, and structural guidance — surfaces concerns to operator; does not hold final approval authority |
 | **Claude Code** | Technical building, repository implementation |
 | **Copilot** | In-editor implementation support inside VS Code only |
 
@@ -135,7 +135,8 @@ If there is any doubt about whether the session scope is safe for YOLO mode — 
 
 ---
 
-## Escalation Triggers (Stop and Escalate to Claude First)
+## Escalation Triggers (Stop and Escalate to Operator)
+When any of these triggers fire, Claude must stop work and prompt the human operator for a decision; Claude may help structure context but may not self-approve or override operator-only authority.
 1. Any proposed change would alter content inside `/Core/`
 2. Any folder, file name, or placement not matching `Team-AM-Repository-Structure-Locked.md`
 3. Any task requiring one AI to perform the work of another role
