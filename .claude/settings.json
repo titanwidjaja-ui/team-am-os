@@ -26,9 +26,16 @@
           {
             "type": "command",
             "command": "bash -c 'echo \"[$(date +%Y-%m-%d)] Session ended.\" >> ~/team-am-os/CHANGELOG.md'"
+          },
+          {
+            "type": "command",
+            "command": "bash -c 'cd ~/team-am-os && echo \"Session ended - build state update triggered\" >> CHANGELOG.md'"
           }
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
   }
 }
