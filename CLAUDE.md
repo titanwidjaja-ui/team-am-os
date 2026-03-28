@@ -180,4 +180,34 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 
 ---
 
-*Last updated: Phase 3 governance complete. All files committed. Next gate: remote push + branch protection.*
+## Installed Plugins & Tools
+
+### Canva MCP
+- Connected via MCP server in Claude Code
+- Use for: design output, coaching decks, onboarding materials, exports
+- Allows Claude Code to create and edit Canva designs directly
+
+### GSD (Get Shit Done) v1.30.0
+- Installed globally via: `npx get-shit-done-cc --claude --global`
+- Solves context rot in long sessions — fresh context per task
+- Key commands:
+  - `/gsd:new-project` — start a new project with full planning phase
+  - `/gsd:discuss-phase` — clarify requirements before building
+  - `/gsd:quick` — small single-task execution
+  - `/gsd:plan-phase` — create implementation plan
+  - `/gsd:progress` — check current progress
+- Use at the start of every new phase or complex build task
+
+### Superpowers
+- Installed via Claude plugin marketplace
+- Enforces structured planning, TDD, and code review before implementation
+- Key commands:
+  - `/brainstorming` — refine requirements before writing code
+  - `/writing-plans` — create detailed implementation plans
+  - `/execute-plan` — run implementation with review checkpoints
+  - `/systematic-debugging` — 4-phase root cause debugging
+- Use before every new build task — do not skip brainstorming phase
+
+---
+
+*Last updated: 2026-03-28 — Added GSD, Superpowers, and Canva MCP to installed plugins.*
