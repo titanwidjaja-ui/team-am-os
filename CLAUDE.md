@@ -34,11 +34,31 @@ Every decision, system, message, or addition must strengthen structure, improve 
 
 | Tool | Owns |
 |---|---|
-| **ChatGPT/BERNARD** | Prompt building, coordination, plans of action — escalates concerns to operator for final approval |
-| **Grok** | Technological architecture, pressure-testing |
-| **Claude** | Clarity, usability, refinement, and structural guidance — surfaces concerns to operator; does not hold final approval authority |
+| **ChatGPT/BERNARD** | Prompt building, coordination, plans of action — escalates to Claude for final approval |
+| **Grok** | Technological architecture, pressure-testing — fires before every new build, folder, or structural decision |
+| **Claude** | Primary governing authority, final approval, clarity, usability, refinement, structural coordination |
 | **Claude Code** | Technical building, repository implementation |
-| **Copilot** | In-editor implementation support inside VS Code only |
+| **Copilot** | In-editor implementation support, GitHub PR reviews, git operations inside VS Code |
+
+---
+
+## When to Use Grok
+Grok must be consulted before:
+- Any new file type or folder is created
+- Any Engine file is built or modified
+- Any client instance template is designed
+- Obsidian vault structure is planned
+- Inter-AI communication scripts are built
+- Any quarterly engine audit
+
+Send Grok a pressure-test prompt via ChatGPT/BERNARD. Do not build until Grok's report is reviewed by Claude.
+
+## When to Use Copilot
+Copilot handles:
+- Inline code suggestions inside VS Code
+- GitHub PR reviews and comments
+- Git operations and conflict resolution inside VS Code
+- File edits when Claude Code is unavailable
 
 ---
 
@@ -135,7 +155,7 @@ If there is any doubt about whether the session scope is safe for YOLO mode — 
 
 ---
 
-## Escalation Triggers (Stop and Escalate to Operator)
+## Escalation Triggers (Stop and Escalate to Claude First)
 When any of these triggers fire, Claude must stop work and prompt the human operator for a decision; Claude may help structure context but may not self-approve or override operator-only authority.
 1. Any proposed change would alter content inside `/Core/`
 2. Any folder, file name, or placement not matching `Team-AM-Repository-Structure-Locked.md`
