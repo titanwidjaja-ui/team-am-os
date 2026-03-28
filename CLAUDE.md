@@ -68,3 +68,68 @@ See `Current-Build-State.md` for live snapshot.
 ---
 
 ## Repository Structure (Locked)
+```
+team-am-os/
+├── /Core/
+├── /Engine/
+├── /AI-Prompts/
+├── /Handoff-Protocols/
+├── /.claude/
+├── /.github/
+├── Start-Here.md
+├── Current-Build-State.md
+├── CLAUDE.md
+└── [root support files]
+```
+
+---
+
+## Sequence of Gates
+1. ✅ Blueprint locked
+2. ✅ Engine core locked
+3. ✅ Repository structure locked
+4. ✅ Local repo built and cleaned
+5. ✅ Governance and handoff files populated and committed
+6. ⏳ **NEXT: First push + branch protection**
+7. 🔒 Locked until #6 done: Phase 4 implementation work
+8. 🔒 Locked until later: Obsidian as central visible base layer
+
+---
+
+## Operating Constraints (Always Enforce)
+- Exact **12-step blueprint shell** — do not alter structure
+- Exact **field names** — do not rename or add fields
+- **One current phase only** — do not run parallel phases
+- **Three top bottlenecks only** — do not expand the bottleneck list
+- **One main weekly adjustment** by default in weekly mode
+- Strong **safety, documentation, and recordkeeping** standards at all times
+- No tool overlap or parallel systems
+- Prefer **durable file-based work** over chat-only reasoning
+
+---
+
+## Escalation Triggers (Stop and Escalate to ChatGPT/BERNARD)
+1. Any proposed change would alter content inside `/Core/`
+2. Any folder, file name, or placement not matching `Team-AM-Repository-Structure-Locked.md`
+3. Any task requiring one AI to perform the work of another role
+4. No governing file or locked reference exists for the requested action
+5. Handoff contains conflicting instructions after confirmation attempt
+
+---
+
+## What NOT to Touch Yet
+- ❌ Obsidian integration
+- ❌ Phase 4 implementation work (blocked until push + branch protection complete)
+- ❌ New architecture without explicit authorization
+- ❌ Client PII or exports (Google Drive only — never in repo)
+
+---
+
+## Data and Storage Rules
+- **Repo:** infrastructure, prompts, handoff protocols, engine logic
+- **Google Drive:** sensitive files, client PII, exports
+- **Obsidian:** future central visible base layer (not active yet)
+
+---
+
+*Last updated: Phase 3 governance complete. All files committed. Next gate: remote push + branch protection.*
