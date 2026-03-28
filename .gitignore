@@ -1,7 +1,5 @@
-# Obsidian workspace state
-.obsidian/workspace
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+# Obsidian vault config — stays local, never committed
+.obsidian/
 
 # macOS
 .DS_Store
