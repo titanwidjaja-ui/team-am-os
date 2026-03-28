@@ -110,6 +110,9 @@ team-am-os/
 3. ✅ Repository structure locked
 4. ✅ Local repo built and cleaned
 5. ✅ Governance and handoff files populated and committed
+6. ⏳ **NEXT: First push + branch protection**
+7. 🔒 Locked until #6 done: Phase 4 implementation work
+8. 🔒 Locked until later: Obsidian as central visible base layer
 6. ✅ First push + branch protection
 7. ✅ Phase 4 implementation work
 8. ⏳ **NEXT: Obsidian as central visible base layer**
