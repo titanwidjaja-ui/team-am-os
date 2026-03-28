@@ -108,6 +108,33 @@ team-am-os/
 
 ---
 
+## YOLO Mode (dangerouslySkipPermissions)
+
+YOLO mode disables approval prompts and lets Claude Code execute autonomously.
+It must be used deliberately and only in the correct conditions.
+
+### Permitted — Session flag only
+```bash
+claude --dangerously-skip-permissions
+```
+Never enable permanently in settings.json for this repo.
+
+### When YOLO Mode Is Permitted
+- Populating /Engine/ or /AI-Prompts/ files from verbatim supplied content
+- Creating new non-core files where content is fully pre-approved
+- Root hygiene tasks (CHANGELOG, MOC updates, .gitignore)
+
+### When YOLO Mode Is Strictly Prohibited
+- Any session that could touch /Core/ files
+- Any session involving locked governance files
+- Any session where an Escalation Trigger condition might apply
+- Any session involving branch protection, repo settings, or GitHub configuration
+
+### General Rule
+If there is any doubt about whether the session scope is safe for YOLO mode — do not enable it. Default to approval prompts.
+
+---
+
 ## Escalation Triggers (Stop and Escalate to ChatGPT/BERNARD)
 1. Any proposed change would alter content inside `/Core/`
 2. Any folder, file name, or placement not matching `Team-AM-Repository-Structure-Locked.md`
