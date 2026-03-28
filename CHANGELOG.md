@@ -10,3 +10,7 @@ last-reviewed: 2026-03-26
 
 ## 2026-03-26
 - team-am-os monorepo initialized v1.1. Repository structure patched; final internal contradiction resolved. /Core/ sealed with both locked foundation files. All engine, AI-prompts, handoff, and support files placed. All future AI work must reference files inside this monorepo only.
+
+## 2026-03-28
+- Auto-update Stop hook configured for Current-Build-State.md
+- Current-Build-State.md updated to v1.2 (reflects Stop hook setup, Phase 4 still next)
