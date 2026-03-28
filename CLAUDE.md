@@ -63,7 +63,7 @@ Copilot handles:
 ---
 
 ## Current Structural Stage
-**Phase 3 — Locally Complete. Pending first push + branch protection.**
+**Phase 4 complete. Gate 8 active — Obsidian as central visible base layer.**
 See `Current-Build-State.md` for live snapshot.
 
 ---
@@ -111,8 +111,8 @@ team-am-os/
 4. ✅ Local repo built and cleaned
 5. ✅ Governance and handoff files populated and committed
 6. ✅ First push + branch protection
-7. ⏳ **NEXT: Phase 4 implementation work**
-8. 🔒 Locked until later: Obsidian as central visible base layer
+7. ✅ Phase 4 implementation work
+8. ⏳ **NEXT: Obsidian as central visible base layer**
 
 ---
 
@@ -166,8 +166,6 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 ---
 
 ## What NOT to Touch Yet
-- ❌ Obsidian integration
-- ❌ Phase 4 implementation work (blocked until push + branch protection complete)
 - ❌ New architecture without explicit authorization
 - ❌ Client PII or exports (Google Drive only — never in repo)
 
@@ -180,6 +178,7 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 
 ---
 
+*Last updated: Phase 4 complete. Gate 8 active — Obsidian as central visible base layer is next.*
 ## Installed Plugins & Tools
 
 ### Canva MCP
