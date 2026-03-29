@@ -63,7 +63,9 @@ Copilot handles:
 ---
 
 ## Current Structural Stage
-**Phase 5 open. Phase 4 complete. Two tracks active — Track A (Inter-AI communication scripts, parked pending Grok) and Track B (Obsidian vault build, active).**
+**Phase 5 — Open. Two tracks active.**
+- Track A: Inter-AI communication scripts (parked pending Grok review)
+- Track B: Obsidian vault build — two-vault architecture v3.1 built and configured
 See `Current-Build-State.md` for live snapshot.
 
 ---
@@ -111,8 +113,8 @@ team-am-os/
 4. ✅ Local repo built and cleaned
 5. ✅ Governance and handoff files populated and committed
 6. ✅ First push + branch protection
-7. ✅ Phase 4 implementation work complete
-8. ⏳ **NEXT: Phase 5 — Track B (Obsidian vault build per PHASE-5-OBSIDIAN-PLAN.md)**
+7. ✅ Phase 4 — /Engine/ starter files, GitHub Wiki, PHASE-5-OBSIDIAN-PLAN.md, auto-update hook
+8. ⏳ **Phase 5 — Two-vault Obsidian build (v3.1) + inter-AI communication scripts**
 
 ---
 
@@ -166,17 +168,18 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 ---
 
 ## What NOT to Touch Yet
-- ❌ Track A (Inter-AI communication scripts) — blocked until Grok pressure-test results reviewed by Claude
-- ❌ Client-instance artifacts
-- ❌ New architecture without explicit authorization
+- ❌ /Core/ files — immutable without escalation
+- ❌ Track A inter-AI scripts — parked until Grok review completes
+- ❌ New architecture without Grok pressure-test + Claude approval
 - ❌ Client PII or exports (Google Drive only — never in repo)
+- ❌ Titan Atlas — completely separate project
 
 ---
 
 ## Data and Storage Rules
 - **Repo:** infrastructure, prompts, handoff protocols, engine logic
 - **Google Drive:** sensitive files, client PII, exports
-- **Obsidian:** future central visible base layer (not active yet)
+- **Obsidian:** read-only view layer — two vaults active (team-am-os system vault, team-am-ops operations vault)
 
 ---
 
@@ -210,4 +213,4 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 
 ---
 
-*Last updated: 2026-03-28 — Synced to Phase 5 (Phase 4 complete, Track B active).*
+*Last updated: 2026-03-29 — Updated to Phase 5 state. Two-vault architecture v3.1 live. Operations vault built.*
