@@ -1,0 +1,1007 @@
+{
+    "responseCode": 200,
+    "message": "success",
+    "content": {
+        "1": {
+            "name": "aboutYou",
+            "order": "1",
+            "qid": "1",
+            "text": "About You",
+            "type": "control_head"
+        },
+        "2": {
+            "name": "fullName",
+            "order": "2",
+            "qid": "2",
+            "required": "Yes",
+            "text": "Full name",
+            "type": "control_textbox"
+        },
+        "3": {
+            "name": "email",
+            "order": "3",
+            "qid": "3",
+            "required": "Yes",
+            "text": "Email",
+            "type": "control_email"
+        },
+        "4": {
+            "name": "phoneNumber",
+            "order": "4",
+            "qid": "4",
+            "required": "No",
+            "text": "Phone number",
+            "type": "control_phone"
+        },
+        "5": {
+            "allowTime": "No",
+            "name": "dateOf",
+            "order": "5",
+            "qid": "5",
+            "required": "Yes",
+            "text": "Date of birth",
+            "type": "control_datetime"
+        },
+        "6": {
+            "name": "genderIdentity",
+            "options": "[\"Male\",\"Female\",\"Non-binary\",\"Prefer not to say\"]",
+            "order": "6",
+            "qid": "6",
+            "required": "Yes",
+            "text": "Gender identity",
+            "type": "control_dropdown"
+        },
+        "7": {
+            "name": "locationAnd",
+            "order": "7",
+            "qid": "7",
+            "required": "Yes",
+            "text": "Location and timezone",
+            "type": "control_textbox"
+        },
+        "8": {
+            "name": "whatDo",
+            "order": "8",
+            "qid": "8",
+            "required": "Yes",
+            "text": "What do you do for work, school, or day-to-day responsibilities?",
+            "type": "control_textbox"
+        },
+        "9": {
+            "name": "nextWhy",
+            "order": "9",
+            "qid": "9",
+            "text": "Next: Why You're Here",
+            "type": "control_pagebreak"
+        },
+        "10": {
+            "name": "whyYoure",
+            "order": "10",
+            "qid": "10",
+            "subHeader": "This helps me understand what matters most to you and what a successful coaching phase should actually look like.",
+            "text": "Why You're Here",
+            "type": "control_head"
+        },
+        "11": {
+            "name": "whatIs",
+            "options": "[\"Fat loss\",\"Muscle gain\",\"Body recomposition\",\"Recovery\",\"General health improvement\"]",
+            "order": "11",
+            "qid": "11",
+            "required": "Yes",
+            "text": "What is your primary goal right now?",
+            "type": "control_dropdown"
+        },
+        "12": {
+            "name": "inYour",
+            "order": "12",
+            "qid": "12",
+            "required": "Yes",
+            "text": "In your own words, what are you trying to change right now, and what would success look like to you?",
+            "type": "control_textarea"
+        },
+        "13": {
+            "name": "whyDoes",
+            "order": "13",
+            "qid": "13",
+            "required": "Yes",
+            "text": "Why does this feel important to you right now?",
+            "type": "control_textarea"
+        },
+        "14": {
+            "name": "whatIs14",
+            "order": "14",
+            "qid": "14",
+            "required": "Yes",
+            "text": "What is currently working well for you, even if it's small?",
+            "type": "control_textarea"
+        },
+        "15": {
+            "name": "whatDo15",
+            "order": "15",
+            "qid": "15",
+            "required": "Yes",
+            "text": "What do you think has made this hard to achieve so far?",
+            "type": "control_textarea"
+        },
+        "16": {
+            "name": "haveYou",
+            "order": "16",
+            "qid": "16",
+            "required": "No",
+            "text": "Have you tried anything before that helped, even temporarily? What worked, and why did it stop?",
+            "type": "control_textarea"
+        },
+        "17": {
+            "name": "doYou",
+            "order": "17",
+            "qid": "17",
+            "required": "No",
+            "text": "Do you have any hard deadlines or events you're working toward?",
+            "type": "control_textbox"
+        },
+        "18": {
+            "name": "whatParts",
+            "order": "18",
+            "qid": "18",
+            "required": "No",
+            "text": "What parts of your life currently take the most time or energy?",
+            "type": "control_textarea"
+        },
+        "19": {
+            "name": "nextYour",
+            "order": "19",
+            "qid": "19",
+            "text": "Next: Your Body Right Now",
+            "type": "control_pagebreak"
+        },
+        "20": {
+            "name": "yourBody",
+            "order": "20",
+            "qid": "20",
+            "text": "Your Body Right Now",
+            "type": "control_head"
+        },
+        "21": {
+            "name": "currentBody",
+            "order": "21",
+            "qid": "21",
+            "required": "Yes",
+            "text": "Current body weight (include kg or lbs)",
+            "type": "control_textbox"
+        },
+        "22": {
+            "name": "heightinclude",
+            "order": "22",
+            "qid": "22",
+            "required": "Yes",
+            "text": "Height (include cm or ft/in)",
+            "type": "control_textbox"
+        },
+        "23": {
+            "name": "waistMeasurement",
+            "order": "23",
+            "qid": "23",
+            "required": "No",
+            "text": "Waist measurement at navel (if available)",
+            "type": "control_textbox"
+        },
+        "24": {
+            "name": "bodyFat",
+            "order": "24",
+            "qid": "24",
+            "required": "No",
+            "text": "Body fat % estimate (if known)",
+            "type": "control_number"
+        },
+        "25": {
+            "name": "howDo",
+            "order": "25",
+            "qid": "25",
+            "required": "No",
+            "text": "How do you currently feel about your physique and body composition?",
+            "type": "control_textarea"
+        },
+        "26": {
+            "name": "nextTraining",
+            "order": "26",
+            "qid": "26",
+            "text": "Next: Training",
+            "type": "control_pagebreak"
+        },
+        "27": {
+            "name": "training",
+            "order": "27",
+            "qid": "27",
+            "text": "Training",
+            "type": "control_head"
+        },
+        "28": {
+            "name": "howLong",
+            "options": "[\"Never\",\"Less than 6 months\",\"6-12 months\",\"1-3 years\",\"3-5 years\",\"5+ years\"]",
+            "order": "28",
+            "qid": "28",
+            "required": "Yes",
+            "text": "How long have you been training consistently?",
+            "type": "control_dropdown"
+        },
+        "29": {
+            "name": "howMany",
+            "order": "29",
+            "qid": "29",
+            "required": "Yes",
+            "text": "How many days per week do you currently train?",
+            "type": "control_number"
+        },
+        "30": {
+            "name": "whatType",
+            "options": "[\"Strength\",\"Hypertrophy\",\"Cardio\",\"HIIT\",\"Sport-specific\",\"Bodyweight\",\"Yoga\\/Pilates\",\"None currently\"]",
+            "order": "30",
+            "qid": "30",
+            "required": "Yes",
+            "text": "What type of training do you do?",
+            "type": "control_checkbox"
+        },
+        "31": {
+            "name": "whatTime",
+            "order": "31",
+            "qid": "31",
+            "required": "Yes",
+            "text": "What time do you typically train?",
+            "type": "control_textbox"
+        },
+        "32": {
+            "name": "doYou32",
+            "options": "[\"Fasted\",\"After eating\",\"No preference\",\"Depends on the day\"]",
+            "order": "32",
+            "qid": "32",
+            "required": "Yes",
+            "text": "Do you prefer to train fasted or after eating?",
+            "type": "control_dropdown"
+        },
+        "33": {
+            "name": "describeYour",
+            "order": "33",
+            "qid": "33",
+            "required": "Yes",
+            "text": "Describe your current training setup (gym, home, equipment available)",
+            "type": "control_textarea"
+        },
+        "34": {
+            "name": "doYou34",
+            "order": "34",
+            "qid": "34",
+            "required": "No",
+            "text": "Do you currently follow a structured program or have a coach? If yes, describe.",
+            "type": "control_textarea"
+        },
+        "35": {
+            "name": "doYou35",
+            "options": "[\"Not really\",\"Moderate\",\"Yes, heavily\"]",
+            "order": "35",
+            "qid": "35",
+            "required": "No",
+            "text": "Do you sweat heavily during training?",
+            "type": "control_dropdown"
+        },
+        "36": {
+            "name": "nextHow",
+            "order": "36",
+            "qid": "36",
+            "text": "Next: How You Eat",
+            "type": "control_pagebreak"
+        },
+        "37": {
+            "name": "howYou",
+            "order": "37",
+            "qid": "37",
+            "subHeader": "There is no perfect answer here. I just want a clear picture of what your eating actually looks like right now.",
+            "text": "How You Eat",
+            "type": "control_head"
+        },
+        "38": {
+            "name": "howWould",
+            "options": "[\"Structured and consistent\",\"Somewhat structured\",\"Unstructured\",\"Chaotic or emotional\"]",
+            "order": "38",
+            "qid": "38",
+            "required": "Yes",
+            "text": "How would you describe your eating right now?",
+            "type": "control_dropdown"
+        },
+        "39": {
+            "name": "howMany39",
+            "order": "39",
+            "qid": "39",
+            "required": "Yes",
+            "text": "How many meals do you typically eat per day?",
+            "type": "control_number"
+        },
+        "40": {
+            "name": "walkMe",
+            "order": "40",
+            "qid": "40",
+            "required": "Yes",
+            "text": "Walk me through everything you ate and drank yesterday, including snacks.",
+            "type": "control_textarea"
+        },
+        "41": {
+            "name": "doesYour",
+            "order": "41",
+            "qid": "41",
+            "required": "No",
+            "text": "Does your schedule make it hard to eat when you want to? If yes, describe.",
+            "type": "control_textarea"
+        },
+        "42": {
+            "name": "howComfortable",
+            "options": "[\"I cook most meals\",\"I cook sometimes\",\"I rarely cook\",\"I don't cook at all\"]",
+            "order": "42",
+            "qid": "42",
+            "required": "Yes",
+            "text": "How comfortable are you with cooking and preparing food ahead of time?",
+            "type": "control_dropdown"
+        },
+        "43": {
+            "name": "howOften",
+            "order": "43",
+            "qid": "43",
+            "required": "Yes",
+            "text": "How often do you eat out or order in per week?",
+            "type": "control_number"
+        },
+        "44": {
+            "name": "isGrocery",
+            "options": "[\"Yes\",\"No\"]",
+            "order": "44",
+            "qid": "44",
+            "required": "No",
+            "text": "Is grocery budget a factor I should consider when building your plan?",
+            "type": "control_radio"
+        },
+        "45": {
+            "name": "doYou45",
+            "order": "45",
+            "qid": "45",
+            "required": "No",
+            "text": "Do you have any food allergies or intolerances?",
+            "type": "control_textarea"
+        },
+        "46": {
+            "name": "areThere",
+            "order": "46",
+            "qid": "46",
+            "required": "No",
+            "text": "Are there any foods you really prefer, dislike, or avoid?",
+            "type": "control_textarea"
+        },
+        "47": {
+            "name": "nextDieting",
+            "order": "47",
+            "qid": "47",
+            "text": "Next: Dieting History",
+            "type": "control_pagebreak"
+        },
+        "48": {
+            "name": "dietingHistory",
+            "order": "48",
+            "qid": "48",
+            "subHeader": "These questions help me understand your recent nutrition history so I do not build a plan on bad assumptions.",
+            "text": "Dieting History",
+            "type": "control_head"
+        },
+        "49": {
+            "name": "haveYou49",
+            "options": "[\"Yes\",\"No\"]",
+            "order": "49",
+            "qid": "49",
+            "required": "Yes",
+            "text": "Have you intentionally tried to lose weight or eat less in the last 12 months?",
+            "type": "control_radio"
+        },
+        "50": {
+            "hidden": "Yes",
+            "name": "ifYes",
+            "order": "50",
+            "qid": "50",
+            "required": "No",
+            "text": "If yes: roughly how long did you eat that way, and how strict was it?",
+            "type": "control_textarea"
+        },
+        "51": {
+            "name": "doYou51",
+            "order": "51",
+            "qid": "51",
+            "required": "No",
+            "text": "Do you have any idea how much you're currently eating in a day? A rough estimate is fine.",
+            "type": "control_textbox"
+        },
+        "52": {
+            "name": "whatIs52",
+            "order": "52",
+            "qid": "52",
+            "required": "No",
+            "text": "What is the least amount you've eaten consistently for more than 2 weeks, if you know?",
+            "type": "control_textbox"
+        },
+        "53": {
+            "name": "haveYou53",
+            "options": "[\"Feeling cold often\",\"Hair thinning or loss\",\"Persistent low energy\",\"Loss or irregularity of menstrual cycle\",\"Low libido\",\"Brain fog\",\"Poor recovery from training\",\"None of these\"]",
+            "order": "53",
+            "qid": "53",
+            "required": "No",
+            "text": "Have you noticed any of these recently?",
+            "type": "control_checkbox"
+        },
+        "54": {
+            "name": "nextDigestion",
+            "order": "54",
+            "qid": "54",
+            "text": "Next: Digestion and Gut Health",
+            "type": "control_pagebreak"
+        },
+        "55": {
+            "name": "digestionAnd",
+            "order": "55",
+            "qid": "55",
+            "text": "Digestion and Gut Health",
+            "type": "control_head"
+        },
+        "56": {
+            "name": "howWould56",
+            "order": "56",
+            "qid": "56",
+            "required": "Yes",
+            "scaleAmount": "10",
+            "scaleFrom": "1",
+            "text": "How would you rate your digestion overall right now?",
+            "type": "control_scale"
+        },
+        "57": {
+            "name": "doYou57",
+            "options": "[\"Bloating\",\"Excessive gas\",\"Acid reflux\",\"Constipation\",\"Diarrhea\",\"Nausea\",\"Stomach pain\",\"None of these\"]",
+            "order": "57",
+            "qid": "57",
+            "required": "No",
+            "text": "Do you regularly experience any of these?",
+            "type": "control_checkbox"
+        },
+        "58": {
+            "hidden": "Yes",
+            "name": "haveYou58",
+            "order": "58",
+            "qid": "58",
+            "required": "No",
+            "text": "Have you ever been diagnosed with any digestive or gut-related conditions?",
+            "type": "control_textarea"
+        },
+        "59": {
+            "name": "nextHydration",
+            "order": "59",
+            "qid": "59",
+            "text": "Next: Hydration",
+            "type": "control_pagebreak"
+        },
+        "60": {
+            "name": "hydration",
+            "order": "60",
+            "qid": "60",
+            "text": "Hydration",
+            "type": "control_head"
+        },
+        "61": {
+            "name": "aboutHow",
+            "order": "61",
+            "qid": "61",
+            "required": "Yes",
+            "text": "About how much do you drink in a full day? Include water, coffee, tea, and anything else.",
+            "type": "control_textbox"
+        },
+        "62": {
+            "name": "doYou62",
+            "options": "[\"Yes regularly\",\"Sometimes\",\"Rarely\",\"Never\"]",
+            "order": "62",
+            "qid": "62",
+            "required": "Yes",
+            "text": "Do you add salt to your food or use electrolyte drinks?",
+            "type": "control_dropdown"
+        },
+        "63": {
+            "name": "doAny",
+            "options": "[\"Muscle cramps\",\"Feeling puffy or bloated\",\"Feeling flat or depleted\",\"Headaches\",\"Dizziness or lightheadedness\",\"None of these\"]",
+            "order": "63",
+            "qid": "63",
+            "required": "No",
+            "text": "Do any of these happen regularly? Select any that apply.",
+            "type": "control_checkbox"
+        },
+        "64": {
+            "name": "howMuch",
+            "order": "64",
+            "qid": "64",
+            "required": "No",
+            "text": "How much alcohol do you drink per week?",
+            "type": "control_textbox"
+        },
+        "65": {
+            "name": "howMuch65",
+            "order": "65",
+            "qid": "65",
+            "required": "Yes",
+            "text": "How much caffeine do you usually have in a day, and from what?",
+            "type": "control_textbox"
+        },
+        "66": {
+            "name": "nextSleep",
+            "order": "66",
+            "qid": "66",
+            "text": "Next: Sleep and Recovery",
+            "type": "control_pagebreak"
+        },
+        "67": {
+            "name": "sleepAnd",
+            "order": "67",
+            "qid": "67",
+            "text": "Sleep and Recovery",
+            "type": "control_head"
+        },
+        "68": {
+            "name": "averageHours",
+            "order": "68",
+            "qid": "68",
+            "required": "Yes",
+            "text": "Average hours of sleep per night",
+            "type": "control_number"
+        },
+        "69": {
+            "name": "whatTime69",
+            "order": "69",
+            "qid": "69",
+            "required": "Yes",
+            "text": "What time do you typically go to bed?",
+            "type": "control_datetime"
+        },
+        "70": {
+            "name": "whatTime70",
+            "order": "70",
+            "qid": "70",
+            "required": "Yes",
+            "text": "What time do you typically wake up?",
+            "type": "control_datetime"
+        },
+        "71": {
+            "name": "howWould71",
+            "order": "71",
+            "qid": "71",
+            "required": "Yes",
+            "scaleAmount": "10",
+            "scaleFrom": "1",
+            "text": "How would you rate your sleep quality most nights?",
+            "type": "control_scale"
+        },
+        "72": {
+            "name": "doYou72",
+            "order": "72",
+            "qid": "72",
+            "required": "No",
+            "text": "Do you use anything to help you sleep, such as supplements, medication, or other sleep aids?",
+            "type": "control_textarea"
+        },
+        "73": {
+            "name": "whatDo73",
+            "order": "73",
+            "qid": "73",
+            "required": "No",
+            "text": "What do the last 2 hours before bed usually look like for you?",
+            "type": "control_textarea"
+        },
+        "74": {
+            "name": "doYou74",
+            "order": "74",
+            "qid": "74",
+            "required": "No",
+            "text": "Do you work shifts, travel frequently, or have an irregular schedule?",
+            "type": "control_textarea"
+        },
+        "75": {
+            "name": "doYou75",
+            "order": "75",
+            "qid": "75",
+            "required": "No",
+            "text": "Do you track daily steps? If so, what's your average?",
+            "type": "control_textbox"
+        },
+        "76": {
+            "name": "howDo76",
+            "order": "76",
+            "qid": "76",
+            "required": "No",
+            "text": "How do you currently manage stress?",
+            "type": "control_textarea"
+        },
+        "77": {
+            "name": "nextMindset",
+            "order": "77",
+            "qid": "77",
+            "text": "Next: Mindset and Consistency",
+            "type": "control_pagebreak"
+        },
+        "78": {
+            "name": "mindsetAnd",
+            "order": "78",
+            "qid": "78",
+            "subHeader": "These questions help me coach the real person, not just the plan on paper. Honest answers help more than impressive answers.",
+            "text": "Mindset and Consistency",
+            "type": "control_head"
+        },
+        "79": {
+            "name": "whenYou",
+            "order": "79",
+            "qid": "79",
+            "required": "Yes",
+            "text": "When you fall off a plan, what usually triggers it?",
+            "type": "control_textarea"
+        },
+        "80": {
+            "name": "whenYou80",
+            "order": "80",
+            "qid": "80",
+            "required": "Yes",
+            "text": "When you have a bad day, like missing a workout or eating off-plan, how do you usually respond?",
+            "type": "control_textarea"
+        },
+        "81": {
+            "name": "doYou81",
+            "options": "[\"Yes\",\"Sometimes\",\"Not really\"]",
+            "order": "81",
+            "qid": "81",
+            "required": "Yes",
+            "text": "Do you tend to be all-or-nothing with diet or training?",
+            "type": "control_dropdown"
+        },
+        "82": {
+            "name": "whatKeeps",
+            "order": "82",
+            "qid": "82",
+            "required": "Yes",
+            "text": "What keeps you consistent? What breaks your consistency?",
+            "type": "control_textarea"
+        },
+        "83": {
+            "name": "onA",
+            "order": "83",
+            "qid": "83",
+            "required": "Yes",
+            "scaleAmount": "10",
+            "scaleFrom": "1",
+            "text": "On a scale of 1-10, how ready are you to follow a structured plan right now?",
+            "type": "control_scale"
+        },
+        "84": {
+            "name": "isThere",
+            "order": "84",
+            "qid": "84",
+            "required": "No",
+            "text": "Is there anything about stress, mindset, or mental health that would help your coach support you better?",
+            "type": "control_textarea"
+        },
+        "85": {
+            "name": "haveYou85",
+            "options": "[\"History of restrictive eating or very low calorie dieting\",\"Binge eating episodes\",\"Purging behaviors\",\"Intense anxiety or guilt around food\",\"Diagnosed eating disorder\",\"None of these\"]",
+            "order": "85",
+            "qid": "85",
+            "required": "Yes",
+            "text": "Have you ever experienced any of the following?",
+            "type": "control_checkbox"
+        },
+        "86": {
+            "name": "nextMedical",
+            "order": "86",
+            "qid": "86",
+            "text": "Next: Medical and Safety",
+            "type": "control_pagebreak"
+        },
+        "87": {
+            "name": "medicalAnd",
+            "order": "87",
+            "qid": "87",
+            "subHeader": "These questions are here for safety. Coaching is not medical care, but I need to know anything that could affect how your plan should be built or adjusted.",
+            "text": "Medical and Safety",
+            "type": "control_head"
+        },
+        "88": {
+            "name": "doYou88",
+            "order": "88",
+            "qid": "88",
+            "required": "No",
+            "text": "Do you have any health conditions or medical issues that may affect training, nutrition, or recovery?",
+            "type": "control_textarea"
+        },
+        "89": {
+            "name": "areYou",
+            "options": "[\"Yes\",\"No\"]",
+            "order": "89",
+            "qid": "89",
+            "required": "Yes",
+            "text": "Are you currently taking any medications?",
+            "type": "control_radio"
+        },
+        "90": {
+            "hidden": "Yes",
+            "name": "ifYes90",
+            "order": "90",
+            "qid": "90",
+            "required": "No",
+            "text": "If yes: please list any medications you currently take, including dose if you know it.",
+            "type": "control_textarea"
+        },
+        "91": {
+            "name": "areYou91",
+            "options": "[\"Yes\",\"No\"]",
+            "order": "91",
+            "qid": "91",
+            "required": "Yes",
+            "text": "Are you currently using, or have you used in the last 6 months, any hormones, peptides, or GLP-1 medications such as semaglutide or tirzepatide?",
+            "type": "control_radio"
+        },
+        "92": {
+            "hidden": "Yes",
+            "name": "ifYes92",
+            "order": "92",
+            "qid": "92",
+            "required": "No",
+            "text": "If yes: please share anything important here, such as what you used, when you started or stopped, and any effects you noticed.",
+            "type": "control_textarea"
+        },
+        "93": {
+            "hidden": "Yes",
+            "name": "ifApplicable",
+            "order": "93",
+            "qid": "93",
+            "required": "No",
+            "text": "If applicable: are your menstrual cycles usually regular? Have you noticed any recent changes?",
+            "type": "control_textarea"
+        },
+        "94": {
+            "name": "haveYou94",
+            "order": "94",
+            "qid": "94",
+            "required": "No",
+            "text": "Have you had any injuries, pain issues, or physical limitations in the last 12 months?",
+            "type": "control_textarea"
+        },
+        "95": {
+            "name": "hasA",
+            "options": "[\"Yes\",\"No\",\"Not sure\"]",
+            "order": "95",
+            "qid": "95",
+            "required": "Yes",
+            "text": "Has a doctor, physiotherapist, or other medical professional ever told you to limit or avoid certain types of exercise?",
+            "type": "control_dropdown"
+        },
+        "96": {
+            "name": "doYou96",
+            "options": "[\"Yes\",\"No\",\"Unsure\"]",
+            "order": "96",
+            "qid": "96",
+            "required": "Yes",
+            "text": "Do you have medical clearance to exercise?",
+            "type": "control_dropdown"
+        },
+        "97": {
+            "name": "isThere97",
+            "order": "97",
+            "qid": "97",
+            "required": "No",
+            "text": "Is there anything else about your health, symptoms, or physical limitations that would help your coach work with you safely?",
+            "type": "control_textarea"
+        },
+        "98": {
+            "name": "nextSupplements",
+            "order": "98",
+            "qid": "98",
+            "text": "Next: Supplements",
+            "type": "control_pagebreak"
+        },
+        "99": {
+            "name": "supplements",
+            "order": "99",
+            "qid": "99",
+            "text": "Supplements",
+            "type": "control_head"
+        },
+        "100": {
+            "name": "areYou100",
+            "options": "[\"Yes\",\"No\"]",
+            "order": "100",
+            "qid": "100",
+            "required": "Yes",
+            "text": "Are you currently taking any supplements?",
+            "type": "control_radio"
+        },
+        "101": {
+            "hidden": "Yes",
+            "name": "ifYes101",
+            "order": "101",
+            "qid": "101",
+            "required": "No",
+            "text": "If yes: list everything you take, including doses",
+            "type": "control_textarea"
+        },
+        "102": {
+            "name": "haveYou102",
+            "order": "102",
+            "qid": "102",
+            "required": "No",
+            "text": "Have you used any supplements in the past that you felt helped noticeably?",
+            "type": "control_textarea"
+        },
+        "103": {
+            "name": "areYou103",
+            "options": "[\"Yes\",\"No\"]",
+            "order": "103",
+            "qid": "103",
+            "required": "Yes",
+            "text": "Are you open to supplement recommendations?",
+            "type": "control_radio"
+        },
+        "104": {
+            "name": "isSupplement",
+            "options": "[\"Yes\",\"No\"]",
+            "order": "104",
+            "qid": "104",
+            "required": "No",
+            "text": "Is supplement budget a concern?",
+            "type": "control_radio"
+        },
+        "105": {
+            "name": "nextTracking",
+            "order": "105",
+            "qid": "105",
+            "text": "Next: Tracking Preferences",
+            "type": "control_pagebreak"
+        },
+        "106": {
+            "name": "trackingPreferences",
+            "order": "106",
+            "qid": "106",
+            "subHeader": "I do not assume everyone needs the same level of tracking. This helps me choose the simplest method that still works for you.",
+            "text": "Tracking Preferences",
+            "type": "control_head"
+        },
+        "107": {
+            "name": "haveYou107",
+            "options": "[\"Yes\",\"No\"]",
+            "order": "107",
+            "qid": "107",
+            "required": "Yes",
+            "text": "Have you used any food tracking apps before?",
+            "type": "control_radio"
+        },
+        "108": {
+            "hidden": "Yes",
+            "name": "ifYes108",
+            "options": "[\"Cronometer\",\"MacroFactor\",\"MyFitnessPal\",\"MyNetDiary\",\"Other\"]",
+            "order": "108",
+            "qid": "108",
+            "required": "No",
+            "text": "If yes: which apps have you used?",
+            "type": "control_checkbox"
+        },
+        "109": {
+            "name": "howDoes",
+            "options": "[\"It helps me\",\"Neutral\",\"It stresses me out\",\"It triggers unhealthy behavior\"]",
+            "order": "109",
+            "qid": "109",
+            "required": "Yes",
+            "text": "How does food tracking usually affect you?",
+            "type": "control_dropdown"
+        },
+        "110": {
+            "name": "whatType110",
+            "options": "[\"Detailed\",\"Simplified\",\"No tracking\",\"Not sure \\u2014 let my coach decide\"]",
+            "order": "110",
+            "qid": "110",
+            "required": "Yes",
+            "text": "What type of tracking feels most realistic for you right now?",
+            "type": "control_dropdown"
+        },
+        "111": {
+            "name": "nextGetting",
+            "order": "111",
+            "qid": "111",
+            "text": "Next: Getting Started",
+            "type": "control_pagebreak"
+        },
+        "112": {
+            "name": "gettingStarted",
+            "order": "112",
+            "qid": "112",
+            "text": "Getting Started",
+            "type": "control_head"
+        },
+        "113": {
+            "name": "whenWould",
+            "options": "[\"As soon as possible\",\"Within the next week\",\"Within the next 2 weeks\",\"I'm not sure yet\"]",
+            "order": "113",
+            "qid": "113",
+            "required": "Yes",
+            "text": "When would you realistically be ready to start?",
+            "type": "control_dropdown"
+        },
+        "114": {
+            "name": "isThere114",
+            "order": "114",
+            "qid": "114",
+            "required": "No",
+            "text": "Is there anything in the next 2 weeks that would disrupt your routine? (Travel, events, holidays)",
+            "type": "control_textarea"
+        },
+        "115": {
+            "name": "whatDays",
+            "order": "115",
+            "qid": "115",
+            "required": "Yes",
+            "text": "What days and times usually work best for weekly check-ins?",
+            "type": "control_textbox"
+        },
+        "116": {
+            "name": "howDo116",
+            "options": "[\"Text\",\"Email\",\"Voice message\",\"Video call\"]",
+            "order": "116",
+            "qid": "116",
+            "required": "Yes",
+            "text": "How do you prefer to communicate with your coach?",
+            "type": "control_checkbox"
+        },
+        "117": {
+            "name": "finalStep",
+            "order": "117",
+            "qid": "117",
+            "text": "Final Step",
+            "type": "control_pagebreak"
+        },
+        "118": {
+            "name": "finalConfirmation",
+            "order": "118",
+            "qid": "118",
+            "text": "Final Confirmation",
+            "type": "control_head"
+        },
+        "119": {
+            "name": "walkMe119",
+            "order": "119",
+            "qid": "119",
+            "required": "Yes",
+            "text": "Walk me through a typical day in your life, from waking up to going to bed.",
+            "type": "control_textarea"
+        },
+        "120": {
+            "name": "isThere120",
+            "order": "120",
+            "qid": "120",
+            "required": "No",
+            "text": "Is there anything else you want your coach to know that wasn't covered above?",
+            "type": "control_textarea"
+        },
+        "121": {
+            "name": "iConfirm",
+            "options": "[\"I agree\"]",
+            "order": "121",
+            "qid": "121",
+            "required": "Yes",
+            "text": "I confirm all information provided is accurate to the best of my knowledge",
+            "type": "control_checkbox"
+        },
+        "122": {
+            "name": "iUnderstand",
+            "options": "[\"I agree\"]",
+            "order": "122",
+            "qid": "122",
+            "required": "Yes",
+            "text": "I understand that coaching is not a substitute for medical advice",
+            "type": "control_checkbox"
+        }
+    },
+    "duration": "86.60ms",
+    "info": null,
+    "limit-left": 9874
+}
