@@ -1,7 +1,7 @@
 ---
 status: locked
-version: 1.0
-locked-date: 2026-03-26
+version: 1.1
+locked-date: 2026-03-30
 purpose: Canonical locked shell for Team AM Client Blueprint generation.
 governing-ai: ChatGPT
 ---
@@ -132,7 +132,8 @@ Make this page feel like the client has been fully understood before you prescri
 - What Is Holding You Back Right Now
 - Primary Limiting Factor
 - Secondary Limiting Factor
-- Body Composition and Recovery Context
+- Body Composition Context
+- Recovery Context
 - Digestion and Hydration Context
 - What Is Noise Right Now
 - What This Means for Your Plan
@@ -183,6 +184,7 @@ This is the operating dashboard for the plan.
 - Protein
 - Carbohydrate Target
 - Fat Target
+- Calorie Cycling Structure
 - Fiber Target
 - Fluid Target
 - Sodium Target
@@ -222,6 +224,7 @@ Turn the numbers into a daily rhythm the client can actually follow.
 - Intra-Workout Nutrition
 - Post-Workout Meal
 - Pre-Sleep Meal
+- Snack and Flexible Eating Structure
 - Why This Timing Works for You
 
 ## Locked Step Rule
@@ -229,6 +232,9 @@ This is not a full meal plan. It is a timing and purpose page.
 
 ## Locked Step Note
 If the client’s training schedule is irregular, fasted, or unknown, collapse Pre-Workout Meal, Intra-Workout Nutrition, and Post-Workout Meal into a single Around Training block and note the adaptation. Do not leave slots empty or fabricate a fixed schedule.
+
+## Locked Step Note
+Snack and Flexible Eating Structure describes how snacking fits within the daily targets. It does not introduce separate macro targets for snacks.
 
 ---
 
@@ -246,12 +252,18 @@ This page should make the plan practical, repeatable, and easy to shop for.
 - Best Convenience Foods for Your Plan
 - How to Build a Plate
 - Why This Food Structure Fits You
+- Meal Prep Strategy
+- Grocery Framework
+- Eating Out Strategy
 
 ## Locked Step Rule
 Keep it practical and food-based.
 
 ## Locked Step Format
 Render this step as structured paragraphs using the exact field labels above.
+
+## Locked Step Note
+Meal Prep Strategy, Grocery Framework, and Eating Out Strategy support adherence, not perfection. A client who eats out frequently needs a realistic strategy, not a command to stop.
 
 ---
 
@@ -294,6 +306,7 @@ Hydration is fluid balance, mineral balance, glycogen status, and consistency.
 - Intra-Workout Hydration
 - Post-Workout Hydration
 - How Carbohydrates Affect Hydration
+- How Alcohol Affects Your Hydration and Recovery
 - Why You May Feel Flat, Puffy, Crampy, or Off
 - Why Consistency Matters
 - How to Adjust Based on Symptoms
@@ -330,6 +343,7 @@ Recovery should be repeatable, not complicated.
 - Your Rest-Day Routine
 - Your Evening Routine
 - Your Main Recovery Risks
+- Your Stress Management Plan
 - What to Do When Recovery Starts Slipping
 - Why This Recovery Structure Fits You
 
@@ -359,6 +373,7 @@ This is the performance operating system for the rest of the plan.
 - How to Respond to a Bad Week
 - What You Must Not Do
 - Why This Execution Style Fits You
+- How Your Coach Will Communicate With You
 
 ## Locked Step Rule
 Keep it direct, sharp, and useful. This page should feel like a performance system, not a motivational speech.
@@ -383,6 +398,9 @@ Use the least complicated tracking method that still gives enough signal to make
 - What You Need to Track Daily
 - What You Need to Track Weekly
 - How to Keep Tracking Fast and Sustainable
+- Scale Protocol
+- Body Measurement Schedule
+- Progress Photo Schedule
 
 ## Locked Step Rule
 Use the minimum tracking level that gives enough signal to adjust the plan intelligently. More data is only better if it improves decisions without hurting adherence.
@@ -392,6 +410,9 @@ Name one primary tool and one fallback only. If manual tracking is the best adhe
 
 ## Locked Step Note
 Best fit is usually Cronometer. Acceptable alternatives include MacroFactor, MyFitnessPal, MyNetDiary, or a structured manual checklist if app use would lower adherence.
+
+## Locked Step Note
+If the client indicated that the scale affects their mental health, Scale Protocol must reflect that by using alternative progress markers such as measurements, photos, or performance rather than scale weight. Do not override the client's stated boundary.
 
 ---
 
@@ -408,6 +429,7 @@ This page should create momentum, not friction.
 - Your 7-Day Starter Version
 - What to Monitor This Week
 - What Success Looks Like This Week
+- Your First Check-In
 
 ## Locked Step Rule
 The first week should create structure, confidence, and usable feedback. It does not need to look dramatic. It needs to be consistent enough to generate good data.
@@ -438,6 +460,8 @@ Use the same structure every week so adjustments stay clean and objective.
 - Appetite
 - Hydration Quality
 - Overall Plan Compliance
+- Client Notes
+- Mood and Motivation
 - Coach Notes
 - Main Adjustment for Next Week
 
@@ -472,6 +496,7 @@ This page should produce a clean weekly read, one main adjustment if needed, and
 - Confirm exact field names are preserved.
 - Confirm no page drifts outside coaching scope.
 - Confirm no section creates more friction than the client can realistically absorb.
+- Confirm Step 10 body measurement protocol respects client's stated scale and measurement boundaries from intake data.
 
 ## Template-Fidelity QA Gate
 - Render the final blueprint before delivery.

@@ -1,6 +1,7 @@
 ---
 status: locked
-version: 1.0
+version: 1.1
+locked-date: 2026-03-30
 purpose: Canonical decision-logic core for Team AM engine.
 governing-ai: Grok (technological architecture lead)
 governing-blueprint: Client-Blueprint-12Step-Locked.md
@@ -91,7 +92,7 @@ This file contains only the immutable decision logic that governs how the locked
 1. Bodyweight and waist trends use weekly averages only. Minimum standard: five bodyweight data points for a reliable weekly trend.
 2. Performance trends use logged lifts, reps, or comparable training outputs across at least two sessions.
 3. Compliance uses self-report plus tracking data. Below 80 percent overall plan compliance triggers bottleneck review before a performance-oriented adjustment is made.
-4. Recovery markers such as sleep, digestion, energy, stress, and soreness use a 1 to 10 anchored scale and must be interpreted as trends, not isolated numbers.
+4. Recovery markers such as sleep, digestion, energy, stress, soreness, and mood or motivation use a 1 to 10 anchored scale and must be interpreted as trends, not isolated numbers.
 5. Subjective-scale anchors:
    1. 1 to 3 = poor or significantly impaired
    2. 4 to 5 = below baseline or noticeably off
@@ -104,6 +105,7 @@ This file contains only the immutable decision logic that governs how the locked
    1. Recovery and Health Restoration use shorter evidence windows and give more weight to subjective-marker decline, symptom patterns, and safety context.
    2. Gain and Fat Loss use the standard thresholds above and usually require clearer multi-day or multi-session trend confirmation.
    3. Recomp uses the standard thresholds but tolerates slower visible change because progress is often harder to detect week to week.
+9. Mood and motivation trends are read alongside energy, appetite, and stress. A sustained decline in mood or motivation of 3 or more points over one week without a clear external cause triggers bottleneck review before a performance-oriented adjustment is made.
 
 ## Safety & Escalation Logic
 1. Apply the three-level framework exactly as defined in the locked blueprint.
