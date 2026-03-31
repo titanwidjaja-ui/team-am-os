@@ -94,6 +94,7 @@ See `Current-Build-State.md` for live snapshot.
 team-am-os/
 ├── /Core/
 ├── /Engine/
+├── /Templates/
 ├── /AI-Prompts/
 ├── /Handoff-Protocols/
 ├── /.claude/
@@ -103,6 +104,8 @@ team-am-os/
 ├── CLAUDE.md
 └── [root support files]
 ```
+
+> `/Templates/` approved by Grok governance review (2026-03-31). Houses client-facing HTML output templates (Blueprint, Snapshot Card). Do not move to /Engine/ or /Core/.
 
 ---
 
@@ -213,4 +216,4 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 
 ---
 
-*Last updated: 2026-03-29 — Updated to Phase 5 state. Two-vault architecture v3.1 live. Operations vault built.*
+*Last updated: 2026-03-31 — Added /Templates/ folder (Grok-approved). Blueprint v4 and Snapshot Card HTML templates live.*
