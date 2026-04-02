@@ -237,4 +237,12 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 
 ---
 
-*Last updated: 2026-04-02 — Repo Phase 1 setup: CODEOWNERS, CI linting, link checking, VS Code config, GitHub MCP. Operator-approved structural additions: .vscode/, .markdownlint.json, .lycheeignore.*
+## AI Prompts — v2.0 Status
+
+Stage 1-4 v2.0 prompts approved post-Grok pressure-test. All safety, tier, and KB compliance rules now enforced. Prompts live in /AI-Prompts/.
+
+Grok approval note (2026-04-02): "The four v2.0 prompts are structurally strong and represent a major improvement over prior versions. They adequately address the 16 critical gaps identified in the deep research audit. The prompts are approved with no modifications required. The system is now ready for live client testing."
+
+---
+
+*Last updated: 2026-04-02 — Stage 1-4 v2.0 prompts and Knowledge Base added to /AI-Prompts/ per Grok governance approval.*

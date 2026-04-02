@@ -8,6 +8,12 @@ last-reviewed: 2026-03-26
 
 # CHANGELOG
 
+## 2026-04-02
+
+- feat(prompts): Stage 1-4 v2.0 prompts added to /AI-Prompts/ — Stage-1-Pre-Call-Analysis-v2.md, Stage-1.5-Call-Notes-Integration-v2.md, Stage-2-Blueprint-Generation-v2.md, Stage-3-QA-Gate-v2.md, Team-AM-Coaching-Knowledge-Base-v2.md
+- Grok approval: structurally strong, addresses all 16 critical gaps from deep research audit, no modifications required, cleared for live client testing
+- CLAUDE.md updated: v2.0 prompt status and Grok approval note recorded
+
 ## 2026-03-26
 - team-am-os monorepo initialized v1.1. Repository structure patched; final internal contradiction resolved. /Core/ sealed with both locked foundation files. All engine, AI-prompts, handoff, and support files placed. All future AI work must reference files inside this monorepo only.
 
@@ -133,3 +139,17 @@ last-reviewed: 2026-03-26
 
 ## 2026-04-02
 - Repo Phase 1 setup: CODEOWNERS (protects /Core/, CLAUDE.md, .github/CODEOWNERS, .github/workflows/), markdownlint CI workflow (.markdownlint.json + .github/workflows/markdownlint.yml), link check CI workflow (.github/workflows/linkcheck.yml + .lycheeignore), VS Code config (.vscode/extensions.json + .vscode/settings.json), GitHub MCP Server registered via HTTP transport. CLAUDE.md updated with Repo Tooling section. All additions operator-approved.
+- 2026-04-02 01:45 — Session ended.
+- 2026-04-02 01:49 — Session ended.
+- 2026-04-02 02:29 — Session ended.
+- 2026-04-02 02:53 — Session ended.
+- 2026-04-02 02:55 — Session ended.
+- 2026-04-02 04:20 — Session ended.
+- 2026-04-02 04:22 — Session ended.
+- 2026-04-02 04:23 — Session ended.
+- 2026-04-02 04:25 — Session ended.
+- 2026-04-02 04:28 — Session ended.
+- 2026-04-02 04:29 — Session ended.
+- 2026-04-02 04:44 — Session ended.
+- 2026-04-02 05:02 — Session ended.
+- 2026-04-02 05:07 — Session ended.
