@@ -114,3 +114,22 @@ last-reviewed: 2026-03-26
 - 2026-03-31 14:43 — Session ended.
 - 2026-03-31 14:49 — Session ended.
 - 2026-03-31 14:50 — Session ended.
+- 2026-03-31 14:52 — Session ended.
+- 2026-03-31 14:54 — Session ended.
+- 2026-03-31 15:01 — Session ended.
+- 2026-03-31 15:04 — Session ended.
+- 2026-03-31 15:06 — Session ended.
+- 2026-03-31 15:07 — Session ended.
+- 2026-03-31 15:51 — Session ended.
+- 2026-03-31 15:53 — Session ended.
+- 2026-03-31 16:39 — Session ended.
+- 2026-03-31 16:43 — Session ended.
+- 2026-03-31 16:58 — Session ended.
+- 2026-03-31 18:25 — Session ended.
+- 2026-03-31 18:32 — Session ended.
+- 2026-04-02 01:14 — Session ended.
+- 2026-04-02 01:28 — Session ended.
+- 2026-04-02 01:37 — Session ended.
+
+## 2026-04-02
+- Repo Phase 1 setup: CODEOWNERS (protects /Core/, CLAUDE.md, .github/CODEOWNERS, .github/workflows/), markdownlint CI workflow (.markdownlint.json + .github/workflows/markdownlint.yml), link check CI workflow (.github/workflows/linkcheck.yml + .lycheeignore), VS Code config (.vscode/extensions.json + .vscode/settings.json), GitHub MCP Server registered via HTTP transport. CLAUDE.md updated with Repo Tooling section. All additions operator-approved.

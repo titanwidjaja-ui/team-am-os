@@ -1,0 +1,4 @@
+# Known URLs that may be flaky or require auth
+https://github.com/titanwidjaja-ui/team-am-os.*
+localhost
+127.0.0.1

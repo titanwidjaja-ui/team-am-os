@@ -216,4 +216,25 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 
 ---
 
-*Last updated: 2026-03-31 — Added /Templates/ folder (Grok-approved). Blueprint v4 and Snapshot Card HTML templates live.*
+## Repo Tooling
+
+### CI/CD
+- **Markdown linting:** Runs on every push/PR that changes .md files. Config in `.markdownlint.json`.
+- **Link checking:** Runs weekly (Monday 9am UTC) and on PRs. Config in `.lycheeignore`.
+
+### Governance Protection
+- **CODEOWNERS:** `/Core/`, `CLAUDE.md`, `.github/CODEOWNERS`, `.github/workflows/` require owner review.
+- **Branch protection:** PRs required for main. Code owner review required for protected paths. Admin bypass enabled for solo operator.
+- **Lefthook (planned):** Local pre-commit hook blocking accidental /Core/ modifications.
+
+### Editor
+- **VS Code config:** Committed in `.vscode/`. Install recommended extensions on first open.
+- **Markdown lint rules:** Match between `.markdownlint.json` (CI) and `.vscode/settings.json` (editor).
+
+### MCP Servers
+- **GitHub MCP Server:** Claude Code can manage PRs, issues, and branches via natural language.
+- **Canva MCP:** Installed via `claude mcp add --transport http Canva https://mcp.canva.com/mcp`.
+
+---
+
+*Last updated: 2026-04-02 — Repo Phase 1 setup: CODEOWNERS, CI linting, link checking, VS Code config, GitHub MCP. Operator-approved structural additions: .vscode/, .markdownlint.json, .lycheeignore.*

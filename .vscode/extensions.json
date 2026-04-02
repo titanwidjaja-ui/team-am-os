@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "yzhang.markdown-all-in-one",
+    "DavidAnson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "usernamehw.errorlens",
+    "eamodio.gitlens",
+    "vivaxy.vscode-conventional-commits",
+    "Gruntfuggly.todo-tree",
+    "ritwickdey.LiveServer",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
