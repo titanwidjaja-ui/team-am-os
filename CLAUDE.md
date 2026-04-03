@@ -84,6 +84,7 @@ See `Current-Build-State.md` for live snapshot.
 - `/AI-Prompts/ChatGPT-Prompt-Governance.md`
 - `/AI-Prompts/Grok-Architecture-Prompt.md`
 - `/AI-Prompts/Claude-Code-Builder-Prompt.md`
+- `/AI-Prompts/Stage-4-Check-In-Analysis-v1.md`
 - `Start-Here.md`
 - `Current-Build-State.md`
 
@@ -241,8 +242,10 @@ When any of these triggers fire, Claude must stop work and prompt the human oper
 
 Stage 1-4 v2.0 prompts approved post-Grok pressure-test. All safety, tier, and KB compliance rules now enforced. Prompts live in /AI-Prompts/.
 
+Stage 4 v1.0 (Check-In Analysis and Snapshot Card Generation) approved by Grok (2026-04-02). All 5 stage prompts are now locked. KB v2.8 finalized with 9 appendices.
+
 Grok approval note (2026-04-02): "The four v2.0 prompts are structurally strong and represent a major improvement over prior versions. They adequately address the 16 critical gaps identified in the deep research audit. The prompts are approved with no modifications required. The system is now ready for live client testing."
 
 ---
 
-*Last updated: 2026-04-02 — Stage 1-4 v2.0 prompts and Knowledge Base added to /AI-Prompts/ per Grok governance approval.*
+*Last updated: 2026-04-02 — Stage 4 v1.0 prompt added per Grok approval. All 5 stage prompts now locked. KB v2.8 finalized with 9 appendices.*
