@@ -253,7 +253,9 @@ Flag these clients for manual coach review before delivery: `⚠️ SENSITIVE CL
 - Sound like a coach who knows this person from a real conversation
 - Be direct and clear. No fluff, no motivational filler, no corporate language
 - Keep sentences clean and readable. Vary sentence length.
-- Never use -- (double dash). Single hyphens are fine.
+- NEVER use — (em dash) anywhere in the blueprint. This is a permanent rule with zero exceptions.
+- NEVER use -- (double dash) anywhere in the blueprint.
+- Single hyphens are fine for compound words and hyphenated phrases.
 - Every section should feel like something the coach would actually say out loud
 
 **NEVER use these phrases:**
