@@ -8,6 +8,10 @@ last-reviewed: 2026-03-26
 
 # CHANGELOG
 
+## 2026-04-04
+
+- Stage 2 prompt updated to v2.1. 10-step architecture with merged steps (4+5, 6+7, 10+11), new training step (05), Alejandro voice guide, Coach Letter, Closing Page. Grok approved.
+
 ## 2026-04-02
 
 - feat(prompts): Stage 4 v1.0 prompt added to /AI-Prompts/ — Stage-4-Check-In-Analysis-v1.md approved by Grok. All 5 stage prompts now locked. KB v2.8 finalized with 9 appendices.
@@ -199,3 +203,56 @@ last-reviewed: 2026-03-26
 - 2026-04-02 19:11 — Session ended.
 - 2026-04-02 22:21 — Session ended.
 - 2026-04-02 22:24 — Session ended.
+- 2026-04-02 22:34 — Session ended.
+- 2026-04-02 22:36 — Session ended.
+- 2026-04-02 22:46 — Session ended.
+- 2026-04-03 14:18 — Session ended.
+- 2026-04-03 14:27 — Session ended.
+- 2026-04-03 14:39 — Session ended.
+- 2026-04-03 14:44 — Session ended.
+- 2026-04-03 14:54 — Session ended.
+- 2026-04-03 15:26 — Session ended.
+- 2026-04-03 15:28 — Session ended.
+- 2026-04-03 15:36 — Session ended.
+- 2026-04-03 16:43 — Session ended.
+- 2026-04-03 16:47 — Session ended.
+- 2026-04-03 16:55 — Session ended.
+- 2026-04-03 17:04 — Session ended.
+- 2026-04-03 17:14 — Session ended.
+- 2026-04-03 17:19 — Session ended.
+- 2026-04-03 17:20 — Session ended.
+- 2026-04-03 17:45 — Session ended.
+- 2026-04-03 17:46 — Session ended.
+- 2026-04-03 18:23 — Session ended.
+- 2026-04-03 20:10 — Session ended.
+- 2026-04-03 20:31 — Session ended.
+- 2026-04-03 20:36 — Session ended.
+- 2026-04-03 21:43 — Session ended.
+- 2026-04-03 22:15 — Session ended.
+- 2026-04-03 22:16 — Session ended.
+- 2026-04-03 23:24 — Session ended.
+- 2026-04-03 23:44 — Session ended.
+- 2026-04-03 23:46 — Session ended.
+- 2026-04-03 23:47 — Session ended.
+- 2026-04-03 23:47 — Session ended.
+- 2026-04-03 23:49 — Session ended.
+- 2026-04-03 23:52 — Session ended.
+- 2026-04-04 00:14 — Session ended.
+- 2026-04-04 00:45 — Session ended.
+- 2026-04-04 01:17 — Session ended.
+- 2026-04-04 01:25 — Session ended.
+- 2026-04-04 02:06 — Session ended.
+- 2026-04-04 02:40 — Session ended.
+- 2026-04-04 03:11 — Session ended.
+- 2026-04-04 03:39 — Session ended.
+- 2026-04-04 03:42 — Session ended.
+- 2026-04-04 03:52 — Session ended.
+- 2026-04-04 05:22 — Session ended.
+- 2026-04-04 12:20 — Session ended.
+- 2026-04-04 12:20 — Session ended.
+- 2026-04-04 12:22 — Session ended.
+- 2026-04-04 12:24 — Session ended.
+- 2026-04-04 12:37 — Session ended.
+- 2026-04-04 12:41 — Session ended.
+- 2026-04-04 12:48 — Session ended.
+- 2026-04-04 12:51 — Session ended.
