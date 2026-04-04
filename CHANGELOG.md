@@ -11,6 +11,7 @@ last-reviewed: 2026-03-26
 ## 2026-04-04
 
 - Stage 2 prompt updated to v2.1. 10-step architecture with merged steps (4+5, 6+7, 10+11), new training step (05), Alejandro voice guide, Coach Letter, Closing Page. Grok approved.
+- Stage 3 QA Gate updated to v2.1. 37 sequential checks for 10-step architecture, strengthened allergen/medication conflict check, verify-numbers.js integration, Alejandro voice compliance. Grok approved.
 
 ## 2026-04-02
 
@@ -256,3 +257,5 @@ last-reviewed: 2026-03-26
 - 2026-04-04 12:41 — Session ended.
 - 2026-04-04 12:48 — Session ended.
 - 2026-04-04 12:51 — Session ended.
+- 2026-04-04 12:57 — Session ended.
+- 2026-04-04 13:06 — Session ended.
