@@ -431,6 +431,13 @@ Apply Dietary Restriction Override Protocol if applicable.
 
 NOTE: Exercise selection, split design, and progression logic are DETERMINISTIC. They come from KB Domain 7 and the coaching brief's training assessment. Do NOT invent programming.
 
+VOLUME RULES (from KB Domain 7d, non-negotiable):
+- Working sets per exercise: 1-3 maximum. NEVER 4+ sets of any exercise.
+- Default: 2 working sets for compounds, 1-2 for isolation.
+- The weekly volume target (6-10 sets per muscle group) is achieved through exercise selection and frequency, NOT by stacking sets on one exercise.
+- If you write "4 sets", "4x10", "4x12", or any prescription with 4+ sets for a single exercise, you have violated the core training philosophy.
+- This is intensity-focused training (JP/TNF). Fewer sets, maximum effort per set.
+
 Fields to populate:
 - Weekly Split Overview (table: Day, Session Type, Primary Muscle Groups)
 - Per-Session Exercise List (specific exercises, not generic categories)
