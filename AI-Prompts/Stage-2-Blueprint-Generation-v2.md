@@ -543,4 +543,11 @@ Fields to populate:
 
 ---
 
-End of blueprint. Run `/Engine/verify-numbers.js` then Stage 3 QA gates before delivery.
+End of blueprint.
+
+**Post-generation pipeline:**
+1. Run `/Engine/cleanup-text.js` (tier-aware deterministic text cleanup)
+2. Run `/Engine/verify-numbers.js` (numerical verification against calc layer)
+3. Run Stage 3 QA gates before delivery
+
+*Note: A future Stage 2.5 Voice Pass will be added as an LLM-based voice refinement step between cleanup-text.js and verify-numbers.js. For now, cleanup-text.js handles deterministic enforcement only.*
