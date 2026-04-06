@@ -8,6 +8,21 @@ last-reviewed: 2026-03-26
 
 # CHANGELOG
 
+## 2026-04-06
+
+- Website rebuilt with dark theme (#0A0A0F) and Refined Gold accent (#C8A45C). All purple/blue removed. Pill-shaped buttons, Lucide icons, dark glass nav. Committed and pushed to GitHub Pages.
+- AM tier price updated from $35 to $50/month across the website.
+- Real blueprint screenshots (cover, macros, training) replace CSS mockup in phone carousel on website.
+- Brand kit reference page (brand-kit.html) added to site repo.
+- Blueprint template updated: 9 step titles renamed to branded names (The Assessment, The Strategy, etc.). Fonts updated to Satoshi (headlines) + Inter (body) + Space Grotesk (data).
+- Google Sheets Prompts tab updated: Stage 2 v2.1 (A3), Stage 3 v2.1 (A4), KB v3 (A6).
+- 6 client templates added: Welcome Message, Onboarding Call Checklist, Check-In Response, Graduation Message, Pipeline Run Checklist, Coaching Brief Template.
+- Jotform reference docs committed: automation plan, check-in field IDs, intake conditional QIDs.
+- Sole proprietorship declaration PDF generated for Jotform business verification.
+- DNS verified: teamamtraining.com resolves to GitHub Pages IPs. HTTP works. HTTPS pending (SSL cert not yet provisioned).
+- Pipeline verified: all 3 Engine scripts functional (calc-layer.js, cleanup-text.js, verify-numbers.js). Node v24.14.1.
+- Blueprint verified near production-ready: 5/7 checks pass. Two minor issues: 1 em dash in HTML comment, "optimize" x2 in visible text.
+
 ## 2026-04-04
 
 - Stage 2 prompt updated to v2.1. 10-step architecture with merged steps (4+5, 6+7, 10+11), new training step (05), Alejandro voice guide, Coach Letter, Closing Page. Grok approved.
@@ -259,3 +274,54 @@ last-reviewed: 2026-03-26
 - 2026-04-04 12:51 — Session ended.
 - 2026-04-04 12:57 — Session ended.
 - 2026-04-04 13:06 — Session ended.
+- 2026-04-04 13:10 — Session ended.
+- 2026-04-04 13:13 — Session ended.
+- 2026-04-04 13:20 — Session ended.
+- 2026-04-04 16:07 — Session ended.
+- 2026-04-04 16:08 — Session ended.
+- 2026-04-04 16:09 — Session ended.
+- 2026-04-04 16:19 — Session ended.
+- 2026-04-04 16:27 — Session ended.
+- 2026-04-04 16:28 — Session ended.
+- 2026-04-04 16:36 — Session ended.
+- 2026-04-04 16:40 — Session ended.
+- 2026-04-04 16:52 — Session ended.
+- 2026-04-04 17:12 — Session ended.
+- 2026-04-04 17:14 — Session ended.
+- 2026-04-04 17:26 — Session ended.
+- 2026-04-04 17:41 — Session ended.
+- 2026-04-04 19:16 — Session ended.
+- 2026-04-04 19:39 — Session ended.
+- 2026-04-04 23:20 — Session ended.
+- 2026-04-04 23:29 — Session ended.
+- 2026-04-04 23:30 — Session ended.
+- 2026-04-04 23:49 — Session ended.
+- 2026-04-04 23:50 — Session ended.
+- 2026-04-04 23:54 — Session ended.
+- 2026-04-05 00:06 — Session ended.
+- 2026-04-05 00:26 — Session ended.
+- 2026-04-05 00:29 — Session ended.
+- 2026-04-05 00:54 — Session ended.
+- 2026-04-05 02:00 — Session ended.
+- 2026-04-05 02:06 — Session ended.
+- 2026-04-05 02:37 — Session ended.
+- 2026-04-05 13:54 — Session ended.
+- 2026-04-05 14:30 — Session ended.
+- 2026-04-05 15:31 — Session ended.
+- 2026-04-05 15:32 — Session ended.
+- 2026-04-05 15:32 — Session ended.
+- 2026-04-05 15:32 — Session ended.
+- 2026-04-05 15:45 — Session ended.
+- 2026-04-05 15:53 — Session ended.
+- 2026-04-05 15:56 — Session ended.
+- 2026-04-05 16:17 — Session ended.
+- 2026-04-05 16:21 — Session ended.
+- 2026-04-05 16:23 — Session ended.
+- 2026-04-05 16:27 — Session ended.
+- 2026-04-05 16:59 — Session ended.
+- 2026-04-05 17:11 — Session ended.
+- 2026-04-05 17:20 — Session ended.
+- 2026-04-05 17:22 — Session ended.
+- 2026-04-05 22:25 — Session ended.
+- 2026-04-05 23:36 — Session ended.
+- 2026-04-06 01:00 — Session ended.
