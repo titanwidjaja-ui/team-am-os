@@ -95,15 +95,31 @@ If pregnancy, active eating disorder, or unstable cardiovascular condition is de
 - Standard/Intermediate: client selected "I know the basics"
 - Expert: client selected "I'm deep in this"
 
+**Experience Classification (use highest qualifying tier):**
+
+Experience level should NOT be based solely on training duration. Use this multi-factor assessment:
+
+- **BEGINNER:** Training <6 months OR cannot describe their current program structure
+- **INTERMEDIATE:** Training 6 months-2 years AND follows a structured split AND tracks at least some lifts
+- **ADVANCED:** Must meet at least 3 of these 5:
+  1. Training consistently 2+ years
+  2. Runs a periodized or complex split (PPL, Upper/Lower, hybrid)
+  3. Can articulate training concepts (RPE, progressive overload, deload timing)
+  4. Has sustained a training-related injury from heavy loads (indicates significant strength base)
+  5. Has previous nutrition tracking experience (macros, not just calories)
+- **OVERRIDE:** If the client is a coach, personal trainer, or studying exercise science, classify as Advanced regardless of training duration.
+
 **Tier Validation Protocol:**
-Cross-check the client's self-selection against these intake signals:
+Cross-check the client's self-selection against the experience classification above AND these intake signals:
 - Training age (months/years of consistent training)
 - Tracking history (have they tracked macros before?)
 - Terminology use in open-text fields (do they use words like "progressive overload," "RPE," "maintenance calories" correctly?)
 - Supplement knowledge (do they know what they're taking and why?)
 - Nutrition specificity (do they give vague answers like "I eat healthy" or specific answers like "I hit about 140g protein most days"?)
+- Program complexity (generic routine vs. periodized split with intent)
+- Professional context (coach, trainer, or exercise science student)
 
-If signals contradict self-selection, flag: `⚠️ TIER MISMATCH: Client selected [X] but intake data suggests [Y]. Verify on call.`
+If signals contradict self-selection, flag: `⚠️ TIER MISMATCH: Client selected [X] but intake data suggests [Y] based on multi-factor assessment. Verify on call.`
 
 Never silently override the client's selection. Always flag for coach verification.
 
