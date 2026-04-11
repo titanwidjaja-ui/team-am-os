@@ -5,67 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Team AM Client Blueprint - Jordan Rivera</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 @page { size: 8.5in 11in; margin: 0; }
-body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
-.page { width: 8.5in; background: white; margin: 0 auto; }
+body { font-family: 'Inter', system-ui, sans-serif; background: #0A0A0F; }
+.page { width: 8.5in; background: #111118; margin: 0 auto; }
 @media screen { .page + .page { margin-top: 32px; } }
 @media print { .page { box-shadow: none; } }
-.step-page { padding: 0.85in 0.85in 0.75in; font-size: 9.5pt; line-height: 1.6; color: #0F172A; min-height: 11in; }
+.step-page { padding: 0.85in 0.85in 0.75in; font-size: 9.5pt; line-height: 1.6; color: #FFFFFF; min-height: 11in; }
 .step-page, .toc-page { page-break-before: always; break-before: page; }
 .cover-page { background: #0A1628; min-height: 11in; display: flex; flex-direction: column; justify-content: space-between; padding: 0.85in; overflow: hidden; position: relative; }
-.toc-page { padding: 0.85in; min-height: 11in; background: white; }
+.toc-page { padding: 0.85in; min-height: 11in; background: #111118; }
 .cover-glow-tr { position: absolute; top: -180px; right: -180px; width: 560px; height: 560px; background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%); pointer-events: none; }
 .cover-glow-bl { position: absolute; bottom: -180px; left: -180px; width: 560px; height: 560px; background: radial-gradient(circle, rgba(37,99,235,0.04) 0%, transparent 70%); pointer-events: none; }
-.sh-bar { height: 2px; background: linear-gradient(90deg,#2563EB 0%,#2563EB 60px,#E2E8F0 60px); margin-bottom: 22px; }
+.sh-bar { height: 2px; background: linear-gradient(90deg,#C8A45C 0%,#C8A45C 60px,rgba(255,255,255,0.06) 60px); margin-bottom: 22px; }
 .sh-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; }
-.sh-num { font-size: 11pt; font-weight: 700; color: #2563EB; }
-.sh-ttl { font-family: 'DM Serif Display', Georgia, serif; font-size: 17pt; color: #0A1628; }
-.sh-sub { font-size: 9pt; color: #475569; margin-top: -16px; margin-bottom: 24px; }
+.sh-num { font-size: 11pt; font-weight: 700; color: #C8A45C; }
+.sh-ttl { font-family: 'Satoshi', Georgia, serif; font-size: 17pt; color: #FFFFFF; }
+.sh-sub { font-size: 9pt; color: #9CA3AF; margin-top: -16px; margin-bottom: 24px; }
 .sec { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
 .bic { min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.bic.bl { background: #DBEAFE; } .bic.gr { background: #BBF7D0; } .bic.am { background: #FDE68A; } .bic.gy { background: #E2E8F0; } .bic.rd { background: #FECACA; }
-.sec-lbl { font-size: 7.5pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #0A1628; }
-.sec-sub { font-size: 7pt; color: #94A3B8; margin-left: auto; }
+.bic.bl { background: rgba(200,164,92,0.15); } .bic.gr { background: rgba(16,185,129,0.15); } .bic.am { background: rgba(200,164,92,0.2); } .bic.gy { background: rgba(255,255,255,0.06); } .bic.rd { background: rgba(220,38,38,0.15); }
+.sec-lbl { font-size: 7.5pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #FFFFFF; }
+.sec-sub { font-size: 7pt; color: #6B7280; margin-left: auto; }
 .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
 .g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 18px; }
 .g4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; margin-bottom: 18px; }
 .g5 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 8px; margin-bottom: 18px; }
 .gasym { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 12px; margin-bottom: 20px; }
 .callout { border-radius: 8px; padding: 16px 20px; margin-bottom: 14px; display: flex; gap: 14px; align-items: flex-start; }
-.callout.bl { background: #EFF6FF; border: 1px solid #DBEAFE; }
-.callout.gr { background: #ECFDF5; border: 1px solid #BBF7D0; }
-.callout.am { background: #FFFBEB; border: 1px solid #FDE68A; }
-.callout.rd { background: #FEF2F2; border: 1px solid #FECACA; }
+.callout.bl { background: rgba(200,164,92,0.06); border: 1px solid rgba(200,164,92,0.15); }
+.callout.gr { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15); }
+.callout.am { background: rgba(200,164,92,0.08); border: 1px solid rgba(200,164,92,0.2); }
+.callout.rd { background: rgba(220,38,38,0.06); border: 1px solid rgba(220,38,38,0.15); }
 .callout.sm { padding: 14px 18px; }
 .cic { border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
 .cic.lg { min-width: 32px; height: 32px; }
 .cic.sm { min-width: 28px; height: 28px; }
-.cic.bl { background: #DBEAFE; } .cic.gr { background: #BBF7D0; } .cic.am { background: #FDE68A; } .cic.rd { background: #FECACA; } .cic.gy { background: #E2E8F0; }
+.cic.bl { background: rgba(200,164,92,0.15); } .cic.gr { background: rgba(16,185,129,0.15); } .cic.am { background: rgba(200,164,92,0.2); } .cic.rd { background: rgba(220,38,38,0.15); } .cic.gy { background: rgba(255,255,255,0.06); }
 .c-lbl { font-size: 7.5pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 5px; }
 .c-txt { font-size: 9pt; line-height: 1.65; }
 .field { padding: 16px 18px; border-radius: 0 6px 6px 0; display: flex; gap: 14px; align-items: flex-start; margin-bottom: 18px; }
-.field.nv { border-left: 3px solid #0A1628; background: #F8FAFC; }
-.field.gr { border-left: 3px solid #059669; background: #ECFDF5; }
-.field.bl { border-left: 3px solid #2563EB; background: #F8FAFC; }
-.field.am { border-left: 3px solid #D97706; background: #FFFBEB; }
+.field.nv { border-left: 3px solid #0A1628; background: rgba(255,255,255,0.03); }
+.field.gr { border-left: 3px solid #059669; background: rgba(16,185,129,0.06); }
+.field.bl { border-left: 3px solid #C8A45C; background: rgba(255,255,255,0.03); }
+.field.am { border-left: 3px solid #D97706; background: rgba(200,164,92,0.08); }
 .fic { border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
 .fic.sm { min-width: 28px; height: 28px; }
-.fic.gy { background: #E2E8F0; }
-.fic.gr { background: #BBF7D0; }
-.fic.bl { background: #DBEAFE; }
-.f-lbl { font-size: 7.5pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #1A2B45; margin-bottom: 4px; }
-.f-txt { font-size: 9pt; line-height: 1.65; color: #0F172A; }
+.fic.gy { background: rgba(255,255,255,0.06); }
+.fic.gr { background: rgba(16,185,129,0.15); }
+.fic.bl { background: rgba(200,164,92,0.15); }
+.f-lbl { font-size: 7.5pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #FFFFFF; margin-bottom: 4px; }
+.f-txt { font-size: 9pt; line-height: 1.65; color: #FFFFFF; }
 .ni { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-radius: 6px; margin-bottom: 6px; }
-.ni.bl { background: #EFF6FF; border: 1px solid #DBEAFE; }
-.ni.wh { background: white; border: 1px solid #E2E8F0; }
+.ni.bl { background: rgba(200,164,92,0.06); border: 1px solid rgba(200,164,92,0.15); }
+.ni.wh { background: #111118; border: 1px solid rgba(255,255,255,0.06); }
 .nc { min-width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 8pt; font-weight: 700; color: white; flex-shrink: 0; }
-.nc.bl { background: #2563EB; } .nc.gy { background: #CBD5E1; }
-.chk { display: flex; align-items: flex-start; gap: 8px; font-size: 9pt; color: #0F172A; margin-bottom: 6px; }
+.nc.bl { background: #C8A45C; } .nc.gy { background: rgba(255,255,255,0.1); }
+.chk { display: flex; align-items: flex-start; gap: 8px; font-size: 9pt; color: #FFFFFF; margin-bottom: 6px; }
 .chk svg { flex-shrink: 0; margin-top: 3px; }
-.chk.mt { color: #64748B; }
+.chk.mt { color: #9CA3AF; }
 .bka { break-inside: avoid; }
 .mb20 { margin-bottom: 20px; } .mb18 { margin-bottom: 18px; } .mb14 { margin-bottom: 14px; }
 </style>
@@ -78,14 +79,14 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="cover-glow-bl"></div>
 
 <div style="display:flex;align-items:center;gap:10px;position:relative;z-index:1;">
-  <div style="width:36px;height:36px;border:1.5px solid rgba(255,255,255,0.3);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:11px;letter-spacing:0.05em;">AM</div>
+  <div style="width:36px;height:36px;background:#C8A45C;border:none;border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:11px;letter-spacing:0.05em;">AM</div>
   <span style="color:rgba(255,255,255,0.5);font-size:8.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;">Team AM</span>
 </div>
 
 <div style="text-align:center;position:relative;z-index:1;">
-  <div style="font-family:'DM Serif Display',Georgia,serif;font-size:48pt;color:white;line-height:1.1;margin-bottom:14px;">Your Blueprint</div>
-  <div style="font-size:8.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#2563EB;margin-bottom:22px;">Personalized Coaching Blueprint</div>
-  <div style="width:60px;height:3px;background:#2563EB;margin:0 auto 32px;"></div>
+  <div style="font-family:'Satoshi',Georgia,serif;font-size:48pt;color:white;line-height:1.1;margin-bottom:14px;">Your Blueprint</div>
+  <div style="font-size:8.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#C8A45C;margin-bottom:22px;">Personalized Coaching Blueprint</div>
+  <div style="width:60px;height:3px;background:#C8A45C;margin:0 auto 32px;"></div>
   <div style="font-size:10.5pt;line-height:2.2;color:rgba(255,255,255,0.7);">
     <div>Prepared For: <span style="color:white;font-weight:600;">Jordan Rivera</span></div>
     <div>Date: <span style="color:white;font-weight:600;">March 30, 2026</span></div>
@@ -101,69 +102,69 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 
 <!-- ============================================================ TABLE OF CONTENTS -->
 <div class="page toc-page">
-<div style="font-family:'DM Serif Display',Georgia,serif;font-size:26pt;color:#0A1628;margin-bottom:6px;">Contents</div>
-<div style="font-size:9pt;color:#94A3B8;margin-bottom:20px;">Your personalized plan across 12 steps</div>
-<div style="height:2px;background:linear-gradient(90deg,#2563EB 0%,#2563EB 60px,#E2E8F0 60px);margin-bottom:28px;"></div>
+<div style="font-family:'Satoshi',Georgia,serif;font-size:26pt;color:#FFFFFF;margin-bottom:6px;">Contents</div>
+<div style="font-size:9pt;color:#6B7280;margin-bottom:20px;">Your personalized plan across 12 steps</div>
+<div style="height:2px;background:linear-gradient(90deg,#C8A45C 0%,#C8A45C 60px,rgba(255,255,255,0.06) 60px);margin-bottom:28px;"></div>
 
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">01</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Where You Are Right Now</div><div style="font-size:8pt;color:#94A3B8;">What I see in your data and what it means for your plan</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">3</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">01</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Assessment</div><div style="font-size:8pt;color:#6B7280;">What I see in your data and what it means for your plan</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">3</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">02</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Phase and Game Plan</div><div style="font-size:8pt;color:#94A3B8;">Why this phase, your priorities, and what we're fixing first</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">4</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">02</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Strategy</div><div style="font-size:8pt;color:#6B7280;">Why this phase, your priorities, and what we're fixing first</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">4</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">03</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Numbers</div><div style="font-size:8pt;color:#94A3B8;">Calories, macros, and the targets that drive everything</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">5</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">03</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Engine</div><div style="font-size:8pt;color:#6B7280;">Calories, macros, and the targets that drive everything</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">5</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">04</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Eating Rhythm</div><div style="font-size:8pt;color:#94A3B8;">When to eat, how to structure your day, and why this timing works</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">6</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">04</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Fuel System</div><div style="font-size:8pt;color:#6B7280;">When to eat, how to structure your day, and why this timing works</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">6</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">05</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Food Playbook</div><div style="font-size:8pt;color:#94A3B8;">What to eat, how to build a plate, and how to keep it simple</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">7</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">05</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Fuel System (continued)</div><div style="font-size:8pt;color:#6B7280;">What to eat, how to build a plate, and how to keep it simple</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">7</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">06</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Supplements</div><div style="font-size:8pt;color:#94A3B8;">What's worth taking, what's not, and why each one is here</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">8</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">06</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Support Stack</div><div style="font-size:8pt;color:#6B7280;">What's worth taking, what's not, and why each one is here</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">8</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">07</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Hydration System</div><div style="font-size:8pt;color:#94A3B8;">Fluid targets, electrolytes, and why sodium matters for performance</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">9</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">07</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Support Stack (continued)</div><div style="font-size:8pt;color:#6B7280;">Fluid targets, electrolytes, and why sodium matters for performance</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">9</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">08</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Recovery Routine</div><div style="font-size:8pt;color:#94A3B8;">Sleep, stress, movement, and the order to check when things slip</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">10</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">08</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Recovery Check</div><div style="font-size:8pt;color:#6B7280;">Sleep, stress, movement, and the order to check when things slip</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">10</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">09</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Mindset Playbook</div><div style="font-size:8pt;color:#94A3B8;">Your strengths, your traps, and how to respond when it gets hard</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">11</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">09</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Operating System</div><div style="font-size:8pt;color:#6B7280;">Your strengths, your traps, and how to respond when it gets hard</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">11</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">10</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Tracking Setup</div><div style="font-size:8pt;color:#94A3B8;">What to track, how to track it, and how to keep it sustainable</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">12</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">10</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Daily Engine</div><div style="font-size:8pt;color:#6B7280;">What to track, how to track it, and how to keep it sustainable</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">12</span>
 </div>
-<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #F1F5F9;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">11</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your First 7 Days</div><div style="font-size:8pt;color:#94A3B8;">Exactly what to do this week and what success looks like</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">13</span>
+<div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">11</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Daily Engine (continued)</div><div style="font-size:8pt;color:#6B7280;">Exactly what to do this week and what success looks like</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">13</span>
 </div>
 <div style="display:flex;align-items:center;padding:13px 0;">
-  <span style="font-size:8px;font-weight:700;color:#2563EB;letter-spacing:0.1em;min-width:30px;">12</span>
-  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#0A1628;">Your Check-In</div><div style="font-size:8pt;color:#94A3B8;">What I ask for every two weeks, why it matters, and how I use it</div></div>
-  <span style="font-size:8.5pt;color:#94A3B8;padding-left:12px;">14</span>
+  <span style="font-size:8px;font-weight:700;color:#C8A45C;letter-spacing:0.1em;min-width:30px;">12</span>
+  <div style="flex:1;"><div style="font-size:10pt;font-weight:500;color:#FFFFFF;">The Roadmap</div><div style="font-size:8pt;color:#6B7280;">What I ask for every two weeks, why it matters, and how I use it</div></div>
+  <span style="font-size:8.5pt;color:#6B7280;padding-left:12px;">14</span>
 </div>
 </div>
 
@@ -171,30 +172,30 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="page step-page">
 
 <!-- Blueprint header strip -->
-<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;margin-bottom:20px;">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:6px;margin-bottom:20px;">
   <div style="display:flex;align-items:center;gap:8px;">
-    <div style="width:20px;height:20px;border:1.5px solid #0A1628;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:#0A1628;letter-spacing:0.03em;">AM</div>
-    <span style="font-size:7.5pt;font-weight:700;color:#0A1628;">Jordan Rivera</span>
+    <div style="width:20px;height:20px;border:1.5px solid #0A1628;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:#FFFFFF;letter-spacing:0.03em;">AM</div>
+    <span style="font-size:7.5pt;font-weight:700;color:#FFFFFF;">Jordan Rivera</span>
   </div>
   <div style="display:flex;align-items:center;gap:16px;">
-    <span style="font-size:7.5pt;color:#475569;">March 30, 2026</span>
-    <span style="font-size:7pt;font-weight:600;color:#2563EB;background:#EFF6FF;border:1px solid #DBEAFE;padding:2px 10px;border-radius:10px;letter-spacing:0.04em;">Fat Loss</span>
+    <span style="font-size:7.5pt;color:#9CA3AF;">March 30, 2026</span>
+    <span style="font-size:7pt;font-weight:600;color:#C8A45C;background:#EFF6FF;border:1px solid #DBEAFE;padding:2px 10px;border-radius:10px;letter-spacing:0.04em;">Fat Loss</span>
   </div>
 </div>
 
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 01</span>
-  <span class="sh-ttl">Where You Are Right Now</span>
+  <span class="sh-ttl">The Assessment</span>
 </div>
 
 <!-- Here's What I See -->
 <div class="callout bl mb18 bka">
   <div class="cic lg bl">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
   </div>
   <div>
-    <div class="c-lbl" style="color:#2563EB;">Here's what I see</div>
+    <div class="c-lbl" style="color:#C8A45C;">Here's what I see</div>
     <div class="c-txt" style="color:#1E3A5F;">Jordan, you're coming into this with a real foundation. The training has been consistent and your sleep is genuinely strong - both of those are assets. The gap right now is on the nutrition side. Eating has been mostly guesswork, meal timing has been irregular, and daily water intake is well below what your body needs. The plan closes those gaps in a specific order, starting with tracking and structure. Get those right and the results follow fast.</div>
   </div>
 </div>
@@ -226,29 +227,29 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <!-- Two Biggest Limiters -->
 <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:16px 18px;margin-bottom:18px;" class="bka">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
-    <div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div>
+    <div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div>
     <span class="sec-lbl">Your two biggest limiters</span>
   </div>
   <div class="g2" style="margin-bottom:0;">
-    <div style="background:white;border-radius:6px;padding:12px 14px;">
-      <div style="font-size:8pt;font-weight:700;color:#2563EB;margin-bottom:2px;">01 - No tracking system</div>
-      <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Without data, neither of us can know what's actually working. Every adjustment I make depends on your numbers. No numbers means we're both guessing.</div>
+    <div style="background:#111118;border-radius:6px;padding:12px 14px;">
+      <div style="font-size:8pt;font-weight:700;color:#C8A45C;margin-bottom:2px;">01 - No tracking system</div>
+      <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Without data, neither of us can know what's actually working. Every adjustment I make depends on your numbers. No numbers means we're both guessing.</div>
     </div>
-    <div style="background:white;border-radius:6px;padding:12px 14px;">
-      <div style="font-size:8pt;font-weight:700;color:#2563EB;margin-bottom:2px;">02 - No meal structure</div>
-      <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Eating at random times makes hunger and energy unpredictable. When hunger spikes at the wrong time, compliance breaks down. Fixed meal times prevent this.</div>
+    <div style="background:#111118;border-radius:6px;padding:12px 14px;">
+      <div style="font-size:8pt;font-weight:700;color:#C8A45C;margin-bottom:2px;">02 - No meal structure</div>
+      <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Eating at random times makes hunger and energy unpredictable. When hunger spikes at the wrong time, compliance breaks down. Fixed meal times prevent this.</div>
     </div>
   </div>
 </div>
 
 <!-- Three metric context cards -->
 <div class="g3 bka">
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:14px;text-align:center;">
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:14px;text-align:center;">
     <div style="margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto;display:block;"><path d="M12 3v18"/><path d="M8 7l4-4 4 4"/><path d="M8 17l4 4 4-4"/></svg></div>
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8;margin-bottom:4px;">Body</div>
-    <div style="font-size:17pt;font-weight:700;color:#0A1628;line-height:1.1;">195 lbs</div>
-    <div style="font-size:8pt;color:#475569;margin-top:4px;">~22% body fat</div>
-    <div style="font-size:7.5pt;color:#94A3B8;margin-top:2px;">solid muscle base</div>
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6B7280;margin-bottom:4px;">Body</div>
+    <div style="font-size:17pt;font-weight:700;color:#FFFFFF;line-height:1.1;">195 lbs</div>
+    <div style="font-size:8pt;color:#9CA3AF;margin-top:4px;">~22% body fat</div>
+    <div style="font-size:7.5pt;color:#6B7280;margin-top:2px;">solid muscle base</div>
   </div>
   <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:8px;padding:14px;text-align:center;">
     <div style="margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto;display:block;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
@@ -294,25 +295,25 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 02</span>
-  <span class="sh-ttl">Your Phase and Game Plan</span>
+  <span class="sh-ttl">The Strategy</span>
 </div>
 
 <!-- Phase declaration - two column -->
 <div class="g2 bka">
   <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:18px 20px;">
     <div style="margin-bottom:10px;">
-      <svg width="32" height="20" viewBox="0 0 80 40" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,8 22,8 32,28 48,14 58,22 76,4"/></svg>
+      <svg width="32" height="20" viewBox="0 0 80 40" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,8 22,8 32,28 48,14 58,22 76,4"/></svg>
     </div>
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#2563EB;margin-bottom:4px;">Current phase</div>
-    <div style="font-size:20pt;font-weight:700;color:#0A1628;line-height:1.1;margin-bottom:8px;">Fat Loss</div>
-    <div style="display:inline-flex;align-items:center;gap:5px;background:#DBEAFE;border-radius:10px;padding:3px 10px;">
-      <div style="width:6px;height:6px;background:#2563EB;border-radius:50%;"></div>
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#C8A45C;margin-bottom:4px;">Current phase</div>
+    <div style="font-size:20pt;font-weight:700;color:#FFFFFF;line-height:1.1;margin-bottom:8px;">Fat Loss</div>
+    <div style="display:inline-flex;align-items:center;gap:5px;background:rgba(200,164,92,0.15);border-radius:10px;padding:3px 10px;">
+      <div style="width:6px;height:6px;background:#C8A45C;border-radius:50%;"></div>
       <span style="font-size:7.5pt;font-weight:600;color:#1D4ED8;">Active</span>
     </div>
   </div>
   <div class="field bl" style="margin-bottom:0;border-radius:0 6px 6px 0;">
     <div class="fic sm bl">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
     </div>
     <div>
       <div class="f-lbl">Why I put you here</div>
@@ -322,41 +323,41 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 </div>
 
 <!-- Priority Ranking -->
-<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:16px 18px;" class="mb18 bka">
+<div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:16px 18px;" class="mb18 bka">
   <div class="sec" style="margin-bottom:14px;">
     <div class="bic gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2.5" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
     <span class="sec-lbl">Your priority ranking</span>
   </div>
-  <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:#2563EB;border:1px solid #DBEAFE;border-radius:6px;margin-bottom:6px;">
+  <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:#C8A45C;border:1px solid #DBEAFE;border-radius:6px;margin-bottom:6px;">
     <div class="nc" style="min-width:22px;height:22px;background:rgba(255,255,255,0.25);color:white;">1</div>
     <div style="flex:1;font-size:9pt;font-weight:600;color:white;">Hit daily calorie and protein targets</div>
-    <span style="font-size:7pt;font-weight:700;color:#2563EB;background:white;border:1px solid #DBEAFE;padding:2px 8px;border-radius:8px;">Top focus</span>
+    <span style="font-size:7pt;font-weight:700;color:#C8A45C;background:#111118;border:1px solid #DBEAFE;padding:2px 8px;border-radius:8px;">Top focus</span>
   </div>
   <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:#60A5FA;border:1px solid #DBEAFE;border-radius:6px;margin-bottom:6px;">
     <div class="nc" style="min-width:22px;height:22px;background:rgba(255,255,255,0.3);color:white;">2</div>
     <div style="flex:1;font-size:9pt;font-weight:600;color:white;">Log every meal in Cronometer</div>
   </div>
-  <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:#DBEAFE;border:1px solid #BFDBFE;border-radius:6px;margin-bottom:10px;">
+  <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(200,164,92,0.15);border:1px solid #BFDBFE;border-radius:6px;margin-bottom:10px;">
     <div class="nc bl">3</div>
-    <div style="flex:1;font-size:9pt;font-weight:600;color:#2563EB;">Hit 130 oz water daily</div>
+    <div style="flex:1;font-size:9pt;font-weight:600;color:#C8A45C;">Hit 130 oz water daily</div>
   </div>
   <div style="display:flex;align-items:center;gap:10px;padding:9px 14px;background:#EFF6FF;border:1px solid #E2E8F0;border-radius:6px;margin-bottom:6px;">
     <div class="nc gy">4</div>
-    <div style="flex:1;font-size:9pt;font-weight:500;color:#475569;">Maintain current training intensity - do not add volume</div>
+    <div style="flex:1;font-size:9pt;font-weight:500;color:#9CA3AF;">Maintain current training intensity - do not add volume</div>
   </div>
-  <div style="display:flex;align-items:center;gap:10px;padding:9px 14px;background:#F1F5F9;border:1px solid #E2E8F0;border-radius:6px;">
-    <div class="nc" style="min-width:22px;height:22px;background:#CBD5E1;color:#94A3B8;">5</div>
-    <div style="flex:1;font-size:9pt;font-weight:500;color:#94A3B8;">Hit 10,000 steps daily</div>
+  <div style="display:flex;align-items:center;gap:10px;padding:9px 14px;background:rgba(255,255,255,0.06);border:1px solid #E2E8F0;border-radius:6px;">
+    <div class="nc" style="min-width:22px;height:22px;background:#CBD5E1;color:#6B7280;">5</div>
+    <div style="flex:1;font-size:9pt;font-weight:500;color:#6B7280;">Hit 10,000 steps daily</div>
   </div>
 </div>
 
 <!-- The One Thing That Matters Most -->
 <div class="callout bl bka">
   <div class="cic lg bl">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="1.8" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
   </div>
   <div>
-    <div class="c-lbl" style="color:#2563EB;">The one thing that matters most</div>
+    <div class="c-lbl" style="color:#C8A45C;">The one thing that matters most</div>
     <div class="c-txt" style="color:#1E3A5F;font-size:10pt;font-weight:600;">Hitting your protein target every single day. Get protein right and calories right, and muscle is protected while fat comes off. Everything else is secondary.</div>
   </div>
 </div>
@@ -371,13 +372,13 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div style="border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;margin-bottom:10px;" class="bka">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
     <div class="nc bl" style="min-width:22px;height:22px;">1</div>
-    <span style="font-size:9pt;font-weight:700;color:#0A1628;">No tracking system</span>
+    <span style="font-size:9pt;font-weight:700;color:#FFFFFF;">No tracking system</span>
   </div>
-  <div style="font-size:8.5pt;line-height:1.55;color:#475569;margin-bottom:10px;">You've been estimating portions without data. Neither of us can make accurate adjustments without real numbers. This gets fixed first.</div>
+  <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;margin-bottom:10px;">You've been estimating portions without data. Neither of us can make accurate adjustments without real numbers. This gets fixed first.</div>
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
-    <div style="background:#ECFDF5;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#065F46;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Now</div><div style="font-size:8pt;color:#0F172A;">Download Cronometer and set up your targets</div></div>
-    <div style="background:#EFF6FF;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Next</div><div style="font-size:8pt;color:#0F172A;">Weigh protein sources for the first 2 weeks</div></div>
-    <div style="background:#F8FAFC;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Later</div><div style="font-size:8pt;color:#475569;">Add calorie cycling once flat calories are dialed</div></div>
+    <div style="background:#ECFDF5;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#065F46;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Now</div><div style="font-size:8pt;color:#FFFFFF;">Download Cronometer and set up your targets</div></div>
+    <div style="background:#EFF6FF;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Next</div><div style="font-size:8pt;color:#FFFFFF;">Weigh protein sources for the first 2 weeks</div></div>
+    <div style="background:rgba(255,255,255,0.03);border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Later</div><div style="font-size:8pt;color:#9CA3AF;">Add calorie cycling once flat calories are dialed</div></div>
   </div>
 </div>
 
@@ -385,13 +386,13 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div style="border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;margin-bottom:10px;" class="bka">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
     <div class="nc bl" style="min-width:22px;height:22px;">2</div>
-    <span style="font-size:9pt;font-weight:700;color:#0A1628;">Inconsistent meal timing</span>
+    <span style="font-size:9pt;font-weight:700;color:#FFFFFF;">Inconsistent meal timing</span>
   </div>
-  <div style="font-size:8.5pt;line-height:1.55;color:#475569;margin-bottom:10px;">Eating at random times makes hunger unpredictable. When hunger spikes at the wrong time, you make bad decisions by default. Fixed meal times remove that variable.</div>
+  <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;margin-bottom:10px;">Eating at random times makes hunger unpredictable. When hunger spikes at the wrong time, you make bad decisions by default. Fixed meal times remove that variable.</div>
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
-    <div style="background:#ECFDF5;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#065F46;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Now</div><div style="font-size:8pt;color:#0F172A;">Pick 4 fixed meal times and protect them this week</div></div>
-    <div style="background:#EFF6FF;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Next</div><div style="font-size:8pt;color:#0F172A;">Add one Sunday meal prep session</div></div>
-    <div style="background:#F8FAFC;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Later</div><div style="font-size:8pt;color:#475569;">Adjust meal timing around training block changes</div></div>
+    <div style="background:#ECFDF5;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#065F46;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Now</div><div style="font-size:8pt;color:#FFFFFF;">Pick 4 fixed meal times and protect them this week</div></div>
+    <div style="background:#EFF6FF;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Next</div><div style="font-size:8pt;color:#FFFFFF;">Add one Sunday meal prep session</div></div>
+    <div style="background:rgba(255,255,255,0.03);border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Later</div><div style="font-size:8pt;color:#9CA3AF;">Adjust meal timing around training block changes</div></div>
   </div>
 </div>
 
@@ -399,13 +400,13 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div style="border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;" class="bka">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
     <div class="nc bl" style="min-width:22px;height:22px;">3</div>
-    <span style="font-size:9pt;font-weight:700;color:#0A1628;">Low daily water intake</span>
+    <span style="font-size:9pt;font-weight:700;color:#FFFFFF;">Low daily water intake</span>
   </div>
-  <div style="font-size:8.5pt;line-height:1.55;color:#475569;margin-bottom:10px;">You're getting roughly half your target. Low hydration affects energy, digestion, and the reliability of your scale readings. This is one of the fastest-fixing bottlenecks in the plan.</div>
+  <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;margin-bottom:10px;">You're getting roughly half your target. Low hydration affects energy, digestion, and the reliability of your scale readings. This is one of the fastest-fixing bottlenecks in the plan.</div>
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
-    <div style="background:#ECFDF5;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#065F46;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Now</div><div style="font-size:8pt;color:#0F172A;">Get a 32-40 oz bottle and track daily fills</div></div>
-    <div style="background:#EFF6FF;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Next</div><div style="font-size:8pt;color:#0F172A;">Add a pinch of sodium to pre-training water</div></div>
-    <div style="background:#F8FAFC;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Later</div><div style="font-size:8pt;color:#475569;">Add electrolyte supplements once baseline is consistent</div></div>
+    <div style="background:#ECFDF5;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#065F46;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Now</div><div style="font-size:8pt;color:#FFFFFF;">Get a 32-40 oz bottle and track daily fills</div></div>
+    <div style="background:#EFF6FF;border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Next</div><div style="font-size:8pt;color:#FFFFFF;">Add a pinch of sodium to pre-training water</div></div>
+    <div style="background:rgba(255,255,255,0.03);border-radius:6px;padding:8px 10px;"><div style="font-size:7pt;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Do Later</div><div style="font-size:8pt;color:#9CA3AF;">Add electrolyte supplements once baseline is consistent</div></div>
   </div>
 </div>
 </div>
@@ -415,26 +416,26 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 03</span>
-  <span class="sh-ttl">Your Numbers</span>
+  <span class="sh-ttl">The Engine</span>
 </div>
 
 <!-- Calorie cards -->
 <div class="g2 bka">
   <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:16px 20px;">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-      <div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
-      <span style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#2563EB;">Your daily calories</span>
+      <div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+      <span style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C8A45C;">Your daily calories</span>
     </div>
-    <div style="font-size:26pt;font-weight:700;color:#2563EB;line-height:1.1;margin-bottom:4px;">2,250</div>
+    <div style="font-size:26pt;font-weight:700;color:#C8A45C;line-height:1.1;margin-bottom:4px;">2,250</div>
     <div style="font-size:8pt;color:#3B82F6;">about 400 below maintenance</div>
   </div>
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:16px 20px;">
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:16px 20px;">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
       <div class="bic gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
-      <span style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#475569;">Estimated maintenance</span>
+      <span style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9CA3AF;">Estimated maintenance</span>
     </div>
-    <div style="font-size:26pt;font-weight:700;color:#0A1628;line-height:1.1;margin-bottom:4px;">2,650</div>
-    <div style="font-size:8pt;color:#94A3B8;">based on your stats and activity</div>
+    <div style="font-size:26pt;font-weight:700;color:#FFFFFF;line-height:1.1;margin-bottom:4px;">2,650</div>
+    <div style="font-size:8pt;color:#6B7280;">based on your stats and activity</div>
   </div>
 </div>
 
@@ -451,33 +452,33 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
     <div style="font-size:8pt;color:#92400E;">remaining budget after protein and fat</div>
   </div>
   <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:16px 14px;text-align:center;">
-    <div style="font-size:7pt;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563EB;margin-bottom:4px;">Fat</div>
-    <div style="font-size:26pt;font-weight:700;color:#2563EB;line-height:1.1;margin-bottom:4px;">78g</div>
+    <div style="font-size:7pt;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#C8A45C;margin-bottom:4px;">Fat</div>
+    <div style="font-size:26pt;font-weight:700;color:#C8A45C;line-height:1.1;margin-bottom:4px;">78g</div>
     <div style="font-size:8pt;color:#1D4ED8;">0.4g per lb - hormones and function</div>
   </div>
 </div>
 
 <!-- Supporting targets -->
 <div class="g4 bka">
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px 10px;text-align:center;">
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#94A3B8;margin-bottom:4px;">Fiber</div>
-    <div style="font-size:15pt;font-weight:700;color:#0A1628;line-height:1.1;">25-35g</div>
-    <div style="font-size:7.5pt;color:#475569;margin-top:3px;">daily minimum</div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:12px 10px;text-align:center;">
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#6B7280;margin-bottom:4px;">Fiber</div>
+    <div style="font-size:15pt;font-weight:700;color:#FFFFFF;line-height:1.1;">25-35g</div>
+    <div style="font-size:7.5pt;color:#9CA3AF;margin-top:3px;">daily minimum</div>
   </div>
   <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;">
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#2563EB;margin-bottom:4px;">Fluids</div>
-    <div style="font-size:15pt;font-weight:700;color:#2563EB;line-height:1.1;">130 oz</div>
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#C8A45C;margin-bottom:4px;">Fluids</div>
+    <div style="font-size:15pt;font-weight:700;color:#C8A45C;line-height:1.1;">130 oz</div>
     <div style="font-size:7.5pt;color:#3B82F6;margin-top:3px;">minimum daily</div>
   </div>
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px 10px;text-align:center;">
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#94A3B8;margin-bottom:4px;">Sodium</div>
-    <div style="font-size:15pt;font-weight:700;color:#0A1628;line-height:1.1;">~3,850mg</div>
-    <div style="font-size:7.5pt;color:#475569;margin-top:3px;">1g per liter, scale up</div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:12px 10px;text-align:center;">
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#6B7280;margin-bottom:4px;">Sodium</div>
+    <div style="font-size:15pt;font-weight:700;color:#FFFFFF;line-height:1.1;">~3,850mg</div>
+    <div style="font-size:7.5pt;color:#9CA3AF;margin-top:3px;">1g per liter, scale up</div>
   </div>
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px 10px;text-align:center;">
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#94A3B8;margin-bottom:4px;">Potassium</div>
-    <div style="font-size:15pt;font-weight:700;color:#0A1628;line-height:1.1;">~3,850mg</div>
-    <div style="font-size:7.5pt;color:#475569;margin-top:3px;">matches sodium 1:1</div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:12px 10px;text-align:center;">
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:#6B7280;margin-bottom:4px;">Potassium</div>
+    <div style="font-size:15pt;font-weight:700;color:#FFFFFF;line-height:1.1;">~3,850mg</div>
+    <div style="font-size:7.5pt;color:#9CA3AF;margin-top:3px;">matches sodium 1:1</div>
   </div>
 </div>
 
@@ -495,10 +496,10 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <!-- Why I Chose These Numbers -->
 <div class="callout bl bka" style="margin-bottom:0;">
   <div class="cic lg bl">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
   </div>
   <div>
-    <div class="c-lbl" style="color:#2563EB;">Why I chose these numbers</div>
+    <div class="c-lbl" style="color:#C8A45C;">Why I chose these numbers</div>
     <div class="c-txt" style="color:#1E3A5F;">At 195 lbs and 22% body fat, you have enough fat stores to handle a 400-calorie deficit without muscle loss, especially with 156g of protein anchoring the plan. Protein is set at 0.8g per lb, which is the fat loss rate - lower than a gain phase to preserve your carb budget and keep energy up. Fat is set at 0.4g per lb, which is the floor for hormonal function. Everything else is carbs, and at 231g you have enough fuel to train hard and recover well.</div>
   </div>
 </div>
@@ -510,42 +511,42 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 04</span>
-  <span class="sh-ttl">Your Eating Rhythm</span>
+  <span class="sh-ttl">The Fuel System</span>
 </div>
 
 <!-- Timeline -->
 <div class="sec">
-  <div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+  <div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
   <span class="sec-lbl">Your meal timing</span>
 </div>
 
 <div style="position:relative;padding-left:32px;margin-bottom:20px;" class="bka">
   <!-- Timeline line -->
-  <div style="position:absolute;left:10px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,#2563EB 0%,#DBEAFE 100%);"></div>
+  <div style="position:absolute;left:10px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,#C8A45C 0%,#DBEAFE 100%);"></div>
 
   <!-- Meal 1 -->
   <div style="position:relative;margin-bottom:14px;">
-    <div style="position:absolute;left:-26px;top:8px;width:12px;height:12px;background:#2563EB;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px #2563EB;"></div>
-    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:12px 14px;">
+    <div style="position:absolute;left:-26px;top:8px;width:12px;height:12px;background:#C8A45C;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px #C8A45C;"></div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:6px;padding:12px 14px;">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-        <span style="font-size:8.5pt;font-weight:700;color:#2563EB;">7:00 AM</span>
-        <span style="font-size:7pt;font-weight:600;color:#0A1628;text-transform:uppercase;letter-spacing:0.06em;">Breakfast</span>
+        <span style="font-size:8.5pt;font-weight:700;color:#C8A45C;">7:00 AM</span>
+        <span style="font-size:7pt;font-weight:600;color:#FFFFFF;text-transform:uppercase;letter-spacing:0.06em;">Breakfast</span>
         <span style="margin-left:auto;font-size:7pt;color:#DC2626;font-weight:600;">38g protein</span>
       </div>
-      <div style="font-size:8.5pt;color:#475569;line-height:1.55;">Greek yogurt with oatmeal and berries, plus two eggs. Protein-anchored start to keep hunger stable through the morning.</div>
+      <div style="font-size:8.5pt;color:#9CA3AF;line-height:1.55;">Greek yogurt with oatmeal and berries, plus two eggs. Protein-anchored start to keep hunger stable through the morning.</div>
     </div>
   </div>
 
   <!-- Meal 2 -->
   <div style="position:relative;margin-bottom:14px;">
-    <div style="position:absolute;left:-26px;top:8px;width:12px;height:12px;background:#2563EB;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px #2563EB;"></div>
-    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:12px 14px;">
+    <div style="position:absolute;left:-26px;top:8px;width:12px;height:12px;background:#C8A45C;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px #C8A45C;"></div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:6px;padding:12px 14px;">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-        <span style="font-size:8.5pt;font-weight:700;color:#2563EB;">12:00 PM</span>
-        <span style="font-size:7pt;font-weight:600;color:#0A1628;text-transform:uppercase;letter-spacing:0.06em;">Lunch</span>
+        <span style="font-size:8.5pt;font-weight:700;color:#C8A45C;">12:00 PM</span>
+        <span style="font-size:7pt;font-weight:600;color:#FFFFFF;text-transform:uppercase;letter-spacing:0.06em;">Lunch</span>
         <span style="margin-left:auto;font-size:7pt;color:#DC2626;font-weight:600;">47g protein</span>
       </div>
-      <div style="font-size:8.5pt;color:#475569;line-height:1.55;">Chicken breast with white rice, salad, and olive oil. Largest meal of the day. Gets you halfway to your protein target before training.</div>
+      <div style="font-size:8.5pt;color:#9CA3AF;line-height:1.55;">Chicken breast with white rice, salad, and olive oil. Largest meal of the day. Gets you halfway to your protein target before training.</div>
     </div>
   </div>
 
@@ -558,32 +559,32 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
         <span style="font-size:7pt;font-weight:600;color:#065F46;text-transform:uppercase;letter-spacing:0.06em;">Pre-Workout</span>
         <span style="margin-left:auto;font-size:7pt;color:#DC2626;font-weight:600;">36g protein</span>
       </div>
-      <div style="font-size:8.5pt;color:#475569;line-height:1.55;">Whey protein shake plus banana and rice cakes. Carb-forward to fuel training. Keep fat low here so it doesn't slow gastric emptying before your session.</div>
+      <div style="font-size:8.5pt;color:#9CA3AF;line-height:1.55;">Whey protein shake plus banana and rice cakes. Carb-forward to fuel training. Keep fat low here so it doesn't slow gastric emptying before your session.</div>
     </div>
   </div>
 
   <!-- Meal 4 - Post-workout/Dinner -->
   <div style="position:relative;">
-    <div style="position:absolute;left:-26px;top:8px;width:12px;height:12px;background:#2563EB;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px #2563EB;"></div>
-    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:12px 14px;">
+    <div style="position:absolute;left:-26px;top:8px;width:12px;height:12px;background:#C8A45C;border-radius:50%;border:2px solid white;box-shadow:0 0 0 2px #C8A45C;"></div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:6px;padding:12px 14px;">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-        <span style="font-size:8.5pt;font-weight:700;color:#2563EB;">7:30 PM</span>
-        <span style="font-size:7pt;font-weight:600;color:#0A1628;text-transform:uppercase;letter-spacing:0.06em;">Dinner</span>
+        <span style="font-size:8.5pt;font-weight:700;color:#C8A45C;">7:30 PM</span>
+        <span style="font-size:7pt;font-weight:600;color:#FFFFFF;text-transform:uppercase;letter-spacing:0.06em;">Dinner</span>
         <span style="margin-left:auto;font-size:7pt;color:#DC2626;font-weight:600;">35g protein</span>
       </div>
-      <div style="font-size:8.5pt;color:#475569;line-height:1.55;">Salmon with sweet potato and vegetables. Fat and protein-forward to support overnight recovery. Carbs come from the sweet potato and vegetables.</div>
+      <div style="font-size:8.5pt;color:#9CA3AF;line-height:1.55;">Salmon with sweet potato and vegetables. Fat and protein-forward to support overnight recovery. Carbs come from the sweet potato and vegetables.</div>
     </div>
   </div>
 </div>
 
 <!-- Flexible slot -->
-<div style="border-bottom:2px solid #F1F5F9;padding:12px 14px;margin-bottom:18px;" class="bka">
+<div style="border-bottom:2px solid rgba(255,255,255,0.06);padding:12px 14px;margin-bottom:18px;" class="bka">
   <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-    <span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#475569;">Flexible eating slot</span>
-    <span style="margin-left:auto;font-size:7.5pt;color:#94A3B8;">150-200 calories</span>
+    <span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#9CA3AF;">Flexible eating slot</span>
+    <span style="margin-left:auto;font-size:7.5pt;color:#6B7280;">150-200 calories</span>
   </div>
-  <div style="font-size:8.5pt;color:#475569;line-height:1.55;">An evening buffer for a light snack if hunger is high, social eating situations, or when one of your main meals ran short. Not a bonus reward - use it when you need it and skip it when you don't.</div>
+  <div style="font-size:8.5pt;color:#9CA3AF;line-height:1.55;">An evening buffer for a light snack if hunger is high, social eating situations, or when one of your main meals ran short. Not a bonus reward - use it when you need it and skip it when you don't.</div>
 </div>
 
 <!-- Why This Rhythm Works -->
@@ -603,7 +604,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 05</span>
-  <span class="sh-ttl">Your Food Playbook</span>
+  <span class="sh-ttl">The Fuel System (continued)</span>
 </div>
 
 <!-- Protein tier cards -->
@@ -633,9 +634,9 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 </div>
 
 <!-- Convenience note -->
-<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:8px 14px;margin-bottom:18px;display:flex;align-items:center;gap:8px;" class="bka">
-  <span style="font-size:7pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#94A3B8;">Convenience (Tier 3)</span>
-  <span style="font-size:8.5pt;color:#475569;">Whey protein, deli meats (minimal processing) — fill gaps, not foundations</span>
+<div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:6px;padding:8px 14px;margin-bottom:18px;display:flex;align-items:center;gap:8px;" class="bka">
+  <span style="font-size:7pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B7280;">Convenience (Tier 3)</span>
+  <span style="font-size:8.5pt;color:#9CA3AF;">Whey protein, deli meats (minimal processing) — fill gaps, not foundations</span>
 </div>
 
 <!-- Carbs + Fat two-column -->
@@ -652,7 +653,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
   </div>
   <!-- Fat -->
   <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;overflow:hidden;">
-    <div style="background:#2563EB;padding:10px 14px;display:flex;align-items:center;gap:8px;">
+    <div style="background:#C8A45C;padding:10px 14px;display:flex;align-items:center;gap:8px;">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
       <span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:white;">Fat sources</span>
     </div>
@@ -663,7 +664,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 </div>
 
 <!-- When You Can't Track - plate section -->
-<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;overflow:hidden;margin-bottom:18px;" class="bka">
+<div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;overflow:hidden;margin-bottom:18px;" class="bka">
   <div style="background:#0A1628;padding:10px 18px;display:flex;align-items:center;gap:8px;">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
     <span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:white;">When you can't track</span>
@@ -674,26 +675,26 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
       <div style="text-align:center;padding:10px 8px;background:#FEF2F2;border-radius:6px;border:1px solid #FECACA;">
         <div style="font-size:18pt;margin-bottom:4px;">✋</div>
         <div style="font-size:7pt;font-weight:700;color:#DC2626;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Palm</div>
-        <div style="font-size:8pt;font-weight:600;color:#0A1628;margin-bottom:2px;">Protein</div>
-        <div style="font-size:7.5pt;color:#475569;line-height:1.4;">Beef, salmon, eggs, chicken, or any Tier 1 source. Thickness and width of your palm per meal.</div>
+        <div style="font-size:8pt;font-weight:600;color:#FFFFFF;margin-bottom:2px;">Protein</div>
+        <div style="font-size:7.5pt;color:#9CA3AF;line-height:1.4;">Beef, salmon, eggs, chicken, or any Tier 1 source. Thickness and width of your palm per meal.</div>
       </div>
       <div style="text-align:center;padding:10px 8px;background:#FFFBEB;border-radius:6px;border:1px solid #FDE68A;">
         <div style="font-size:18pt;margin-bottom:4px;">🤲</div>
         <div style="font-size:7pt;font-weight:700;color:#D97706;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Cupped handful</div>
-        <div style="font-size:8pt;font-weight:600;color:#0A1628;margin-bottom:2px;">Carb sources</div>
-        <div style="font-size:7.5pt;color:#475569;line-height:1.4;">Rice, oats, potato - one cupped handful</div>
+        <div style="font-size:8pt;font-weight:600;color:#FFFFFF;margin-bottom:2px;">Carb sources</div>
+        <div style="font-size:7.5pt;color:#9CA3AF;line-height:1.4;">Rice, oats, potato - one cupped handful</div>
       </div>
       <div style="text-align:center;padding:10px 8px;background:#ECFDF5;border-radius:6px;border:1px solid #BBF7D0;">
         <div style="font-size:18pt;margin-bottom:4px;">✊</div>
         <div style="font-size:7pt;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Fist</div>
-        <div style="font-size:8pt;font-weight:600;color:#0A1628;margin-bottom:2px;">Nutrient-dense veg</div>
-        <div style="font-size:7.5pt;color:#475569;line-height:1.4;">Dark leafy greens, cruciferous, deeply colored - not iceberg</div>
+        <div style="font-size:8pt;font-weight:600;color:#FFFFFF;margin-bottom:2px;">Nutrient-dense veg</div>
+        <div style="font-size:7.5pt;color:#9CA3AF;line-height:1.4;">Dark leafy greens, cruciferous, deeply colored - not iceberg</div>
       </div>
       <div style="text-align:center;padding:10px 8px;background:#EFF6FF;border-radius:6px;border:1px solid #DBEAFE;">
         <div style="font-size:18pt;margin-bottom:4px;">👍</div>
-        <div style="font-size:7pt;font-weight:700;color:#2563EB;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Thumb</div>
-        <div style="font-size:8pt;font-weight:600;color:#0A1628;margin-bottom:2px;">Fat sources</div>
-        <div style="font-size:7.5pt;color:#475569;line-height:1.4;">Oils, nut butters, avocado - one thumb-sized serving</div>
+        <div style="font-size:7pt;font-weight:700;color:#C8A45C;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Thumb</div>
+        <div style="font-size:8pt;font-weight:600;color:#FFFFFF;margin-bottom:2px;">Fat sources</div>
+        <div style="font-size:7.5pt;color:#9CA3AF;line-height:1.4;">Oils, nut butters, avocado - one thumb-sized serving</div>
       </div>
     </div>
   </div>
@@ -704,23 +705,23 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
   <div style="border:1px solid #E2E8F0;border-radius:8px;padding:14px 14px;">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
       <div class="nc bl" style="min-width:22px;height:22px;">1</div>
-      <span style="font-size:8.5pt;font-weight:700;color:#0A1628;">Meal Prep Strategy</span>
+      <span style="font-size:8.5pt;font-weight:700;color:#FFFFFF;">Meal Prep Strategy</span>
     </div>
-    <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Pick one day (Sunday). Batch cook 2-3 protein sources and 2 carb sources. Pre-portion into containers for the first 3-4 days. Focus on breakfast and lunch first - those are the hardest to get right on a busy day.</div>
+    <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Pick one day (Sunday). Batch cook 2-3 protein sources and 2 carb sources. Pre-portion into containers for the first 3-4 days. Focus on breakfast and lunch first - those are the hardest to get right on a busy day.</div>
   </div>
   <div style="border:1px solid #E2E8F0;border-radius:8px;padding:14px 14px;">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
       <div class="nc bl" style="min-width:22px;height:22px;">2</div>
-      <span style="font-size:8.5pt;font-weight:700;color:#0A1628;">Grocery Framework</span>
+      <span style="font-size:8.5pt;font-weight:700;color:#FFFFFF;">Grocery Framework</span>
     </div>
-    <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Build around protein (chicken, eggs, Greek yogurt, salmon) + produce (leafy greens, sweet potato, banana, berries) + pantry (rice, oatmeal, olive oil). Rotate 2-3 proteins per week to avoid food fatigue.</div>
+    <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Build around protein (chicken, eggs, Greek yogurt, salmon) + produce (leafy greens, sweet potato, banana, berries) + pantry (rice, oatmeal, olive oil). Rotate 2-3 proteins per week to avoid food fatigue.</div>
   </div>
   <div style="border:1px solid #E2E8F0;border-radius:8px;padding:14px 14px;">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
       <div class="nc bl" style="min-width:22px;height:22px;">3</div>
-      <span style="font-size:8.5pt;font-weight:700;color:#0A1628;">Eating Out Strategy</span>
+      <span style="font-size:8.5pt;font-weight:700;color:#FFFFFF;">Eating Out Strategy</span>
     </div>
-    <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Protein and vegetables first. Ask for dressings on the side. Estimate 4-6 oz protein. Skip the bread basket unless it fits the meal. Eating out 1-2 times per week is fine - just log your best estimate and move on.</div>
+    <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Protein and vegetables first. Ask for dressings on the side. Estimate 4-6 oz protein. Skip the bread basket unless it fits the meal. Eating out 1-2 times per week is fine - just log your best estimate and move on.</div>
   </div>
 </div>
 
@@ -752,7 +753,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 06</span>
-  <span class="sh-ttl">Your Supplements</span>
+  <span class="sh-ttl">The Support Stack</span>
 </div>
 
 <!-- Essential tier -->
@@ -765,45 +766,45 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="g2 bka">
   <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:8px;padding:14px 16px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-      <span style="font-size:9.5pt;font-weight:700;color:#0A1628;">Creatine Monohydrate</span>
+      <span style="font-size:9.5pt;font-weight:700;color:#FFFFFF;">Creatine Monohydrate</span>
       <span style="font-size:7pt;font-weight:700;color:#065F46;background:#BBF7D0;padding:2px 8px;border-radius:8px;">Essential</span>
     </div>
     <div style="font-size:8.5pt;font-weight:700;color:#059669;margin-bottom:4px;">12g daily</div>
-    <div style="font-size:8pt;color:#475569;margin-bottom:4px;"><strong style="color:#0A1628;">Timing:</strong> Any time, mix with water or your protein shake</div>
-    <div style="font-size:8pt;color:#475569;line-height:1.5;"><strong style="color:#0A1628;">Purpose:</strong> Increases intracellular water, strengthens muscle contractions, supports recovery. Load phase not needed at this dose.</div>
+    <div style="font-size:8pt;color:#9CA3AF;margin-bottom:4px;"><strong style="color:#FFFFFF;">Timing:</strong> Any time, mix with water or your protein shake</div>
+    <div style="font-size:8pt;color:#9CA3AF;line-height:1.5;"><strong style="color:#FFFFFF;">Purpose:</strong> Increases intracellular water, strengthens muscle contractions, supports recovery. Load phase not needed at this dose.</div>
   </div>
   <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:8px;padding:14px 16px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-      <span style="font-size:9.5pt;font-weight:700;color:#0A1628;">Whey Protein</span>
+      <span style="font-size:9.5pt;font-weight:700;color:#FFFFFF;">Whey Protein</span>
       <span style="font-size:7pt;font-weight:700;color:#065F46;background:#BBF7D0;padding:2px 8px;border-radius:8px;">Essential</span>
     </div>
     <div style="font-size:8.5pt;font-weight:700;color:#059669;margin-bottom:4px;">1-2 scoops (25-50g)</div>
-    <div style="font-size:8pt;color:#475569;margin-bottom:4px;"><strong style="color:#0A1628;">Timing:</strong> Post-workout or between meals when food protein is short</div>
-    <div style="font-size:8pt;color:#475569;line-height:1.5;"><strong style="color:#0A1628;">Purpose:</strong> Convenient protein source, not a magic ingredient. Use it to meet targets when whole food isn't practical.</div>
+    <div style="font-size:8pt;color:#9CA3AF;margin-bottom:4px;"><strong style="color:#FFFFFF;">Timing:</strong> Post-workout or between meals when food protein is short</div>
+    <div style="font-size:8pt;color:#9CA3AF;line-height:1.5;"><strong style="color:#FFFFFF;">Purpose:</strong> Convenient protein source, not a magic ingredient. Use it to meet targets when whole food isn't practical.</div>
   </div>
   <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:8px;padding:14px 16px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-      <span style="font-size:9.5pt;font-weight:700;color:#0A1628;">Vitamin D3 + K2</span>
+      <span style="font-size:9.5pt;font-weight:700;color:#FFFFFF;">Vitamin D3 + K2</span>
       <span style="font-size:7pt;font-weight:700;color:#065F46;background:#BBF7D0;padding:2px 8px;border-radius:8px;">Essential</span>
     </div>
     <div style="font-size:8.5pt;font-weight:700;color:#059669;margin-bottom:4px;">3,000 IU D3 with K2 (MK-7)</div>
-    <div style="font-size:8pt;color:#475569;margin-bottom:4px;"><strong style="color:#0A1628;">Timing:</strong> With a fat-containing meal (lunch or dinner)</div>
-    <div style="font-size:8pt;color:#475569;line-height:1.5;"><strong style="color:#0A1628;">Purpose:</strong> D3 for immune function, hormone optimization, sleep quality. K2 ensures calcium goes to bones, not arteries. Always take them together.</div>
+    <div style="font-size:8pt;color:#9CA3AF;margin-bottom:4px;"><strong style="color:#FFFFFF;">Timing:</strong> With a fat-containing meal (lunch or dinner)</div>
+    <div style="font-size:8pt;color:#9CA3AF;line-height:1.5;"><strong style="color:#FFFFFF;">Purpose:</strong> D3 for immune function, hormone optimization, sleep quality. K2 ensures calcium goes to bones, not arteries. Always take them together.</div>
   </div>
   <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:8px;padding:14px 16px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-      <span style="font-size:9.5pt;font-weight:700;color:#0A1628;">Magnesium Glycinate</span>
+      <span style="font-size:9.5pt;font-weight:700;color:#FFFFFF;">Magnesium Glycinate</span>
       <span style="font-size:7pt;font-weight:700;color:#065F46;background:#BBF7D0;padding:2px 8px;border-radius:8px;">Essential</span>
     </div>
     <div style="font-size:8.5pt;font-weight:700;color:#059669;margin-bottom:4px;">400mg</div>
-    <div style="font-size:8pt;color:#475569;margin-bottom:4px;"><strong style="color:#0A1628;">Timing:</strong> Before bed</div>
-    <div style="font-size:8pt;color:#475569;line-height:1.5;"><strong style="color:#0A1628;">Purpose:</strong> Sleep quality, muscle recovery, stress regulation. Glycinate form is better absorbed and doesn't cause GI issues like oxide or citrate can.</div>
+    <div style="font-size:8pt;color:#9CA3AF;margin-bottom:4px;"><strong style="color:#FFFFFF;">Timing:</strong> Before bed</div>
+    <div style="font-size:8pt;color:#9CA3AF;line-height:1.5;"><strong style="color:#FFFFFF;">Purpose:</strong> Sleep quality, muscle recovery, stress regulation. Glycinate form is better absorbed and doesn't cause GI issues like oxide or citrate can.</div>
   </div>
 </div>
 
 <!-- Recommended tier -->
 <div class="sec">
-  <div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+  <div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
   <span class="sec-lbl">Recommended</span>
   <span style="font-size:7pt;font-weight:700;color:#1D4ED8;background:#EFF6FF;border:1px solid #DBEAFE;padding:2px 8px;border-radius:8px;margin-left:6px;">Tier 2 - add if budget allows</span>
 </div>
@@ -811,21 +812,21 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="g2 bka" style="margin-bottom:14px;">
   <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:14px 16px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-      <span style="font-size:9.5pt;font-weight:700;color:#0A1628;">Omega-3 (Fish Oil)</span>
-      <span style="font-size:7pt;font-weight:700;color:#1D4ED8;background:#DBEAFE;padding:2px 8px;border-radius:8px;">Recommended</span>
+      <span style="font-size:9.5pt;font-weight:700;color:#FFFFFF;">Omega-3 (Fish Oil)</span>
+      <span style="font-size:7pt;font-weight:700;color:#1D4ED8;background:rgba(200,164,92,0.15);padding:2px 8px;border-radius:8px;">Recommended</span>
     </div>
-    <div style="font-size:8.5pt;font-weight:700;color:#2563EB;margin-bottom:4px;">2-3g EPA + DHA daily</div>
-    <div style="font-size:8pt;color:#475569;margin-bottom:4px;"><strong style="color:#0A1628;">Timing:</strong> With a meal</div>
-    <div style="font-size:8pt;color:#475569;line-height:1.5;"><strong style="color:#0A1628;">Purpose:</strong> Anti-inflammatory, cardiovascular health, brain function. Get triglyceride form when possible. Check the label for actual EPA/DHA content.</div>
+    <div style="font-size:8.5pt;font-weight:700;color:#C8A45C;margin-bottom:4px;">2-3g EPA + DHA daily</div>
+    <div style="font-size:8pt;color:#9CA3AF;margin-bottom:4px;"><strong style="color:#FFFFFF;">Timing:</strong> With a meal</div>
+    <div style="font-size:8pt;color:#9CA3AF;line-height:1.5;"><strong style="color:#FFFFFF;">Purpose:</strong> Anti-inflammatory, cardiovascular health, brain function. Get triglyceride form when possible. Check the label for actual EPA/DHA content.</div>
   </div>
   <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:14px 16px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-      <span style="font-size:9.5pt;font-weight:700;color:#0A1628;">Zinc</span>
-      <span style="font-size:7pt;font-weight:700;color:#1D4ED8;background:#DBEAFE;padding:2px 8px;border-radius:8px;">Recommended</span>
+      <span style="font-size:9.5pt;font-weight:700;color:#FFFFFF;">Zinc</span>
+      <span style="font-size:7pt;font-weight:700;color:#1D4ED8;background:rgba(200,164,92,0.15);padding:2px 8px;border-radius:8px;">Recommended</span>
     </div>
-    <div style="font-size:8.5pt;font-weight:700;color:#2563EB;margin-bottom:4px;">25-30mg</div>
-    <div style="font-size:8pt;color:#475569;margin-bottom:4px;"><strong style="color:#0A1628;">Timing:</strong> With dinner</div>
-    <div style="font-size:8pt;color:#475569;line-height:1.5;"><strong style="color:#0A1628;">Purpose:</strong> Immune support, testosterone regulation, enzymatic function. Most people eating in a deficit are at least mildly deficient.</div>
+    <div style="font-size:8.5pt;font-weight:700;color:#C8A45C;margin-bottom:4px;">25-30mg</div>
+    <div style="font-size:8pt;color:#9CA3AF;margin-bottom:4px;"><strong style="color:#FFFFFF;">Timing:</strong> With dinner</div>
+    <div style="font-size:8pt;color:#9CA3AF;line-height:1.5;"><strong style="color:#FFFFFF;">Purpose:</strong> Immune support, testosterone regulation, enzymatic function. Most people eating in a deficit are at least mildly deficient.</div>
   </div>
 </div>
 
@@ -858,61 +859,61 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 07</span>
-  <span class="sh-ttl">Your Hydration System</span>
+  <span class="sh-ttl">The Support Stack (continued)</span>
 </div>
 
 <div class="g3 bka">
   <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:16px 14px;text-align:center;">
-    <div style="margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto;display:block;"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#2563EB;margin-bottom:4px;">Daily fluids</div>
-    <div style="font-size:20pt;font-weight:700;color:#2563EB;line-height:1.1;">130 oz</div>
+    <div style="margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto;display:block;"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C8A45C;margin-bottom:4px;">Daily fluids</div>
+    <div style="font-size:20pt;font-weight:700;color:#C8A45C;line-height:1.1;">130 oz</div>
     <div style="font-size:8pt;color:#3B82F6;margin-top:3px;">minimum daily</div>
   </div>
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:16px 14px;text-align:center;">
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:16px 14px;text-align:center;">
     <div style="margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto;display:block;"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8;margin-bottom:4px;">Sodium</div>
-    <div style="font-size:15pt;font-weight:700;color:#0A1628;line-height:1.1;">~3,850mg</div>
-    <div style="font-size:8pt;color:#475569;margin-top:3px;">1g per liter of water, scale up</div>
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6B7280;margin-bottom:4px;">Sodium</div>
+    <div style="font-size:15pt;font-weight:700;color:#FFFFFF;line-height:1.1;">~3,850mg</div>
+    <div style="font-size:8pt;color:#9CA3AF;margin-top:3px;">1g per liter of water, scale up</div>
   </div>
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:16px 14px;text-align:center;">
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:16px 14px;text-align:center;">
     <div style="margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto;display:block;"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></div>
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8;margin-bottom:4px;">Potassium</div>
-    <div style="font-size:15pt;font-weight:700;color:#0A1628;line-height:1.1;">~3,850mg</div>
-    <div style="font-size:8pt;color:#475569;margin-top:3px;">matches sodium 1:1</div>
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6B7280;margin-bottom:4px;">Potassium</div>
+    <div style="font-size:15pt;font-weight:700;color:#FFFFFF;line-height:1.1;">~3,850mg</div>
+    <div style="font-size:8pt;color:#9CA3AF;margin-top:3px;">matches sodium 1:1</div>
   </div>
 </div>
 
 <div class="mb18 bka">
-  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"><path d="M6.5 6.5h11"/><path d="M4 12h16"/><path d="M6.5 17.5h11"/><circle cx="4" cy="6.5" r="2"/><circle cx="20" cy="6.5" r="2"/><circle cx="4" cy="17.5" r="2"/><circle cx="20" cy="17.5" r="2"/></svg></div><span class="sec-lbl">Around your training</span></div>
+  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round"><path d="M6.5 6.5h11"/><path d="M4 12h16"/><path d="M6.5 17.5h11"/><circle cx="4" cy="6.5" r="2"/><circle cx="20" cy="6.5" r="2"/><circle cx="4" cy="17.5" r="2"/><circle cx="20" cy="17.5" r="2"/></svg></div><span class="sec-lbl">Around your training</span></div>
   <div class="g3" style="margin-bottom:0;">
-    <div style="border-left:3px solid #2563EB;background:#F8FAFC;padding:12px 14px;border-radius:0 6px 6px 0;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#2563EB;">Before</span></div>
-      <div style="font-size:9pt;line-height:1.55;color:#0F172A;">16 oz of water in the hour before your session. Add a pinch of salt if you've been at your desk all day.</div>
+    <div style="border-left:3px solid #C8A45C;background:rgba(255,255,255,0.03);padding:12px 14px;border-radius:0 6px 6px 0;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#C8A45C;">Before</span></div>
+      <div style="font-size:9pt;line-height:1.55;color:#FFFFFF;">16 oz of water in the hour before your session. Add a pinch of salt if you've been at your desk all day.</div>
     </div>
-    <div style="border-left:3px solid #2563EB;background:#F8FAFC;padding:12px 14px;border-radius:0 6px 6px 0;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#2563EB;">During</span></div>
-      <div style="font-size:9pt;line-height:1.55;color:#0F172A;">Sip 16 oz throughout the session. Small sips between sets, not chugging.</div>
+    <div style="border-left:3px solid #C8A45C;background:rgba(255,255,255,0.03);padding:12px 14px;border-radius:0 6px 6px 0;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#C8A45C;">During</span></div>
+      <div style="font-size:9pt;line-height:1.55;color:#FFFFFF;">Sip 16 oz throughout the session. Small sips between sets, not chugging.</div>
     </div>
-    <div style="border-left:3px solid #2563EB;background:#F8FAFC;padding:12px 14px;border-radius:0 6px 6px 0;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#2563EB;">After</span></div>
-      <div style="font-size:9pt;line-height:1.55;color:#0F172A;">16 oz with dinner. The food gives you sodium and potassium naturally.</div>
+    <div style="border-left:3px solid #C8A45C;background:rgba(255,255,255,0.03);padding:12px 14px;border-radius:0 6px 6px 0;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#C8A45C;">After</span></div>
+      <div style="font-size:9pt;line-height:1.55;color:#FFFFFF;">16 oz with dinner. The food gives you sodium and potassium naturally.</div>
     </div>
   </div>
 </div>
 
 <div class="callout bl bka">
-  <div class="cic lg bl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-  <div><div class="c-lbl" style="color:#2563EB;">Why sodium matters more than you think</div><div class="c-txt" style="color:#1E3A5F;">Sodium drives fluid into your muscle cells, powers every muscle contraction through nerve impulse transmission, and maintains the blood volume that delivers nutrients to working muscles. Without enough sodium, you can drink all the water you want and still be functionally dehydrated at the cellular level. Low sodium directly reduces strength, explosiveness, endurance, and your ability to sustain work capacity across a full session.</div></div>
+  <div class="cic lg bl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+  <div><div class="c-lbl" style="color:#C8A45C;">Why sodium matters more than you think</div><div class="c-txt" style="color:#1E3A5F;">Sodium drives fluid into your muscle cells, powers every muscle contraction through nerve impulse transmission, and maintains the blood volume that delivers nutrients to working muscles. Without enough sodium, you can drink all the water you want and still be functionally dehydrated at the cellular level. Low sodium directly reduces strength, explosiveness, endurance, and your ability to sustain work capacity across a full session.</div></div>
 </div>
 
 <div class="callout gr sm bka">
   <div class="cic sm gr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-  <div><div class="c-lbl" style="color:#065F46;">On bloating</div><div class="c-txt" style="color:#0F172A;font-size:8.5pt;">The water retention from adequate sodium is intramuscular. It's water being held inside your muscle cells where it belongs. This makes muscles look fuller, perform better, and recover faster. The puffy, soft bloat people worry about comes from inconsistent sodium intake. Consistent daily intake eliminates this within 1-2 weeks.</div></div>
+  <div><div class="c-lbl" style="color:#065F46;">On bloating</div><div class="c-txt" style="color:#FFFFFF;font-size:8.5pt;">The water retention from adequate sodium is intramuscular. It's water being held inside your muscle cells where it belongs. This makes muscles look fuller, perform better, and recover faster. The puffy, soft bloat people worry about comes from inconsistent sodium intake. Consistent daily intake eliminates this within 1-2 weeks.</div></div>
 </div>
 
 <div style="border-left:3px solid #059669;background:#ECFDF5;padding:14px 18px;border-radius:0 6px 6px 0;margin-bottom:14px;display:flex;gap:14px;align-items:flex-start;" class="bka">
   <div class="cic sm gr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-  <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#065F46;margin-bottom:4px;">Why potassium matches sodium</div><div style="font-size:9pt;line-height:1.65;color:#0F172A;">Every cell runs on the sodium-potassium pump. Sodium pulls water to the outside of cells, potassium pulls it inside. You need both in balance for true cellular hydration. High sodium without potassium means water sits outside your muscle cells, which is the kind of bloat nobody wants. Potassium also regulates blood pressure, prevents cramping, and supports heart rhythm. As your sodium goes up, potassium must follow.</div></div>
+  <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#065F46;margin-bottom:4px;">Why potassium matches sodium</div><div style="font-size:9pt;line-height:1.65;color:#FFFFFF;">Every cell runs on the sodium-potassium pump. Sodium pulls water to the outside of cells, potassium pulls it inside. You need both in balance for true cellular hydration. High sodium without potassium means water sits outside your muscle cells, which is the kind of bloat nobody wants. Potassium also regulates blood pressure, prevents cramping, and supports heart rhythm. As your sodium goes up, potassium must follow.</div></div>
 </div>
 
 <div class="g2 bka">
@@ -930,7 +931,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
   <div class="sec"><div class="bic gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="2.5" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><span class="sec-lbl">How to adjust based on symptoms</span></div>
   <div class="g3" style="margin-bottom:0;">
     <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 14px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span style="font-size:8pt;font-weight:700;color:#2563EB;">Feeling puffy</span></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span style="font-size:8pt;font-weight:700;color:#C8A45C;">Feeling puffy</span></div>
       <div style="font-size:8.5pt;line-height:1.55;color:#1E3A5F;">Check sodium consistency and potassium balance. Puffiness usually means sodium is inconsistent or potassium is too low. Stabilize both daily amounts.</div>
     </div>
     <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:12px 14px;">
@@ -955,14 +956,14 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 08</span>
-  <span class="sh-ttl">Your Recovery Routine</span>
+  <span class="sh-ttl">The Recovery Check</span>
 </div>
 
 <div class="g3 bka">
   <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:16px 14px;text-align:center;">
-    <div style="margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto;display:block;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
-    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#2563EB;margin-bottom:4px;">Sleep target</div>
-    <div style="font-size:20pt;font-weight:700;color:#2563EB;line-height:1.1;">7.5-8 hrs</div>
+    <div style="margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto;display:block;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+    <div style="font-size:7pt;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#C8A45C;margin-bottom:4px;">Sleep target</div>
+    <div style="font-size:20pt;font-weight:700;color:#C8A45C;line-height:1.1;">7.5-8 hrs</div>
     <div style="font-size:8pt;color:#3B82F6;margin-top:3px;">you're already here. protect it.</div>
   </div>
   <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:16px 14px;text-align:center;">
@@ -980,17 +981,17 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 </div>
 
 <div class="mb18 bka">
-  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span class="sec-lbl">Your sleep window</span></div>
+  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span class="sec-lbl">Your sleep window</span></div>
   <div class="g2" style="margin-bottom:0;">
-    <div style="border-left:3px solid #2563EB;background:#F8FAFC;padding:12px 14px;border-radius:0 6px 6px 0;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#2563EB;">Bedtime</span></div>
-      <div style="font-size:14pt;font-weight:700;color:#0A1628;margin-bottom:2px;">10:30 PM</div>
-      <div style="font-size:8.5pt;color:#475569;">Stay within 30 minutes of this every night, including weekends.</div>
+    <div style="border-left:3px solid #C8A45C;background:rgba(255,255,255,0.03);padding:12px 14px;border-radius:0 6px 6px 0;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#C8A45C;">Bedtime</span></div>
+      <div style="font-size:14pt;font-weight:700;color:#FFFFFF;margin-bottom:2px;">10:30 PM</div>
+      <div style="font-size:8.5pt;color:#9CA3AF;">Stay within 30 minutes of this every night, including weekends.</div>
     </div>
-    <div style="border-left:3px solid #059669;background:#F8FAFC;padding:12px 14px;border-radius:0 6px 6px 0;">
+    <div style="border-left:3px solid #059669;background:rgba(255,255,255,0.03);padding:12px 14px;border-radius:0 6px 6px 0;">
       <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#059669;">Wake time</span></div>
-      <div style="font-size:14pt;font-weight:700;color:#0A1628;margin-bottom:2px;">6:30 AM</div>
-      <div style="font-size:8.5pt;color:#475569;">Morning sunlight within 30 minutes of waking anchors your circadian rhythm.</div>
+      <div style="font-size:14pt;font-weight:700;color:#FFFFFF;margin-bottom:2px;">6:30 AM</div>
+      <div style="font-size:8.5pt;color:#9CA3AF;">Morning sunlight within 30 minutes of waking anchors your circadian rhythm.</div>
     </div>
   </div>
 </div>
@@ -998,17 +999,17 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="mb18 bka">
   <div class="sec"><div class="bic gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="2.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><span class="sec-lbl">Your evening routine</span></div>
   <div class="g3" style="margin-bottom:0;">
-    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px 14px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span style="font-size:8pt;font-weight:700;color:#0A1628;">9:00 PM</span></div>
-      <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Screen brightness down. Blue light reduction starts here.</div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:12px 14px;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span style="font-size:8pt;font-weight:700;color:#FFFFFF;">9:00 PM</span></div>
+      <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Screen brightness down. Blue light reduction starts here.</div>
     </div>
-    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px 14px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg><span style="font-size:8pt;font-weight:700;color:#0A1628;">9:30 PM</span></div>
-      <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Phone on Do Not Disturb. No more scrolling. Light reading or stretching.</div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:12px 14px;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg><span style="font-size:8pt;font-weight:700;color:#FFFFFF;">9:30 PM</span></div>
+      <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Phone on Do Not Disturb. No more scrolling. Light reading or stretching.</div>
     </div>
-    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px 14px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span style="font-size:8pt;font-weight:700;color:#0A1628;">10:30 PM</span></div>
-      <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Lights out. Consistent every night. This is the habit that compounds the most.</div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:12px 14px;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span style="font-size:8pt;font-weight:700;color:#FFFFFF;">10:30 PM</span></div>
+      <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Lights out. Consistent every night. This is the habit that compounds the most.</div>
     </div>
   </div>
 </div>
@@ -1020,16 +1021,16 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 
 <div style="border-left:3px solid #059669;background:#ECFDF5;padding:14px 18px;border-radius:0 6px 6px 0;margin-bottom:18px;display:flex;gap:14px;align-items:flex-start;" class="bka">
   <div class="cic sm gr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-  <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#065F46;margin-bottom:4px;">Your stress management plan</div><div style="font-size:9pt;line-height:1.65;color:#0F172A;">Your current approach to stress is reactive. Here's one proactive habit to build: take 10 minutes to walk after your most stressful work block each day. Not meditation, not journaling. Just movement and separation from the screen. It costs nothing and compounds over time.</div></div>
+  <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#065F46;margin-bottom:4px;">Your stress management plan</div><div style="font-size:9pt;line-height:1.65;color:#FFFFFF;">Your current approach to stress is reactive. Here's one proactive habit to build: take 10 minutes to walk after your most stressful work block each day. Not meditation, not journaling. Just movement and separation from the screen. It costs nothing and compounds over time.</div></div>
 </div>
 
 <div class="mb18 bka">
-  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div><span class="sec-lbl">When recovery starts slipping, check in this order</span></div>
-  <div class="ni bl"><div class="nc bl">1</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span style="font-size:9pt;font-weight:600;color:#0A1628;">Sleep duration and timing</span></div></div>
-  <div class="ni bl"><div class="nc bl">2</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span style="font-size:9pt;font-weight:600;color:#0A1628;">Hydration consistency</span></div></div>
-  <div class="ni bl"><div class="nc bl">3</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg><span style="font-size:9pt;font-weight:600;color:#0A1628;">Sodium intake</span></div></div>
-  <div class="ni wh"><div class="nc gy">4</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg><span style="font-size:9pt;font-weight:500;color:#475569;">Food intake</span></div></div>
-  <div class="ni wh" style="margin-bottom:0;"><div class="nc gy">5</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span style="font-size:9pt;font-weight:500;color:#475569;">Stress load</span></div></div>
+  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div><span class="sec-lbl">When recovery starts slipping, check in this order</span></div>
+  <div class="ni bl"><div class="nc bl">1</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span style="font-size:9pt;font-weight:600;color:#FFFFFF;">Sleep duration and timing</span></div></div>
+  <div class="ni bl"><div class="nc bl">2</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span style="font-size:9pt;font-weight:600;color:#FFFFFF;">Hydration consistency</span></div></div>
+  <div class="ni bl"><div class="nc bl">3</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg><span style="font-size:9pt;font-weight:600;color:#FFFFFF;">Sodium intake</span></div></div>
+  <div class="ni wh"><div class="nc gy">4</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg><span style="font-size:9pt;font-weight:500;color:#9CA3AF;">Food intake</span></div></div>
+  <div class="ni wh" style="margin-bottom:0;"><div class="nc gy">5</div><div style="display:flex;align-items:center;gap:6px;flex:1;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span style="font-size:9pt;font-weight:500;color:#9CA3AF;">Stress load</span></div></div>
 </div>
 
 <div class="field nv bka" style="margin-bottom:0;">
@@ -1043,33 +1044,33 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 09</span>
-  <span class="sh-ttl">Your Mindset Playbook</span>
+  <span class="sh-ttl">The Operating System</span>
 </div>
 
 <div class="g2 bka">
   <div style="border-left:3px solid #059669;background:#ECFDF5;padding:14px 16px;border-radius:0 6px 6px 0;">
     <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;"><div class="bic gr"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#065F46;">Your strengths</span></div>
-    <div style="font-size:9pt;line-height:1.65;color:#0F172A;">You show up consistently. You're honest about your weaknesses. You're motivated by internal standards, not by what other people think. Those are rare and the plan is built to leverage every one of them.</div>
+    <div style="font-size:9pt;line-height:1.65;color:#FFFFFF;">You show up consistently. You're honest about your weaknesses. You're motivated by internal standards, not by what other people think. Those are rare and the plan is built to leverage every one of them.</div>
   </div>
   <div style="border-left:3px solid #D97706;background:#FFFBEB;padding:14px 16px;border-radius:0 6px 6px 0;">
     <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;"><div class="bic am"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#92400E;">Your traps</span></div>
-    <div style="font-size:9pt;line-height:1.65;color:#0F172A;">All-or-nothing thinking is your biggest trap. One missed meal becomes "the day is ruined." The gap between your standards and how you respond to imperfection is where your consistency breaks.</div>
+    <div style="font-size:9pt;line-height:1.65;color:#FFFFFF;">All-or-nothing thinking is your biggest trap. One missed meal becomes "the day is ruined." The gap between your standards and how you respond to imperfection is where your consistency breaks.</div>
   </div>
 </div>
 
 <div class="mb20 bka">
-  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="sec-lbl">Your operating rules</span></div>
+  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="sec-lbl">Your operating rules</span></div>
   <div class="g3" style="margin-bottom:0;">
     <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:14px 16px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span style="font-size:8pt;font-weight:700;color:#2563EB;">Confidence</span></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span style="font-size:8pt;font-weight:700;color:#C8A45C;">Confidence</span></div>
       <div style="font-size:8.5pt;line-height:1.55;color:#1E3A5F;">Trust the process for the full phase before judging results. Confidence comes from compliance data, not from daily scale readings or how you feel in the mirror on a random Tuesday.</div>
     </div>
     <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:14px 16px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg><span style="font-size:8pt;font-weight:700;color:#2563EB;">Focus in training</span></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg><span style="font-size:8pt;font-weight:700;color:#C8A45C;">Focus in training</span></div>
       <div style="font-size:8.5pt;line-height:1.55;color:#1E3A5F;">Every set has a target. Log the weight and reps. Your logbook is the only objective measure of progress in the gym. If the numbers are moving, the plan is working regardless of what you see.</div>
     </div>
     <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:14px 16px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span style="font-size:8pt;font-weight:700;color:#2563EB;">Objectivity</span></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span style="font-size:8pt;font-weight:700;color:#C8A45C;">Objectivity</span></div>
       <div style="font-size:8.5pt;line-height:1.55;color:#1E3A5F;">Use weekly averages, not single data points. Compare week-over-week, not day-over-day. Your job is to report the data honestly. My job is to interpret it and adjust.</div>
     </div>
   </div>
@@ -1104,47 +1105,47 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 10</span>
-  <span class="sh-ttl">Your Tracking Setup</span>
+  <span class="sh-ttl">The Daily Engine</span>
 </div>
 
 <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:20px 24px;margin-bottom:14px;display:flex;gap:20px;align-items:center;" class="bka">
-  <div style="min-width:48px;height:48px;background:#DBEAFE;border-radius:12px;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+  <div style="min-width:48px;height:48px;background:rgba(200,164,92,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="1.5" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
   <div style="flex:1;">
-    <div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#2563EB;margin-bottom:3px;">Your tracking app</div>
-    <div style="font-size:14pt;font-weight:700;color:#0A1628;margin-bottom:3px;">Cronometer</div>
+    <div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#C8A45C;margin-bottom:3px;">Your tracking app</div>
+    <div style="font-size:14pt;font-weight:700;color:#FFFFFF;margin-bottom:3px;">Cronometer</div>
     <div style="font-size:9pt;color:#1E3A5F;line-height:1.55;">Best macro accuracy, cleanest interface, best food database for whole foods. This is the tool I recommend for all clients.</div>
   </div>
-  <div style="background:white;border:1px solid #DBEAFE;border-radius:8px;padding:10px 14px;min-width:140px;">
-    <div style="font-size:7pt;font-weight:600;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Backup option</div>
-    <div style="font-size:9.5pt;font-weight:600;color:#0A1628;margin-bottom:2px;">MyFitnessPal</div>
-    <div style="font-size:8pt;color:#475569;line-height:1.4;">If switching would create friction. Any tracking beats perfect tracking you don't do.</div>
+  <div style="background:#111118;border:1px solid #DBEAFE;border-radius:8px;padding:10px 14px;min-width:140px;">
+    <div style="font-size:7pt;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Backup option</div>
+    <div style="font-size:9.5pt;font-weight:600;color:#FFFFFF;margin-bottom:2px;">MyFitnessPal</div>
+    <div style="font-size:8pt;color:#9CA3AF;line-height:1.4;">If switching would create friction. Any tracking beats perfect tracking you don't do.</div>
   </div>
 </div>
 
-<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:14px 20px;margin-bottom:18px;display:flex;align-items:center;gap:14px;" class="bka">
-  <div style="min-width:28px;height:28px;background:#E2E8F0;border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="2" stroke-linecap="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+<div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:14px 20px;margin-bottom:18px;display:flex;align-items:center;gap:14px;" class="bka">
+  <div style="min-width:28px;height:28px;background:rgba(255,255,255,0.06);border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="2" stroke-linecap="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
   <div>
-    <div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0A1628;margin-bottom:2px;">Your tracking level</div>
-    <div style="font-size:9pt;color:#475569;">Standard macro tracking with estimated portions. Weigh your protein sources for the first 2 weeks until you can eyeball accurately. After that, estimate and spot-check once a week.</div>
+    <div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF;margin-bottom:2px;">Your tracking level</div>
+    <div style="font-size:9pt;color:#9CA3AF;">Standard macro tracking with estimated portions. Weigh your protein sources for the first 2 weeks until you can eyeball accurately. After that, estimate and spot-check once a week.</div>
   </div>
 </div>
 
 <div class="g2 mb20 bka">
   <div style="border:1px solid #DBEAFE;border-radius:8px;overflow:hidden;">
-    <div style="background:#2563EB;padding:10px 16px;display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:white;">Track daily</span></div>
+    <div style="background:#C8A45C;padding:10px 16px;display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:white;">Track daily</span></div>
     <div style="padding:14px 16px;display:flex;flex-direction:column;gap:8px;">
-      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:#EFF6FF;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#0F172A;"><strong style="color:#0A1628;">Total calories</strong></div></div>
-      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:#FEF2F2;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#0F172A;"><strong style="color:#DC2626;">Protein</strong> <span style="color:#475569;">(most important)</span></div></div>
-      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:#EFF6FF;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#0F172A;"><strong style="color:#0A1628;">Meal timing</strong></div></div>
-      <div style="font-size:8pt;color:#475569;padding-top:4px;border-top:1px solid #F1F5F9;margin-top:2px;">Carbs and fat fall into place if calories and protein are on target.</div>
+      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:#EFF6FF;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#FFFFFF;"><strong style="color:#FFFFFF;">Total calories</strong></div></div>
+      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:#FEF2F2;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#FFFFFF;"><strong style="color:#DC2626;">Protein</strong> <span style="color:#9CA3AF;">(most important)</span></div></div>
+      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:#EFF6FF;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#FFFFFF;"><strong style="color:#FFFFFF;">Meal timing</strong></div></div>
+      <div style="font-size:8pt;color:#9CA3AF;padding-top:4px;border-top:1px solid rgba(255,255,255,0.06);margin-top:2px;">Carbs and fat fall into place if calories and protein are on target.</div>
     </div>
   </div>
   <div style="border:1px solid #E2E8F0;border-radius:8px;overflow:hidden;">
     <div style="background:#0A1628;padding:10px 16px;display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:white;">Track weekly</span></div>
     <div style="padding:14px 16px;display:flex;flex-direction:column;gap:8px;">
-      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#0F172A;"><strong style="color:#0A1628;">Average body weight</strong> <span style="color:#475569;">from daily weigh-ins</span></div></div>
-      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#0F172A;"><strong style="color:#0A1628;">Waist measurement</strong> <span style="color:#475569;">Sunday morning</span></div></div>
-      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#0F172A;"><strong style="color:#0A1628;">Training performance</strong> <span style="color:#475569;">logged in your program</span></div></div>
+      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#FFFFFF;"><strong style="color:#FFFFFF;">Average body weight</strong> <span style="color:#9CA3AF;">from daily weigh-ins</span></div></div>
+      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#FFFFFF;"><strong style="color:#FFFFFF;">Waist measurement</strong> <span style="color:#9CA3AF;">Sunday morning</span></div></div>
+      <div style="display:flex;align-items:flex-start;gap:8px;"><div style="min-width:18px;height:18px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div style="font-size:9pt;color:#FFFFFF;"><strong style="color:#FFFFFF;">Training performance</strong> <span style="color:#9CA3AF;">logged in your program</span></div></div>
     </div>
   </div>
 </div>
@@ -1155,19 +1156,19 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 </div>
 
 <div class="g2 mb18 bka">
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start;">
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start;">
     <div class="bic gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div>
-    <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0A1628;margin-bottom:3px;">Measurement schedule</div><div style="font-size:8.5pt;color:#475569;line-height:1.5;">Waist at your navel every Sunday morning, same conditions as the scale. Record to the nearest quarter inch.</div></div>
+    <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF;margin-bottom:3px;">Measurement schedule</div><div style="font-size:8.5pt;color:#9CA3AF;line-height:1.5;">Waist at your navel every Sunday morning, same conditions as the scale. Record to the nearest quarter inch.</div></div>
   </div>
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start;">
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:12px 16px;display:flex;gap:10px;align-items:flex-start;">
     <div class="bic gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-    <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0A1628;margin-bottom:3px;">Progress photos</div><div style="font-size:8.5pt;color:#475569;line-height:1.5;">Front, side, and back every 2 weeks. Same lighting, same time of day, same clothing. For coaching use only.</div></div>
+    <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF;margin-bottom:3px;">Progress photos</div><div style="font-size:8.5pt;color:#9CA3AF;line-height:1.5;">Front, side, and back every 2 weeks. Same lighting, same time of day, same clothing. For coaching use only.</div></div>
   </div>
 </div>
 
 <div class="callout gr bka">
   <div class="cic lg gr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-  <div><div class="c-lbl" style="color:#065F46;">How to keep tracking sustainable</div><div class="c-txt" style="color:#0F172A;">Track protein and calories. That's it. If you hit those two numbers, carbs and fat sort themselves out within the budget. Don't spend 20 minutes logging every seasoning. Log the main components of each meal and move on. Tracking should take less than 5 minutes a day after the first week.</div></div>
+  <div><div class="c-lbl" style="color:#065F46;">How to keep tracking sustainable</div><div class="c-txt" style="color:#FFFFFF;">Track protein and calories. That's it. If you hit those two numbers, carbs and fat sort themselves out within the budget. Don't spend 20 minutes logging every seasoning. Log the main components of each meal and move on. Tracking should take less than 5 minutes a day after the first week.</div></div>
 </div>
 
 <div class="field nv bka" style="margin-bottom:0;">
@@ -1181,17 +1182,17 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 11</span>
-  <span class="sh-ttl">Your First 7 Days</span>
+  <span class="sh-ttl">The Daily Engine (continued)</span>
 </div>
 
 <div class="mb20 bka">
-  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><span class="sec-lbl">Your top 5 priorities this week</span></div>
+  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><span class="sec-lbl">Your top 5 priorities this week</span></div>
   <div class="g5" style="margin-bottom:0;">
-    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">1</div><div style="font-size:8.5pt;font-weight:600;color:#0A1628;line-height:1.4;">Set up Cronometer</div></div>
-    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">2</div><div style="font-size:8.5pt;font-weight:600;color:#0A1628;line-height:1.4;">One meal prep session</div></div>
-    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">3</div><div style="font-size:8.5pt;font-weight:600;color:#0A1628;line-height:1.4;">Hit 130 oz water daily</div></div>
-    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">4</div><div style="font-size:8.5pt;font-weight:600;color:#0A1628;line-height:1.4;">Log every meal</div></div>
-    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">5</div><div style="font-size:8.5pt;font-weight:600;color:#0A1628;line-height:1.4;">Protect your sleep</div></div>
+    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">1</div><div style="font-size:8.5pt;font-weight:600;color:#FFFFFF;line-height:1.4;">Set up Cronometer</div></div>
+    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">2</div><div style="font-size:8.5pt;font-weight:600;color:#FFFFFF;line-height:1.4;">One meal prep session</div></div>
+    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">3</div><div style="font-size:8.5pt;font-weight:600;color:#FFFFFF;line-height:1.4;">Hit 130 oz water daily</div></div>
+    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">4</div><div style="font-size:8.5pt;font-weight:600;color:#FFFFFF;line-height:1.4;">Log every meal</div></div>
+    <div style="background:#EFF6FF;border:1px solid #DBEAFE;border-radius:8px;padding:12px 10px;text-align:center;"><div class="nc bl" style="margin:0 auto 6px;">5</div><div style="font-size:8.5pt;font-weight:600;color:#FFFFFF;line-height:1.4;">Protect your sleep</div></div>
   </div>
 </div>
 
@@ -1203,15 +1204,15 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
     <div class="chk"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>Set consistent meal times</span></div>
     <div class="chk" style="margin-bottom:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>Prep protein and carbs for the first 3-4 days</span></div>
   </div>
-  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:16px 18px;">
-    <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;"><div class="bic gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#64748B;">Ignore for now</span></div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:16px 18px;">
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;"><div class="bic gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#9CA3AF;">Ignore for now</span></div>
     <div class="chk mt"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Calorie cycling</span></div>
     <div class="chk mt"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Supplement fine-tuning</span></div>
     <div class="chk mt" style="margin-bottom:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Adding extra cardio</span></div>
   </div>
 </div>
 
-<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;overflow:hidden;margin-bottom:18px;" class="bka">
+<div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;overflow:hidden;margin-bottom:18px;" class="bka">
   <div style="background:#0A1628;padding:10px 18px;display:flex;align-items:center;gap:8px;">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
     <span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:white;">Your 7-day starter version</span>
@@ -1219,13 +1220,13 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
   </div>
   <div style="padding:16px 18px;">
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
-      <div style="text-align:center;padding:10px;"><div style="font-size:7pt;font-weight:600;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Daily calories</div><div style="font-size:16pt;font-weight:700;color:#2563EB;">2,250</div></div>
-      <div style="text-align:center;padding:10px;border-left:1px solid #E2E8F0;border-right:1px solid #E2E8F0;"><div style="font-size:7pt;font-weight:600;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Protein</div><div style="font-size:16pt;font-weight:700;color:#DC2626;">156g</div></div>
-      <div style="text-align:center;padding:10px;"><div style="font-size:7pt;font-weight:600;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Water</div><div style="font-size:16pt;font-weight:700;color:#0A1628;">130 oz</div></div>
+      <div style="text-align:center;padding:10px;"><div style="font-size:7pt;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Daily calories</div><div style="font-size:16pt;font-weight:700;color:#C8A45C;">2,250</div></div>
+      <div style="text-align:center;padding:10px;border-left:1px solid #E2E8F0;border-right:1px solid #E2E8F0;"><div style="font-size:7pt;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Protein</div><div style="font-size:16pt;font-weight:700;color:#DC2626;">156g</div></div>
+      <div style="text-align:center;padding:10px;"><div style="font-size:7pt;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Water</div><div style="font-size:16pt;font-weight:700;color:#FFFFFF;">130 oz</div></div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:10px;border-top:1px solid #E2E8F0;">
-      <div style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><div><span style="font-size:8.5pt;font-weight:600;color:#0A1628;">Sleep:</span> <span style="font-size:8.5pt;color:#475569;">7.5-8 hrs, same window nightly</span></div></div>
-      <div style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><span style="font-size:8.5pt;font-weight:600;color:#0A1628;">Meals:</span> <span style="font-size:8.5pt;color:#475569;">Fixed times, 3-4 meals per day</span></div></div>
+      <div style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><div><span style="font-size:8.5pt;font-weight:600;color:#FFFFFF;">Sleep:</span> <span style="font-size:8.5pt;color:#9CA3AF;">7.5-8 hrs, same window nightly</span></div></div>
+      <div style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><span style="font-size:8.5pt;font-weight:600;color:#FFFFFF;">Meals:</span> <span style="font-size:8.5pt;color:#9CA3AF;">Fixed times, 3-4 meals per day</span></div></div>
     </div>
   </div>
 </div>
@@ -1238,10 +1239,10 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:8px;padding:16px 20px;margin-bottom:14px;" class="bka">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><div class="cic sm gr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><span style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#065F46;">What a successful Week 1 looks like</span></div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
-    <div style="display:flex;align-items:center;gap:8px;background:white;border-radius:6px;padding:8px 12px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:8.5pt;color:#0F172A;">Logged every meal for 14 days</span></div>
-    <div style="display:flex;align-items:center;gap:8px;background:white;border-radius:6px;padding:8px 12px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:8.5pt;color:#0F172A;">Hit protein 10 out of 14 days</span></div>
-    <div style="display:flex;align-items:center;gap:8px;background:white;border-radius:6px;padding:8px 12px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:8.5pt;color:#0F172A;">Maintained your sleep schedule</span></div>
-    <div style="display:flex;align-items:center;gap:8px;background:white;border-radius:6px;padding:8px 12px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:8.5pt;color:#0F172A;">Completed all training sessions</span></div>
+    <div style="display:flex;align-items:center;gap:8px;background:#111118;border-radius:6px;padding:8px 12px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:8.5pt;color:#FFFFFF;">Logged every meal for 14 days</span></div>
+    <div style="display:flex;align-items:center;gap:8px;background:#111118;border-radius:6px;padding:8px 12px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:8.5pt;color:#FFFFFF;">Hit protein 10 out of 14 days</span></div>
+    <div style="display:flex;align-items:center;gap:8px;background:#111118;border-radius:6px;padding:8px 12px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:8.5pt;color:#FFFFFF;">Maintained your sleep schedule</span></div>
+    <div style="display:flex;align-items:center;gap:8px;background:#111118;border-radius:6px;padding:8px 12px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:8.5pt;color:#FFFFFF;">Completed all training sessions</span></div>
   </div>
   <div style="font-size:9pt;font-weight:600;color:#065F46;text-align:center;">That's a win. Regardless of what the scale says.</div>
 </div>
@@ -1257,10 +1258,10 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 </div>
 
 <div class="callout bl bka" style="margin-bottom:0;">
-  <div class="cic lg bl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+  <div class="cic lg bl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
   <div>
-    <div class="c-lbl" style="color:#2563EB;">Your first check-in with me</div>
-    <div style="font-size:11pt;font-weight:700;color:#0A1628;margin-bottom:6px;">Day 14</div>
+    <div class="c-lbl" style="color:#C8A45C;">Your first check-in with me</div>
+    <div style="font-size:11pt;font-weight:700;color:#FFFFFF;margin-bottom:6px;">Day 14</div>
     <div class="c-txt" style="color:#1E3A5F;">Come prepared with your average weight over the two weeks, a screenshot of your Cronometer summary, and a quick note on how the first two weeks felt. I'm going to look at your compliance data first, not your results. We're building your baseline.</div>
   </div>
 </div>
@@ -1271,29 +1272,29 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="sh-bar"></div>
 <div class="sh-row">
   <span class="sh-num">Step 12</span>
-  <span class="sh-ttl">Your Check-In</span>
+  <span class="sh-ttl">The Roadmap</span>
 </div>
 <div class="sh-sub">Every two weeks you'll fill out a short check-in form. Here's exactly what I ask for, why each piece matters, and how I use it to adjust your plan.</div>
 
 <div class="callout bl bka">
-  <div class="cic lg bl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-  <div><div class="c-lbl" style="color:#2563EB;">How this works</div><div class="c-txt" style="color:#1E3A5F;">I'll send you a check-in form every two weeks. Fill it out before our check-in. Takes about 3 minutes. I review the data, compare it to your previous check-ins, and make one main adjustment. You don't need to interpret the numbers. That's my job. Your job is to report honestly.</div></div>
+  <div class="cic lg bl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+  <div><div class="c-lbl" style="color:#C8A45C;">How this works</div><div class="c-txt" style="color:#1E3A5F;">I'll send you a check-in form every two weeks. Fill it out before our check-in. Takes about 3 minutes. I review the data, compare it to your previous check-ins, and make one main adjustment. You don't need to interpret the numbers. That's my job. Your job is to report honestly.</div></div>
 </div>
 
 <div class="mb20 bka">
-  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div><span class="sec-lbl">Your hard numbers</span><span class="sec-sub">Objective data I use to make decisions</span></div>
+  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div><span class="sec-lbl">Your hard numbers</span><span class="sec-sub">Objective data I use to make decisions</span></div>
   <div class="g3" style="margin-bottom:0;">
-    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M12 3v18"/><path d="M8 7l4-4 4 4"/><path d="M8 17l4 4 4-4"/></svg><span style="font-size:8pt;font-weight:700;color:#0A1628;">Average body weight</span></div>
-      <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Your average from daily weigh-ins over the two-week period. I never react to a single day. The trend across check-ins is what matters.</div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M12 3v18"/><path d="M8 7l4-4 4 4"/><path d="M8 17l4 4 4-4"/></svg><span style="font-size:8pt;font-weight:700;color:#FFFFFF;">Average body weight</span></div>
+      <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Your average from daily weigh-ins over the two-week period. I never react to a single day. The trend across check-ins is what matters.</div>
     </div>
-    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg><span style="font-size:8pt;font-weight:700;color:#0A1628;">Waist measurement</span></div>
-      <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Taken at your navel every Sunday morning. Catches fat loss the scale might miss, especially early on when water weight is shifting.</div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg><span style="font-size:8pt;font-weight:700;color:#FFFFFF;">Waist measurement</span></div>
+      <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Taken at your navel every Sunday morning. Catches fat loss the scale might miss, especially early on when water weight is shifting.</div>
     </div>
-    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;">
-      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5h11"/><path d="M4 12h16"/><path d="M6.5 17.5h11"/><circle cx="4" cy="6.5" r="2"/><circle cx="20" cy="6.5" r="2"/><circle cx="4" cy="17.5" r="2"/><circle cx="20" cy="17.5" r="2"/></svg><span style="font-size:8pt;font-weight:700;color:#0A1628;">Gym performance</span></div>
-      <div style="font-size:8.5pt;line-height:1.55;color:#475569;">Are your numbers going up, holding, or dropping? Your logbook tells me whether the deficit is sustainable or if we need to adjust.</div>
+    <div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5h11"/><path d="M4 12h16"/><path d="M6.5 17.5h11"/><circle cx="4" cy="6.5" r="2"/><circle cx="20" cy="6.5" r="2"/><circle cx="4" cy="17.5" r="2"/><circle cx="20" cy="17.5" r="2"/></svg><span style="font-size:8pt;font-weight:700;color:#FFFFFF;">Gym performance</span></div>
+      <div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">Are your numbers going up, holding, or dropping? Your logbook tells me whether the deficit is sustainable or if we need to adjust.</div>
     </div>
   </div>
 </div>
@@ -1301,27 +1302,27 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 <div class="mb20 bka">
   <div class="sec"><div class="bic gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><span class="sec-lbl">How you feel</span><span class="sec-sub">1-10 scale for each, where 10 is best</span></div>
   <div class="g2" style="margin-bottom:0;">
-    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M12 2v6l3 3"/><circle cx="12" cy="14" r="8"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#0A1628;margin-bottom:2px;">Digestion</div><div style="font-size:8pt;color:#475569;line-height:1.5;">Bloating, regularity, comfort after meals. Tells me whether food volume or fiber needs adjusting.</div></div></div>
-    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#0A1628;margin-bottom:2px;">Sleep</div><div style="font-size:8pt;color:#475569;line-height:1.5;">Quality, not just hours. Tells me if your recovery system is holding or if something is creeping in.</div></div></div>
-    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#0A1628;margin-bottom:2px;">Energy</div><div style="font-size:8pt;color:#475569;line-height:1.5;">A persistent drop signals the deficit may be too aggressive or recovery is slipping.</div></div></div>
-    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#0A1628;margin-bottom:2px;">Appetite</div><div style="font-size:8pt;color:#475569;line-height:1.5;">Manageable hunger is expected. Constant, aggressive hunger means something needs adjusting.</div></div></div>
-    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#0A1628;margin-bottom:2px;">Hydration</div><div style="font-size:8pt;color:#475569;line-height:1.5;">Dehydration affects digestion, energy, and the scale. Easy to fix when caught early.</div></div></div>
-    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#0A1628;margin-bottom:2px;">Mood and motivation</div><div style="font-size:8pt;color:#475569;line-height:1.5;">Sustained low mood is a signal, not a weakness. Helps me know when to hold the line and when to pull back.</div></div></div>
+    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M12 2v6l3 3"/><circle cx="12" cy="14" r="8"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#FFFFFF;margin-bottom:2px;">Digestion</div><div style="font-size:8pt;color:#9CA3AF;line-height:1.5;">Bloating, regularity, comfort after meals. Tells me whether food volume or fiber needs adjusting.</div></div></div>
+    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#FFFFFF;margin-bottom:2px;">Sleep</div><div style="font-size:8pt;color:#9CA3AF;line-height:1.5;">Quality, not just hours. Tells me if your recovery system is holding or if something is creeping in.</div></div></div>
+    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#FFFFFF;margin-bottom:2px;">Energy</div><div style="font-size:8pt;color:#9CA3AF;line-height:1.5;">A persistent drop signals the deficit may be too aggressive or recovery is slipping.</div></div></div>
+    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#FFFFFF;margin-bottom:2px;">Appetite</div><div style="font-size:8pt;color:#9CA3AF;line-height:1.5;">Manageable hunger is expected. Constant, aggressive hunger means something needs adjusting.</div></div></div>
+    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#FFFFFF;margin-bottom:2px;">Hydration</div><div style="font-size:8pt;color:#9CA3AF;line-height:1.5;">Dehydration affects digestion, energy, and the scale. Easy to fix when caught early.</div></div></div>
+    <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;margin-bottom:8px;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><div><div style="font-size:8.5pt;font-weight:700;color:#FFFFFF;margin-bottom:2px;">Mood and motivation</div><div style="font-size:8pt;color:#9CA3AF;line-height:1.5;">Sustained low mood is a signal, not a weakness. Helps me know when to hold the line and when to pull back.</div></div></div>
   </div>
 </div>
 
 <div class="g2 mb18 bka">
-  <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:8px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;"><div class="cic sm gr"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div style="font-size:8pt;font-weight:700;color:#065F46;margin-bottom:3px;">Plan compliance</div><div style="font-size:8.5pt;line-height:1.55;color:#0F172A;">Your honest estimate as a percentage. This is the first thing I look at. If compliance is low, we fix that before touching anything else.</div></div></div>
-  <div style="border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div><div style="font-size:8pt;font-weight:700;color:#0A1628;margin-bottom:3px;">Your notes</div><div style="font-size:8.5pt;line-height:1.55;color:#475569;">What you felt, struggled with, or are proud of. I'd rather know what went wrong than get a clean report that hides the real picture.</div></div></div>
+  <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:8px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;"><div class="cic sm gr"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div style="font-size:8pt;font-weight:700;color:#065F46;margin-bottom:3px;">Plan compliance</div><div style="font-size:8.5pt;line-height:1.55;color:#FFFFFF;">Your honest estimate as a percentage. This is the first thing I look at. If compliance is low, we fix that before touching anything else.</div></div></div>
+  <div style="border:1px solid #E2E8F0;border-radius:8px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;"><div class="cic sm gy"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div><div style="font-size:8pt;font-weight:700;color:#FFFFFF;margin-bottom:3px;">Your notes</div><div style="font-size:8.5pt;line-height:1.55;color:#9CA3AF;">What you felt, struggled with, or are proud of. I'd rather know what went wrong than get a clean report that hides the real picture.</div></div></div>
 </div>
 
 <div class="mb18 bka">
-  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div><span class="sec-lbl">How I review your check-in</span></div>
-  <div class="ni bl"><div class="nc bl">1</div><span style="font-size:9pt;font-weight:600;color:#0A1628;">Compliance first.</span><span style="font-size:8.5pt;color:#475569;margin-left:6px;">Did you follow the plan? If not, that's the fix before anything changes.</span></div>
-  <div class="ni bl"><div class="nc bl">2</div><span style="font-size:9pt;font-weight:600;color:#0A1628;">Food and fluids.</span><span style="font-size:8.5pt;color:#475569;margin-left:6px;">Are you hitting calories, protein, and water consistently?</span></div>
-  <div class="ni bl"><div class="nc bl">3</div><span style="font-size:9pt;font-weight:600;color:#0A1628;">Sleep and digestion.</span><span style="font-size:8.5pt;color:#475569;margin-left:6px;">Recovery signals that affect everything downstream.</span></div>
-  <div class="ni wh"><div class="nc gy">4</div><span style="font-size:9pt;font-weight:600;color:#0A1628;">Gym performance.</span><span style="font-size:8.5pt;color:#475569;margin-left:6px;">Strength is the canary in the coal mine.</span></div>
-  <div class="ni wh" style="margin-bottom:0;"><div class="nc gy">5</div><span style="font-size:9pt;font-weight:600;color:#0A1628;">Body weight and waist.</span><span style="font-size:8.5pt;color:#475569;margin-left:6px;">Last. Only meaningful after everything above checks out.</span></div>
+  <div class="sec"><div class="bic bl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C8A45C" stroke-width="2.5" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div><span class="sec-lbl">How I review your check-in</span></div>
+  <div class="ni bl"><div class="nc bl">1</div><span style="font-size:9pt;font-weight:600;color:#FFFFFF;">Compliance first.</span><span style="font-size:8.5pt;color:#9CA3AF;margin-left:6px;">Did you follow the plan? If not, that's the fix before anything changes.</span></div>
+  <div class="ni bl"><div class="nc bl">2</div><span style="font-size:9pt;font-weight:600;color:#FFFFFF;">Food and fluids.</span><span style="font-size:8.5pt;color:#9CA3AF;margin-left:6px;">Are you hitting calories, protein, and water consistently?</span></div>
+  <div class="ni bl"><div class="nc bl">3</div><span style="font-size:9pt;font-weight:600;color:#FFFFFF;">Sleep and digestion.</span><span style="font-size:8.5pt;color:#9CA3AF;margin-left:6px;">Recovery signals that affect everything downstream.</span></div>
+  <div class="ni wh"><div class="nc gy">4</div><span style="font-size:9pt;font-weight:600;color:#FFFFFF;">Gym performance.</span><span style="font-size:8.5pt;color:#9CA3AF;margin-left:6px;">Strength is the canary in the coal mine.</span></div>
+  <div class="ni wh" style="margin-bottom:0;"><div class="nc gy">5</div><span style="font-size:9pt;font-weight:600;color:#FFFFFF;">Body weight and waist.</span><span style="font-size:8.5pt;color:#9CA3AF;margin-left:6px;">Last. Only meaningful after everything above checks out.</span></div>
 </div>
 
 <div class="field nv mb18 bka">
@@ -1331,12 +1332,12 @@ body { font-family: 'DM Sans', system-ui, sans-serif; background: #F1F5F9; }
 
 <div class="callout gr sm bka">
   <div class="cic sm gr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
-  <div><div class="c-lbl" style="color:#065F46;">What happens after each check-in</div><div class="c-txt" style="color:#0F172A;font-size:8.5pt;">After I review your data, I'll text you a snapshot card with all your current targets, what changed, and what to focus on for the next two weeks. Save it to your camera roll or pin it in our text thread. That card is your active reference between check-ins. Your blueprint stays as the deep reference for why everything is set up the way it is. Every 8 to 12 weeks, you'll get a completely fresh blueprint built from scratch based on where you are at that point.</div></div>
+  <div><div class="c-lbl" style="color:#065F46;">What happens after each check-in</div><div class="c-txt" style="color:#FFFFFF;font-size:8.5pt;">After I review your data, I'll text you a snapshot card with all your current targets, what changed, and what to focus on for the next two weeks. Save it to your camera roll or pin it in our text thread. That card is your active reference between check-ins. Your blueprint stays as the deep reference for why everything is set up the way it is. Every 8 to 12 weeks, you'll get a completely fresh blueprint built from scratch based on where you are at that point.</div></div>
 </div>
 
-<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:14px 18px;display:flex;gap:14px;align-items:flex-start;" class="bka">
+<div style="background:rgba(255,255,255,0.03);border:1px solid #E2E8F0;border-radius:8px;padding:14px 18px;display:flex;gap:14px;align-items:flex-start;" class="bka">
   <div class="cic sm gy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-  <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0A1628;margin-bottom:4px;">Between check-ins</div><div style="font-size:9pt;line-height:1.65;color:#475569;">Text me if something comes up that can't wait. Injury, illness, a question about a situation the plan doesn't cover, or anything that feels off. Don't wait two weeks to tell me something important. For routine questions about food choices, timing, or whether something counts, check the blueprint first. The answer is usually already in here.</div></div>
+  <div><div style="font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF;margin-bottom:4px;">Between check-ins</div><div style="font-size:9pt;line-height:1.65;color:#9CA3AF;">Text me if something comes up that can't wait. Injury, illness, a question about a situation the plan doesn't cover, or anything that feels off. Don't wait two weeks to tell me something important. For routine questions about food choices, timing, or whether something counts, check the blueprint first. The answer is usually already in here.</div></div>
 </div>
 </div>
 

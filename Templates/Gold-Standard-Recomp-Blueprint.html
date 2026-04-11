@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Blueprint | [CLIENT NAME] | Team AM</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0A0F;--bg-elevated:#111118;--card-bg:rgba(255,255,255,0.03);--card-border:rgba(255,255,255,0.06);--text-1:#FFFFFF;--text-2:#9CA3AF;--text-3:#6B7280;--accent:#C8A45C;--accent-subtle:rgba(200,164,92,0.1);--border:rgba(255,255,255,0.06)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text-1);background:var(--bg);line-height:1.7}
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:60px;position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(200,164,92,0.06) 0%,transparent 70%);pointer-events:none}
+.cover-logo{width:48px;height:48px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Satoshi',sans-serif;font-weight:900;font-size:18px;color:#fff}
+.cover-center{text-align:center}
+.cover-title{font-family:'Satoshi',sans-serif;font-size:clamp(40px,6vw,56px);font-weight:900;color:var(--text-1);letter-spacing:-0.035em;margin-bottom:16px}
+.cover-subtitle{font-family:'Satoshi',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:32px}
+.cover-bar{width:60px;height:3px;background:var(--accent);margin:0 auto 40px}
+.cover-info{font-size:15px;color:var(--text-2);line-height:2.4}
+.cover-info span{color:var(--text-1);font-weight:600}
+.cover-footer{font-size:12px;color:var(--text-3);text-align:center;border-top:1px solid var(--border);padding-top:16px}
+.content{max-width:780px;margin:0 auto;padding:0 32px 80px}
+.step-break{height:80px}
+.step-header{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+.step-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--accent);min-width:28px}
+.step-title{font-family:'Satoshi',sans-serif;font-size:24px;font-weight:800;color:var(--text-1);letter-spacing:-0.02em}
+.step-bar{height:2px;background:linear-gradient(90deg,var(--accent) 0%,var(--accent) 60px,var(--border) 60px);margin-bottom:28px}
+.section-label{font-family:'Satoshi',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin:28px 0 12px;padding-top:8px}
+.sub-header{font-family:'Satoshi',sans-serif;font-size:18px;font-weight:800;color:var(--text-1);margin:32px 0 16px;letter-spacing:-0.01em}
+p{font-size:14px;color:var(--text-2);line-height:1.8;margin-bottom:14px}
+p strong{color:var(--text-1)}
+.data-line{font-size:14px;color:var(--text-2);line-height:1.8;margin-bottom:8px;padding:8px 16px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px}
+.data-line strong{font-family:'Space Grotesk',sans-serif;color:var(--accent);font-weight:700}
+ul{list-style:none;margin-bottom:18px}
+ul li{font-size:14px;color:var(--text-2);line-height:1.75;padding:4px 0 4px 20px;position:relative}
+ul li::before{content:'';position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:0.5}
+ul li strong{color:var(--text-1)}
+ul.numbered li::before{display:none}
+ul.numbered li{padding-left:0}
+.li-num{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--accent);margin-right:6px}
+.table-wrap{overflow-x:auto;margin-bottom:20px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{font-family:'Satoshi',sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);text-align:left;padding:10px 14px;border-bottom:1px solid var(--border);background:var(--bg-elevated)}
+tbody td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-2)}
+tbody tr:hover{background:rgba(255,255,255,0.02)}
+.divider{height:1px;background:var(--border);margin:32px 0}
+code{font-family:'Space Grotesk',monospace;font-size:13px;color:var(--accent);background:var(--accent-subtle);padding:2px 6px;border-radius:4px}
+@media print{body{background:white;color:#0F172A}.cover{background:#0A0A0F;-webkit-print-color-adjust:exact;print-color-adjust:exact}.step-break{page-break-before:always;height:40px}}
+@media(max-width:640px){.cover{padding:40px 24px}.cover-title{font-size:36px}.content{padding:0 20px 60px}.step-title{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="cover-logo">AM</div>
+  <div class="cover-center">
+    <div class="cover-title">Your Blueprint</div>
+    <div class="cover-subtitle">Personalized Coaching Blueprint</div>
+    <div class="cover-bar"></div>
+    <div class="cover-info">
+      <div>Built for <span style="color:#C8A45C">[CLIENT NAME]</span></div>
+      <div>Date: <span>April 10, 2026</span></div>
+      <div>Phase: <span>Recomp</span></div>
+    </div>
+  </div>
+  <div class="cover-footer">Confidential. For coaching use only. Do not distribute.</div>
+</div>
+<div class="content">
+
+<p><strong>Client:</strong> [CLIENT NAME]</p>
+<p><strong>Date:</strong> [Today's Date]</p>
+<p><strong>Current Phase:</strong> Recomp</p>
+
+<div class="divider"></div>
+
+<p>Dear [COACH],</p>
+
+<p>I reviewed your intake form and our call, and I see exactly where you are. You're dealing with the frustration of watching your body composition slide while you wait for full pec clearance. You stopped Retatrutide in March, your protein's been all over the place (some days hitting 100g when you need 174g), and you're trying to balance building Team AM while hitting an August deadline.</p>
+
+<p>Here's what caught my attention: you told me you want "gold standard, ultra-quality" in this blueprint. Not the basic stuff. You want to understand the why behind everything, right? That tells me you're not looking for generic advice - you want the real science and mechanisms that drive results.</p>
+
+<p>Your previous approach - the 40-pound loss in 3 months - worked because you had pharmaceutical support, were in a deep deficit, and it was Ramadan. But that's not sustainable, and more importantly, it's not what you need now. You don't need another aggressive cut. You need a true recomp that preserves every ounce of muscle while stripping the last bit of fat for August.</p>
+
+<p>The biggest thing holding you back isn't your pec tear or the Retatrutide restart. It's that your nutrition execution doesn't match your training knowledge. You understand RPE, mechanical tension, and advanced programming concepts, but you're severely under-eating protein and your meal structure is too sparse for your goals.</p>
+
+<p>This plan is different because we're going to dial in every variable with the same precision you apply to your training. We're running a calorie cycling protocol that gives you fuel on training days and creates a deficit on rest days. Your protein target is non-negotiable at 174g daily. And we're structuring your eating window to maximize both performance and recovery within your fasting preference.</p>
+
+<p>You've got 16-18 weeks. That's enough time to create significant visual change if we lock in the execution now. Not later. Now.</p>
+
+<p>Let's get to work.</p>
+
+<p>[COACH], Team AM</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">01</span><div><div class="step-title">Where You Are Right Now</div></div></div>
+<div class="step-bar"></div>
+
+<p><strong>Here's What I See</strong></p>
+<p>You're a 19-year-old who's balancing kinesiology studies with launching Team AM, recovering from a partial pec tear, and gunning for a specific physique by August. You told me you want this blueprint to be the "gold standard, ultra-quality" - not just for you, but as the template for all future Team AM clients. That's not typical client thinking. That's coach thinking. You're approaching this with the mindset of someone who needs to understand the mechanisms, not just follow instructions.</p>
+
+<p><strong>What's Working For You</strong></p>
+<p>Your training consistency is locked in - 6 days a week even with the injury. You've maintained solid lower body strength (hack squatting 2 plates plus 25 for 8 reps). Your supplement knowledge is advanced and you're already taking most of what you need. You don't drink alcohol, you get 7-9 hours of sleep, and you have full control over your food since you cook most meals. Your evening training window (5-8pm) is perfectly timed for performance.</p>
+
+<p><strong>What's Holding You Back</strong></p>
+<p>Your protein intake is severely inconsistent - some days you're hitting 100g when you need 174g. Your meal structure is working against you: that 700-calorie cream of wheat bowl at 1pm isn't setting you up for success. You're trying to fit adequate nutrition into 2-3 meals in an 8-hour window, which makes hitting your targets nearly impossible. Your hydration fluctuates too much for someone taking that many supplements and training 6 days a week.</p>
+
+<p><strong>The Biggest Thing Holding You Back</strong></p>
+<p>Your nutrition execution doesn't match your training sophistication. You understand mechanical tension, RPE, and periodization at an advanced level, but you're treating nutrition like an afterthought. You can't recomp effectively when protein varies by 70+ grams day to day.</p>
+
+<p><strong>The Second Biggest Thing</strong></p>
+<p>Your 2am bedtime is costing you recovery quality. Even with 7-9 hours, your circadian rhythm is fighting against your goals. Deep sleep quality peaks between 10pm-2am. You're missing that entire window.</p>
+
+<p><strong>Your Body Right Now</strong></p>
+<p>At 174 lbs and approximately 12.5% body fat, you're in a good position to recomp. You're not overly lean where you'd need to gain first, and you're not carrying excess fat that demands an aggressive cut. The recent 40-pound loss means your metabolism has adapted downward, but that's manageable with the right approach. You've got visible abs but want them sharper by August.</p>
+
+<p><strong>Your Recovery</strong></p>
+<p>Sleep duration is solid at 7-9 hours, but timing is suboptimal. Stress is moderate (5/10) from school and business launch, but you're managing it. Your comprehensive supplement stack supports recovery, but inconsistent hydration limits their effectiveness. The pec is 4 weeks from full clearance - you're cleared for heavy shoulder pressing and upper chest flies, which means we can work around it effectively.</p>
+
+<p><strong>Your Digestion and Hydration</strong></p>
+<p>No digestive issues reported, which is excellent given your GLP-1 history. But you're estimating only 100oz of water some days when you need 115oz minimum (147oz on training days). For someone interested in fascia work and muscle quality, hydration inconsistency is a massive oversight. Cellular hydration drives everything from nutrient delivery to waste removal.</p>
+
+<p><strong>Ignore This For Now</strong></p>
+<p>Don't worry about the Retatrutide restart timing yet. Focus on nailing your nutrition foundation first. Don't stress about minor weight fluctuations as you increase carbs and sodium - initial water weight is normal and necessary. Don't get caught up in perfect sleep timing if it disrupts your current productivity. We'll address that gradually.</p>
+
+<p><strong>What This Means For Your Plan</strong></p>
+<p>We're building a recomp protocol that respects your injury recovery, leverages your training knowledge, and fixes the nutrition gaps that are sabotaging your progress. The August timeline is achievable, but only if we execute with the same precision you want in this blueprint. Every meal, every training session, every recovery protocol needs to align with that deadline.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">02</span><div><div class="step-title">Your Phase and Game Plan</div></div></div>
+<div class="step-bar"></div>
+
+<p><strong>Your Current Phase: RECOMP</strong></p>
+<p>We're in body recomposition mode - building muscle and losing fat simultaneously through strategic calorie cycling.</p>
+
+<p><strong>Why We're Here</strong></p>
+<p>You told me you want to "look really good by August" - specifically, lower body fat AND more muscle at the same time. With 16-18 weeks, we don't need to choose between cutting or gaining. We can do both through precise calorie cycling: training days at maintenance to fuel performance and growth, rest days in a slight deficit to chip away at body fat. This approach also supports your pec recovery by ensuring adequate nutrition for tissue repair while still moving toward your aesthetic goals.</p>
+
+<p><strong>Your Priority Ranking</strong></p>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Execute precise nutrition daily - 174g protein without exception</li>
+<li><span class="li-num">2.</span> Optimize recovery timing - gradually shift sleep earlier</li>
+<li><span class="li-num">3.</span> Progress training intelligently within injury constraints</li>
+<li><span class="li-num">4.</span> Maintain consistent hydration for performance</li>
+<li><span class="li-num">5.</span> Prepare for strategic Retatrutide restart when ready</li>
+</ul>
+
+<p><strong>The One Thing That Matters Most</strong></p>
+<p>Protein consistency. If you nail nothing else, hit 174g every single day. This drives muscle preservation during the deficit days and muscle building during maintenance days. Without this, the entire recomp fails.</p>
+
+<p><strong>Visual Phase Timeline</strong></p>
+<p><strong>Weeks 1-4:</strong> Foundation Phase - Lock in nutrition consistency, establish meal timing, gradually increase training volume as pec heals</p>
+<p><strong>Weeks 5-8:</strong> Full Clearance Phase - Return to full pressing movements, possible Retatrutide restart, assess progress</p>
+<p><strong>Weeks 9-14:</strong> Acceleration Phase - Training intensity peaks, nutrition dialed to progress rate, visible changes accelerating</p>
+<p><strong>Weeks 15-18:</strong> Final Push - Last adjustments for August deadline, detail work, potential mini-cut if needed</p>
+
+<p><strong>What's Slowing You Down</strong></p>
+
+<p><strong>Bottleneck #1: Inconsistent Protein Intake</strong></p>
+<ul>
+<li>Do Now: Pre-plan every meal to guarantee 174g daily</li>
+<li>Do Next: Establish protein anchors in each eating window meal</li>
+<li>Do Later: Fine-tune sources for optimal digestion and preference</li>
+</ul>
+
+<p><strong>Bottleneck #2: Suboptimal Hydration</strong></p>
+<ul>
+<li>Do Now: Set hourly water targets from wake to sleep</li>
+<li>Do Next: Add electrolytes to support cellular hydration</li>
+<li>Do Later: Adjust based on training intensity and sweat rate</li>
+</ul>
+
+<p><strong>Bottleneck #3: Late Sleep Schedule</strong></p>
+<ul>
+<li>Do Now: Set a hard training cutoff time to allow wind-down</li>
+<li>Do Next: Shift bedtime 15 minutes earlier each week</li>
+<li>Do Later: Optimize for 11pm-7am window by month 2</li>
+</ul>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">03</span><div><div class="step-title">Your Numbers</div></div></div>
+<div class="step-bar"></div>
+
+<p><strong>Your Daily Calories</strong></p>
+<p>Rest days: 2,650 calories (200 below maintenance)</p>
+<p>Training days: 2,850 calories (at maintenance)</p>
+<p>This creates a weekly average deficit while supporting performance and recovery</p>
+
+<p><strong>Your Estimated Maintenance</strong></p>
+<p>2,850 calories based on your stats and moderate activity level (6 training days, 10K steps)</p>
+
+<p><strong>Protein</strong></p>
+<p>174g daily (1.0g per lb bodyweight)</p>
+<p>Never below this. GLP-1 history plus recomp phase demands optimal protein for muscle preservation.</p>
+
+<p><strong>Carbs</strong></p>
+<p>Rest days: 300g</p>
+<p>Training days: 356g</p>
+<p>Strategic cycling to fuel performance while creating fat loss environment on rest days</p>
+
+<p><strong>Fat</strong></p>
+<p>70g daily (0.4g per lb bodyweight)</p>
+<p>Consistent across all days for hormone production and vitamin absorption</p>
+
+<p><strong>Calorie Cycling Structure</strong></p>
+<p>6 training days at 2,850 calories, 1 rest day at 2,650 calories. The higher frequency of training days supports your volume while the single rest day creates a small weekly deficit. This isn't about dramatic swings - it's about optimizing fuel availability for when you need it most.</p>
+
+<p><strong>Supporting Targets</strong></p>
+<p>Fiber: 30g | Fluids: 147oz training / 115oz rest | Sodium: 3,400mg | Potassium: 3,400mg</p>
+
+<p><strong>How To Think About Your Data</strong></p>
+<p>The scale will fluctuate 2-3 pounds day to day from water, food volume, and sodium. This is normal. Track daily but judge progress by weekly averages. A 2-pound overnight jump means nothing - it's water from carbs doing their job. What matters is the trend line over 2-week periods. During recomp, the scale might barely move while your body composition transforms. Trust the process, not daily weigh-ins.</p>
+
+<p><strong>Why I Chose These Numbers</strong></p>
+<p>Your protein is set at 1.0g/lb because of your GLP-1 history and recomp goals - we need maximum muscle preservation and building stimulus. Carbs are cycled but kept high even on rest days (300g) because you're 19, recovering from injury, and need the cellular hydration and recovery support. Your fat is at 0.4g/lb to leave maximum room for carbs while supporting hormone production. The modest 200-calorie cycling gap prevents any metabolic slowdown while creating enough deficit for gradual fat loss. These numbers support your August timeline without sacrificing muscle or performance.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">04</span><div><div class="step-title">Your Nutrition System</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">LAYER 1: YOUR DAILY REFERENCE</div>
+
+<p><strong>Your Training Day Schedule (2,850 calories | 174g protein | 356g carbs | 70g fat)</strong></p>
+
+<p><strong>Meal 1 - 1:00 PM (750 calories | 45g P | 95g C | 15g F)</strong></p>
+<ul>
+<li>6 oz chicken breast</li>
+<li>1.5 cups jasmine rice</li>
+<li>Large mixed salad with olive oil drizzle</li>
+</ul>
+<p><em>Breaks your fast with easily digestible protein and carbs to fuel your afternoon</em></p>
+
+<p><strong>Meal 2 - 4:00 PM (600 calories | 35g P | 70g C | 13g F)</strong></p>
+<ul>
+<li>Your upgraded cream of wheat bowl: 1 cup cream of wheat (dry measure)</li>
+<li>1 scoop whey protein mixed in</li>
+<li>1 medium banana</li>
+<li>1 tbsp almond butter</li>
+</ul>
+<p><em>Pre-workout fuel that works with your current preferences but adds protein</em></p>
+
+<p><strong>Meal 3 - 8:30 PM (900 calories | 50g P | 106g C | 18g F)</strong></p>
+<ul>
+<li>7 oz lean beef or lamb</li>
+<li>300g sweet potato</li>
+<li>Green vegetables (broccoli, Brussels sprouts, or asparagus)</li>
+</ul>
+<p><em>Post-workout meal maximizing recovery and muscle protein synthesis</em></p>
+
+<p><strong>Meal 4 - 9:30 PM (600 calories | 44g P | 85g C | 12g F)</strong></p>
+<ul>
+<li>1.5 cups Greek yogurt</li>
+<li>1 cup berries</li>
+<li>1/3 cup granola</li>
+<li>1 tbsp honey</li>
+</ul>
+<p><em>Final meal providing casein protein for overnight recovery</em></p>
+
+<p><strong>Flexible Buffer: +/- 12g fat from cooking oils and food prep variance</strong></p>
+
+<p><strong>Your Rest Day Schedule (2,650 calories | 174g protein | 300g carbs | 70g fat)</strong></p>
+<p>Same meal structure with reduced portions:</p>
+<ul>
+<li>Rice reduced to 1 cup in Meal 1</li>
+<li>Cream of wheat reduced to 3/4 cup in Meal 2</li>
+<li>Sweet potato reduced to 250g in Meal 3</li>
+<li>Granola reduced to 1/4 cup in Meal 4</li>
+</ul>
+
+<p><strong>Your Flexible Eating Slot</strong></p>
+<p>You have a 100-150 calorie buffer built into the cooking oil and prep variance. This accounts for real-world execution where you might use slightly more oil or have portion variations. Don't stress exact measurements - hit the protein target and stay close on total calories.</p>
+
+<p><strong>Why This Rhythm Works For You</strong></p>
+<p>This structure respects your fasting preference while ensuring you get four solid protein doses across your 8-hour window. Each meal is spaced 2.5-3 hours apart to optimize digestion and amino acid availability. We front-load carbs around training (meals 2 and 3) for performance and recovery, then taper toward evening. The final Greek yogurt meal provides slow-digesting casein to minimize muscle breakdown during your overnight fast.</p>
+
+<div class="section-label">LAYER 2: THE SYSTEM BEHIND IT</div>
+
+<p><strong>Protein Foundations</strong></p>
+<p><em>Tier 1 Anchors:</em> Whole eggs, beef, lamb, salmon (aim for 2x per week), whole milk</p>
+<p><em>Tier 2 Supporting:</em> Chicken breast, Greek yogurt, cottage cheese, ground turkey</p>
+<p><em>Tier 3 Convenience:</em> Whey protein, halal deli meats for quick additions</p>
+
+<p><strong>Carb Base</strong></p>
+<p>White jasmine rice, sweet potatoes, white potatoes, oats, cream of wheat, fruit (bananas, berries, apples), honey (post-workout or with yogurt)</p>
+
+<p><strong>Fat Sources</strong></p>
+<p>Olive oil, avocado, almond butter, whole eggs, fattier cuts of beef/lamb, full-fat Greek yogurt</p>
+
+<p><strong>Nutrient-Dense Vegetables</strong></p>
+<p>Spinach, broccoli, Brussels sprouts, asparagus, bell peppers, cauliflower - rotate for variety but prioritize dark green options daily</p>
+
+<p><strong>How To Build A Plate When You Can't Track</strong></p>
+<ul>
+<li>Palm-sized protein portion (roughly 6-7 oz cooked)</li>
+<li>Fist-sized carb portion (roughly 1 cup cooked grains or 1 medium potato)</li>
+<li>Thumb-sized fat portion</li>
+<li>Fill remaining plate with vegetables</li>
+</ul>
+
+<p><strong>Meal Prep Strategy</strong></p>
+<p>Sunday: Cook all rice and sweet potatoes for the week, prep 3 days of chicken</p>
+<p>Wednesday: Prep remaining chicken, cut vegetables, portion Greek yogurt</p>
+
+<p><strong>Grocery Framework</strong></p>
+<p>Weekly: 2.5 lbs chicken breast, 2 lbs ground beef/lamb, Greek yogurt, eggs, rice, sweet potatoes, vegetables, fruits</p>
+<p>Staples: Olive oil, spices, cream of wheat, whey protein, almond butter</p>
+
+<p><strong>Eating Out Strategy</strong></p>
+<p>Order grilled protein (chicken, beef, lamb, fish) with rice or potato and vegetables. Ask for sauces on the side. A standard restaurant portion of protein is usually 6-8 oz, perfect for your needs. Skip appetizers, focus on the main plate. If portion sizes are huge, immediately box half for your next meal.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">05</span><div><div class="step-title">Your Training Program</div></div></div>
+<div class="step-bar"></div>
+
+<p><strong>Weekly Split Overview</strong></p>
+
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Session Type</th><th>Primary Muscle Groups</th></tr></thead><tbody>
+<tr><td>, -</td><td>, , , ,</td><td>, , , , , ,</td></tr>
+<tr><td>Monday</td><td>Upper Power</td><td>Chest, Back, Shoulders</td></tr>
+<tr><td>Tuesday</td><td>Lower Power</td><td>Quads, Hamstrings, Glutes</td></tr>
+<tr><td>Wednesday</td><td>REST</td><td>Active recovery</td></tr>
+<tr><td>Thursday</td><td>Push Hypertrophy</td><td>Chest, Shoulders, Triceps</td></tr>
+<tr><td>Friday</td><td>Pull Hypertrophy</td><td>Back, Biceps, Rear Delts</td></tr>
+<tr><td>Saturday</td><td>Legs Hypertrophy</td><td>Full Lower Body</td></tr>
+<tr><td>Sunday</td><td>Upper Weak Points</td><td>Lagging areas + arms</td></tr>
+</tbody></table></div>
+
+<p><strong>Per-Session Exercise List</strong></p>
+
+<p><strong>Monday - Upper Power</strong></p>
+<ul>
+<li>Incline DB Press: 2 working sets (pec-safe angle)</li>
+<li>Bent Over BB Row: 2 working sets</li>
+<li>Military Press: 2 working sets</li>
+<li>Weighted Pullups: 2 working sets</li>
+</ul>
+
+<p><strong>Tuesday - Lower Power</strong></p>
+<ul>
+<li>Hack Squat: 3 working sets</li>
+<li>Romanian Deadlift: 2 working sets</li>
+<li>Walking Lunges: 2 working sets</li>
+<li>Leg Curls: 2 working sets</li>
+</ul>
+
+<p><strong>Thursday - Push Hypertrophy</strong></p>
+<ul>
+<li>High Incline DB Press: 2 working sets</li>
+<li>Cable Flyes (high to low): 2 working sets</li>
+<li>DB Shoulder Press: 2 working sets</li>
+<li>Lateral Raises: 2 working sets</li>
+<li>Overhead Tricep Extension: 2 working sets</li>
+</ul>
+
+<p><strong>Friday - Pull Hypertrophy</strong></p>
+<ul>
+<li>Cable Rows (multiple angles): 3 working sets total</li>
+<li>Lat Pulldowns: 2 working sets</li>
+<li>Chest-Supported DB Rows: 2 working sets</li>
+<li>Cable Curls: 2 working sets</li>
+<li>Rear Delt Flyes: 2 working sets</li>
+</ul>
+
+<p><strong>Saturday - Legs Hypertrophy</strong></p>
+<ul>
+<li>Leg Press: 2 working sets</li>
+<li>Bulgarian Split Squats: 2 working sets per leg</li>
+<li>Leg Curls: 2 working sets</li>
+<li>Leg Extensions: 2 working sets</li>
+<li>Calf Raises: 3 working sets</li>
+</ul>
+
+<p><strong>Sunday - Upper Weak Points</strong></p>
+<ul>
+<li>Target lagging areas identified in first 4 weeks</li>
+<li>Arm specialization work</li>
+<li>Movement quality focus</li>
+</ul>
+
+<p><strong>Sets and Rep Targets</strong></p>
+<ul>
+<li>Power movements: 5-8 reps at RPE 8-9</li>
+<li>Compound hypertrophy: 8-12 reps at RPE 8-9</li>
+<li>Isolation movements: 10-15 reps at RPE 9-10</li>
+<li>Final set of each exercise can go to true failure</li>
+</ul>
+
+<p><strong>Intensity Guidelines</strong></p>
+<p>Mechanical tension drives growth. Every set should be difficult. RPE 8 means you have 2 reps left. RPE 9 means 1 rep left. RPE 10 means true failure with good form. Given your low volume approach (1-3 sets per exercise), intensity must be high. If you're not approaching failure, you're wasting the set.</p>
+
+<p><strong>Progression Model</strong></p>
+<p>When you hit the top of your rep range with good form, increase weight next session:</p>
+<ul>
+<li>Power movements: add 5-10 lbs</li>
+<li>Compounds: add 5 lbs</li>
+<li>Isolations: add 2.5-5 lbs or 1 rep</li>
+</ul>
+<p>If form degrades, the weight was too aggressive. Drop back and build up properly.</p>
+
+<p><strong>Training Log Expectations</strong></p>
+<p>Track: exercise, weight, reps, RPE, and notes on form or how it felt. Your logbook drives every decision. No progression in the book = no progression in physique.</p>
+
+<p><strong>When A Lift Stalls</strong></p>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Check sleep quality and duration first</li>
+<li><span class="li-num">2.</span> Verify nutrition compliance (especially protein)</li>
+<li><span class="li-num">3.</span> Assess recovery between sessions</li>
+<li><span class="li-num">4.</span> Only then modify programming (swap exercise variation or add a backoff set)</li>
+</ul>
+
+<p><strong>Deload Protocol</strong></p>
+<p>No scheduled deloads. Good programming doesn't accumulate fatigue that requires deloading. If you need a deload, check the hierarchy above.</p>
+
+<p><strong>Why This Split</strong></p>
+<p>This hybrid structure leverages your Upper/Lower preference while incorporating PPL principles for frequency. We're training everything 2x per week with varied rep ranges and intensities. The power days build strength in movements you can load safely around your pec recovery. The hypertrophy days create volume through exercise variation rather than excessive sets. Sunday's weak point day lets us target whatever needs extra attention as you progress. This respects your recovery needs while maximizing the stimulus for both muscle gain and strength.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">06</span><div><div class="step-title">Your Supplements and Hydration</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">SECTION 1: YOUR SUPPLEMENTS</div>
+
+<p><strong>Essential (Tier 1)</strong></p>
+<p><strong>Creatine Monohydrate</strong> - 10.5g daily, anytime with water</p>
+<p>You're already taking everything else essential except this. At 174 lbs, you need 10.5g for full saturation. This directly supports muscle gain through increased training capacity, cell volumization, and recovery. Non-negotiable addition.</p>
+
+<p><strong>Vitamin D3 + K2</strong> - Continue current dose with food</p>
+<p>You're already taking this correctly. Maintain for immune function, hormone optimization, and bone health.</p>
+
+<p><strong>Magnesium Glycinate</strong> - Continue current dose before bed</p>
+<p>Supports sleep quality, muscle function, and recovery. You're already dialed in here.</p>
+
+<p><strong>Recommended (Tier 2)</strong></p>
+<p><strong>Fish Oil/Omega-3</strong> - Continue current dose with meals</p>
+<p>Anti-inflammatory effects support recovery from high-volume training. Keep this consistent.</p>
+
+<p><strong>Alpha-GPC</strong> - 600-1200mg pre-workout (restock when you run out)</p>
+<p>Cognitive enhancement for training focus and power output. Since you're running low, prioritize restocking this for neural drive during heavy sessions.</p>
+
+<p><strong>L-Theanine</strong> - Continue current dose</p>
+<p>Helps manage cortisol and supports sleep quality given your moderate stress levels.</p>
+
+<p><strong>Optional (Tier 3)</strong></p>
+<p><strong>Betaine (TMG)</strong> - 2.5g daily</p>
+<p>Enhances power output and body composition. Given your interest in advanced supplementation and mechanisms, this supports methylation and cellular hydration.</p>
+
+<p><strong>Digestive Enzymes</strong> - With larger meals if needed</p>
+<p>Your GLP-1 history might benefit from enzyme support as you increase food volume during the restart.</p>
+
+<p><strong>Don't Waste Your Money On</strong></p>
+<ul>
+<li>BCAAs (you're getting plenty from 174g whole food protein)</li>
+<li>Test boosters (you're 19, your natural production is peaked)</li>
+<li>Fat burners (the deficit and training drive fat loss, not pills)</li>
+</ul>
+
+<p><strong>Why These Supplements</strong></p>
+<p>Your current stack is already sophisticated - you understand quality and mechanisms. The only critical gap is creatine, which directly supports your recomp goals through multiple pathways: increased training capacity, cellular hydration, and improved recovery between sessions. Everything else enhances what you're already taking. Given your "gold standard" expectations and interest in mechanisms, each recommendation has clear research support and synergizes with your existing protocol.</p>
+
+<div class="section-label">SECTION 2: YOUR HYDRATION SYSTEM</div>
+
+<p><strong>Daily Fluid Target</strong></p>
+<p>Rest days: 115 oz (3.4 liters)</p>
+<p>Training days: 147 oz (4.4 liters)</p>
+<p>Plain water only counts. Coffee, shakes, and other beverages are extra.</p>
+
+<p><strong>Sodium Target</strong></p>
+<p>3,400mg daily - scaled to your water intake at 1g per liter</p>
+<p>Most people vastly underestimate sodium needs once water intake increases. You're drinking over a gallon on training days. Without proportional sodium, that water passes through without hydrating muscles properly.</p>
+
+<p><strong>Potassium Target</strong></p>
+<p>3,400mg daily - matches sodium 1:1 for cellular balance</p>
+<p>The sodium-potassium pump drives every muscle contraction. They work as partners, not independently.</p>
+
+<p><strong>Around Your Training</strong></p>
+<p>Pre-workout (30-60 min): 16-24 oz water with 1/4 tsp salt</p>
+<p>During training: 20-32 oz with electrolytes (500-1000mg sodium)</p>
+<p>Post-workout: 24-32 oz to replace sweat losses</p>
+
+<p><strong>How Carbs Affect Your Water</strong></p>
+<p>Every gram of carbohydrate holds 3-4g of water. On your 356g training days, that's almost 3 lbs of water weight. This isn't fat gain - it's functional hydration that makes muscles look full and perform better. Expect 2-3 lb swings between high and low carb days.</p>
+
+<p><strong>How Alcohol Affects Hydration</strong></p>
+<p>Not applicable to you, which is a massive advantage. You're avoiding one of the biggest recovery disruptors.</p>
+
+<p><strong>Symptom Adjustment Guide</strong></p>
+<ul>
+<li>Feeling puffy/bloated: Check sodium consistency - fluctuating intake causes more bloat than high consistent intake</li>
+<li>Looking flat/stringy: Increase sodium by 500mg and reassess</li>
+<li>Cramping: Usually low potassium relative to sodium - check food sources first</li>
+<li>Headaches/fatigue: Classic low sodium symptoms - add 1/4 tsp salt to water and see if it resolves within an hour</li>
+</ul>
+
+<p><strong>Why This Hydration Setup</strong></p>
+<p>You're interested in fascia work and muscle quality, but you're inconsistently hydrated. That's like trying to expand a dried sponge - it doesn't work. Cellular hydration drives nutrient delivery, waste removal, and the pump quality that indicates good blood flow. Your extensive supplement stack requires adequate water to work properly. The sodium recommendation might seem high, but it's proportional to your fluid intake and training volume. You lose 500-1500mg sodium per hour of training. Starting from a depleted state guarantees subpar performance.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">07</span><div><div class="step-title">Your Recovery System</div></div></div>
+<div class="step-bar"></div>
+
+<p><strong>Recovery Check Hierarchy</strong></p>
+<p>When recovery feels off, check in this order:</p>
+<ul class="numbered">
+<li><span class="li-num">1.</span> <strong>Sleep</strong> → Duration and quality</li>
+<li><span class="li-num">2.</span> <strong>Hydration</strong> → Consistency across all days</li>
+<li><span class="li-num">3.</span> <strong>Sodium</strong> → Proportional to water intake</li>
+<li><span class="li-num">4.</span> <strong>Food</strong> → Hit your calorie and protein targets</li>
+<li><span class="li-num">5.</span> <strong>Stress</strong> → School and business demands</li>
+</ul>
+
+<p><strong>Sleep Section</strong></p>
+<div class="data-line"><strong>Target:</strong> 8 hours minimum</div>
+<p><strong>Ideal window:</strong> Progressively shift toward 11:30 PM - 7:30 AM</p>
+<p><strong>Current reality:</strong> Your 2 AM - 10 AM pattern works for now, but costs you peak recovery hours</p>
+
+<p><strong>Evening routine starting at training end (8 PM):</strong></p>
+<ul>
+<li>8:00-9:30 PM: Post-workout meal and relaxation</li>
+<li>9:30-10:30 PM: Business/school work with blue light protection</li>
+<li>10:30-11:00 PM: Shower, prep tomorrow, wind down</li>
+<li>11:00-11:30 PM: Reading or stretching (no screens)</li>
+<li>11:30 PM: Lights out (shift 15 minutes earlier each week)</li>
+</ul>
+
+<p><strong>Caffeine rule:</strong> None after 2 PM if targeting earlier sleep. Currently none after 6 PM for your 2 AM bedtime.</p>
+
+<p><strong>Hydration Checkpoint</strong></p>
+<p>147 oz on training days, 115 oz on rest days. Set hourly reminders if needed. Front-load hydration earlier in the day to avoid disrupting sleep.</p>
+
+<p><strong>Stress Management</strong></p>
+<p>Your 5/10 stress from school and Team AM launch is manageable but needs monitoring:</p>
+<ul>
+<li>Post-training walks for 10-15 minutes to decompress</li>
+<li>Time-block work sessions to prevent overwhelm</li>
+<li>One full rest day (Wednesday) with no business work</li>
+<li>Deep breathing between work blocks (4-7-8 pattern: 4 seconds in, 7 hold, 8 out)</li>
+</ul>
+
+<p><strong>Daily Movement</strong></p>
+<p>Current: Unknown, likely variable</p>
+<p>Target: 10,000 steps minimum</p>
+<p>Progression: Add 1,000 steps per week until you hit 10K consistently</p>
+<p>Implementation: Morning walk to start circadian rhythm, post-meal walks for digestion, evening walk for stress relief</p>
+
+<p><strong>Why This Recovery Setup</strong></p>
+<p>Recovery is when adaptation happens. You can train perfectly and eat perfectly, but without recovery, you won't recomp effectively. Your late sleep pattern is the biggest modifiable factor - every hour you shift earlier improves hormone production and recovery quality. The hierarchy exists because people often blame training when basics aren't covered. Your moderate stress needs active management or it'll compound with the physical stress of training. The step target ensures baseline cardiovascular health and helps partition nutrients toward muscle rather than fat storage.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">08</span><div><div class="step-title">Your Mindset and Operating Rules</div></div></div>
+<div class="step-bar"></div>
+
+<p><strong>Your Strengths</strong></p>
+<p>You bring a coach's mindset to your own transformation. You told me you want "explanations of why behind everything" - that intellectual engagement is a massive advantage. You don't just follow programs, you understand them. Your discipline shows in maintaining 6-day training through a pec injury and building a business while in school. You have elite-level consistency when you believe in the process. Your complete alcohol avoidance and willingness to take comprehensive supplements shows you prioritize results over convenience.</p>
+
+<p><strong>Your Traps</strong></p>
+<p>Your perfectionism might sabotage adherence - wanting the "gold standard" can paralyze execution if you can't hit it perfectly every day. You intellectualize nutrition (understanding concepts) but struggle with practical execution (actually eating enough protein). The August deadline creates productive urgency but also risk of unsustainable approaches. You might restart Retatrutide too aggressively trying to accelerate results.</p>
+
+<p><strong>Your Identity Shift</strong></p>
+<p>You're transitioning from "knowledgeable about fitness" to "someone who executes fitness." From "I understand nutrition" to "I eat 174g protein daily without thinking about it." From "business founder who trains" to "athlete who happens to run a business." This isn't about knowing more - you already know enough. It's about becoming someone whose actions automatically align with their knowledge.</p>
+
+<p><strong>Your Operating Rules</strong></p>
+<ul class="numbered">
+<li><span class="li-num">1.</span> <strong>Log before you lift</strong> - Every training session gets logged before you leave the gym</li>
+<li><span class="li-num">2.</span> <strong>Protein first, always</strong> - Every meal starts with your protein source</li>
+<li><span class="li-num">3.</span> <strong>Imperfect action beats perfect planning</strong> - 85% execution today beats waiting for 100% tomorrow</li>
+<li><span class="li-num">4.</span> <strong>Recovery is not negotiable</strong> - Training tears down, recovery builds up</li>
+<li><span class="li-num">5.</span> <strong>Trust the timeline</strong> - 16 weeks is enough if you execute daily</li>
+</ul>
+
+<p><strong>When You Have A Bad Day</strong></p>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Stop and acknowledge it happened without judgment</li>
+<li><span class="li-num">2.</span> Identify if it's physical (under-recovered) or mental (stress/overwhelm)</li>
+<li><span class="li-num">3.</span> If physical: maintain protein target, hit maintenance calories, reduce training volume by 30%</li>
+<li><span class="li-num">4.</span> If mental: do a primer workout (50% normal volume), walk outside, then reassess</li>
+<li><span class="li-num">5.</span> Never miss two days in a row of anything (training, protein target, hydration)</li>
+<li><span class="li-num">6.</span> Next meal reset - don't wait until tomorrow to get back on track</li>
+</ul>
+
+<p><strong>What You Must Not Do</strong></p>
+<ul>
+<li>Never drop below 150g protein trying to "save calories"</li>
+<li>Never add extra training volume because you feel guilty about nutrition</li>
+<li>Never restart Retatrutide at higher than 0.75mg dose</li>
+<li>Never sacrifice sleep for business work two nights in a row</li>
+<li>Never compare week-to-week progress photos - compare month to month</li>
+<li>Never change the program because you read about a new technique mid-cycle</li>
+</ul>
+
+<p><strong>Emotional Safety Note</strong></p>
+<p>Your high standards are an asset, but perfectionism can become self-destructive. If you find yourself anxious about hitting exact numbers or feeling like a failure for minor deviations, that's your signal to zoom out. The goal is August transformation, not daily perfection. Progress requires consistency, not perfection.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">09</span><div><div class="step-title">Your Daily System</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">PHASE 1: YOUR DAILY SYSTEM</div>
+
+<p><strong>Tracking Setup</strong></p>
+<p>Primary app: MacroFactor (superior algorithm and adaptation)</p>
+<p>Backup: Cronometer (if you prefer micronutrient detail)</p>
+<p>Set up custom recipes for your meal rotation to speed daily logging</p>
+
+<p><strong>Tracking Level</strong></p>
+<p>Full tracking during recomp phase - every food, every gram. This precision is temporary but necessary for the August timeline. After achieving your goal, we can transition to intuitive eating with periodic check-ins.</p>
+
+<p><strong>Track Daily</strong></p>
+<p>□ All food (log before eating when possible)</p>
+<p>□ Protein grams (non-negotiable 174g minimum)</p>
+<p>□ Body weight (same time, same conditions)</p>
+<p>□ Water intake (oz consumed)</p>
+<p>□ Step count</p>
+<p>□ Training log (exercises, sets, reps, weight, RPE)</p>
+
+<p><strong>Track Biweekly</strong></p>
+<p>□ Waist measurement (navel level, relaxed)</p>
+<p>□ Progress photos (front/side/back, same lighting)</p>
+<p>□ Energy levels (1-10)</p>
+<p>□ Sleep quality (1-10)</p>
+<p>□ Strength trends (are key lifts progressing?)</p>
+
+<p><strong>Scale Protocol</strong></p>
+<p>Morning weight after bathroom, before eating/drinking. Daily data points, weekly averages for decisions. Recomp means the scale might not move much while body composition improves dramatically. Trust the process.</p>
+
+<p><strong>How To Keep Tracking Sustainable</strong></p>
+<ul>
+<li>Pre-log your planned day each morning</li>
+<li>Create saved meals for your regulars</li>
+<li>Batch prep makes tracking easier - fewer entries</li>
+<li>Set phone reminders for protein at 3 PM and 6 PM</li>
+<li>If you miss a meal log, estimate and move on - don't abandon the day</li>
+</ul>
+
+<p><strong>Communication Expectations</strong></p>
+<ul>
+<li>Check-in form every 2 weeks (comprehensive data review)</li>
+<li>iMessage for urgent questions or form clarifications</li>
+<li>First check-in: Day 14</li>
+<li>Form includes: 2-week averages, training progress, energy/recovery ratings, specific questions</li>
+<li>Response within 24-48 hours with your biweekly snapshot card showing updated targets</li>
+</ul>
+
+<div class="section-label">PHASE 2: YOUR LAUNCH SEQUENCE</div>
+
+<p><strong>Top 5 Priorities This Week</strong></p>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Hit 174g protein every single day - plan every meal in advance</li>
+<li><span class="li-num">2.</span> Buy and start creatine at 10.5g daily</li>
+<li><span class="li-num">3.</span> Set water reminders for 115-147 oz depending on training</li>
+<li><span class="li-num">4.</span> Log every training session with RPE</li>
+<li><span class="li-num">5.</span> Establish consistent meal timing within your eating window</li>
+</ul>
+
+<p><strong>Change Right Now</strong></p>
+<ul>
+<li>Add protein to your 1 PM meal (currently too carb-heavy)</li>
+<li>Start taking creatine today</li>
+<li>Set hourly water alarms on your phone</li>
+<li>Plan tomorrow's meals tonight</li>
+</ul>
+
+<p><strong>Ignore For Now</strong></p>
+<ul>
+<li>Perfect sleep timing (work on this gradually)</li>
+<li>Retatrutide restart (nail nutrition first)</li>
+<li>Minor weight fluctuations</li>
+<li>Advanced training techniques until full pec clearance</li>
+</ul>
+
+<p><strong>7-Day Starter Version</strong></p>
+<p>Simplified targets while you adapt:</p>
+<ul>
+<li>Calories: Don't track yet, just hit protein</li>
+<li>Protein: 174g minimum (track this meticulously)</li>
+<li>Water: 115 oz minimum every day</li>
+<li>Sodium: Add salt to each meal</li>
+<li>Training: Current program with logged RPE</li>
+</ul>
+
+<p><strong>What To Monitor This Week</strong></p>
+<ul>
+<li>Energy levels after increasing protein</li>
+<li>Fullness in your eating window</li>
+<li>Training performance</li>
+<li>Mental clarity from consistent nutrition</li>
+<li>Scale weight (for data, not decisions)</li>
+</ul>
+
+<p><strong>What A Successful Week 1 Looks Like</strong></p>
+<p>You hit 174g protein at least 6 out of 7 days. You started creatine. You logged every workout. You drank your water target more often than not. You learned which meals work in your schedule. That's it. We're building habits, not chasing perfection.</p>
+
+<p><strong>Week 2:</strong> Identical to Week 1. Don't change anything. Consistency before optimization.</p>
+
+<p><strong>First Check-In: Day 14</strong></p>
+<p>Submit your comprehensive form with 2-week averages. Include specific questions about pec recovery progression and Retatrutide restart timing. I'll adjust based on your execution and feedback.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">10</span><div><div class="step-title">Your Roadmap</div></div></div>
+<div class="step-bar"></div>
+
+<p><strong>Your Phase Timeline</strong></p>
+
+<p><strong>Month 1 (Weeks 1-4): Foundation Building</strong></p>
+<ul>
+<li>Establish nutrition consistency</li>
+<li>Gradually increase training volume</li>
+<li>Achieve full pec clearance</li>
+<li>Check-in #1 (Day 14): Adherence assessment and initial adjustments</li>
+</ul>
+
+<p><strong>Month 2 (Weeks 5-8): Acceleration Phase</strong></p>
+<ul>
+<li>Full pressing movements return</li>
+<li>Possible Retatrutide restart at 0.75mg</li>
+<li>Sleep timing improvement focus</li>
+<li>Check-in #2 (Week 6): Progress evaluation and target refinement</li>
+<li>Check-in #3 (Week 8): Mid-point comprehensive review</li>
+</ul>
+
+<p><strong>Month 3 (Weeks 9-12): Peak Progress</strong></p>
+<ul>
+<li>Maximum training intensity</li>
+<li>Nutrition precision locked in</li>
+<li>Visible composition changes accelerating</li>
+<li>Check-in #4 (Week 10): Fine-tuning for final push</li>
+<li>Check-in #5 (Week 12): Strategy adjustment if needed</li>
+</ul>
+
+<p><strong>Month 4 (Weeks 13-16): Final Push to August</strong></p>
+<ul>
+<li>Detail work and final refinements</li>
+<li>Possible mini-cut if needed</li>
+<li>Peak physique protocols</li>
+<li>Check-in #6 (Week 14): Last adjustments</li>
+<li>Final assessment at Week 16</li>
+</ul>
+
+<p><strong>The Check-In Process</strong></p>
+<p>Every two weeks, you'll submit data showing your averages, not just good days. I analyze trends, not snapshots. You'll receive a branded snapshot card via iMessage showing your current targets, what changed, and your focus for the next two weeks. This keeps us aligned without overcommunicating.</p>
+
+<p><strong>The One Adjustment Principle</strong></p>
+<p>We change one variable at a time. If progress stalls, we might add cardio OR reduce calories OR increase training frequency - never all three. This lets us identify what actually works for your body.</p>
+
+<p><strong>Your 8-12 Week Refresh</strong></p>
+<p>After the August deadline, we'll design your next phase blueprint based on where you land and what comes next. Whether that's a lean gain phase, maintenance, or another cut depends on your results and goals.</p>
+
+<p><strong>Graduation Criteria</strong></p>
+<p>You graduate when you can:</p>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Maintain your physique without constant tracking</li>
+<li><span class="li-num">2.</span> Adjust your own nutrition based on performance</li>
+<li><span class="li-num">3.</span> Program your own training progressions</li>
+<li><span class="li-num">4.</span> Recognize and correct recovery issues independently</li>
+<li><span class="li-num">5.</span> Make informed decisions about supplementation and hydration</li>
+</ul>
+
+<p>Given your coaching aspirations and knowledge base, you're partially there already. This process refines execution to match your understanding.</p>
+
+<p><strong>Your August Reality</strong></p>
+<p>In 16-18 weeks, you'll walk into any room with visible abs, fuller muscle, and the confidence that comes from executing a plan with precision. You wanted "gold standard" coaching - that requires gold standard execution. The blueprint is built. Now we see if you'll follow it with the same intensity you demanded in its creation.</p>
+
+<div class="divider"></div>
+
+<p>Dear [COACH],</p>
+
+<p>This blueprint represents exactly what you asked for - the gold standard approach with every mechanism explained and every number dialed in for your specific situation. It accounts for your injury recovery, your business timeline, your fasting preference, and your August deadline.</p>
+
+<p>In 16-18 weeks, you'll have the physique that matches your knowledge level. But that only happens if you execute with the same precision you demanded in this plan. Your biggest challenge isn't understanding what to do - it's doing it consistently when business gets busy or school gets stressful.</p>
+
+<p>The difference between where you are and where you want to be is 174g of protein every day, 147 oz of water on training days, and trusting the process when the scale doesn't move as fast as you'd like during recomp.</p>
+
+<p>You've got everything you need. Time to prove you can execute at the level you think at.</p>
+
+<p>Let's get to work.</p>
+
+<p>[COACH], Team AM</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Blueprint | [CLIENT NAME] | Team AM</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0A0F;--bg-elevated:#111118;--card-bg:rgba(255,255,255,0.03);--card-border:rgba(255,255,255,0.06);--text-1:#FFFFFF;--text-2:#9CA3AF;--text-3:#6B7280;--accent:#C8A45C;--accent-subtle:rgba(200,164,92,0.1);--border:rgba(255,255,255,0.06)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text-1);background:var(--bg);line-height:1.7}
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:60px;position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(200,164,92,0.06) 0%,transparent 70%);pointer-events:none}
+.cover-logo{width:48px;height:48px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Satoshi',sans-serif;font-weight:900;font-size:18px;color:#fff}
+.cover-center{text-align:center}
+.cover-title{font-family:'Satoshi',sans-serif;font-size:clamp(40px,6vw,56px);font-weight:900;color:var(--text-1);letter-spacing:-0.035em;margin-bottom:16px}
+.cover-subtitle{font-family:'Satoshi',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:32px}
+.cover-bar{width:60px;height:3px;background:var(--accent);margin:0 auto 40px}
+.cover-info{font-size:15px;color:var(--text-2);line-height:2.4}
+.cover-info span{color:var(--text-1);font-weight:600}
+.cover-footer{font-size:12px;color:var(--text-3);text-align:center;border-top:1px solid var(--border);padding-top:16px}
+.content{max-width:780px;margin:0 auto;padding:0 32px 80px}
+.step-break{height:80px}
+.step-header{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+.step-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--accent);min-width:28px}
+.step-title{font-family:'Satoshi',sans-serif;font-size:24px;font-weight:800;color:var(--text-1);letter-spacing:-0.02em}
+.step-bar{height:2px;background:linear-gradient(90deg,var(--accent) 0%,var(--accent) 60px,var(--border) 60px);margin-bottom:28px}
+.section-label{font-family:'Satoshi',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin:28px 0 12px;padding-top:8px}
+.sub-header{font-family:'Satoshi',sans-serif;font-size:18px;font-weight:800;color:var(--text-1);margin:32px 0 16px;letter-spacing:-0.01em}
+p{font-size:14px;color:var(--text-2);line-height:1.8;margin-bottom:14px}
+p strong{color:var(--text-1)}
+.data-line{font-size:14px;color:var(--text-2);line-height:1.8;margin-bottom:8px;padding:8px 16px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px}
+.data-line strong{font-family:'Space Grotesk',sans-serif;color:var(--accent);font-weight:700}
+ul{list-style:none;margin-bottom:18px}
+ul li{font-size:14px;color:var(--text-2);line-height:1.75;padding:4px 0 4px 20px;position:relative}
+ul li::before{content:'';position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:0.5}
+ul li strong{color:var(--text-1)}
+ul.numbered li::before{display:none}
+ul.numbered li{padding-left:0}
+.li-num{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--accent);margin-right:6px}
+.table-wrap{overflow-x:auto;margin-bottom:20px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{font-family:'Satoshi',sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);text-align:left;padding:10px 14px;border-bottom:1px solid var(--border);background:var(--bg-elevated)}
+tbody td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-2)}
+tbody tr:hover{background:rgba(255,255,255,0.02)}
+.divider{height:1px;background:var(--border);margin:32px 0}
+code{font-family:'Space Grotesk',monospace;font-size:13px;color:var(--accent);background:var(--accent-subtle);padding:2px 6px;border-radius:4px}
+@media print{body{background:white;color:#0F172A}.cover{background:#0A0A0F;-webkit-print-color-adjust:exact;print-color-adjust:exact}.step-break{page-break-before:always;height:40px}}
+@media(max-width:640px){.cover{padding:40px 24px}.cover-title{font-size:36px}.content{padding:0 20px 60px}.step-title{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="cover-logo">AM</div>
+  <div class="cover-center">
+    <div class="cover-title">Your Blueprint</div>
+    <div class="cover-subtitle">Personalized Coaching Blueprint</div>
+    <div class="cover-bar"></div>
+    <div class="cover-info">
+      <div>Built for <span style="color:#C8A45C">[CLIENT NAME]</span></div>
+      <div>Date: <span>April 10, 2026</span></div>
+      <div>Phase: <span>Corrective Muscle Gain</span></div>
+    </div>
+  </div>
+  <div class="cover-footer">Confidential. For coaching use only. Do not distribute.</div>
+</div>
+<div class="content">
+
+<p><strong>Client:</strong> [CLIENT NAME]</p>
+<p><strong>Date:</strong> December 19, 2024</p>
+<p><strong>Current Phase:</strong> Corrective Muscle Gain</p>
+
+<div class="divider"></div>
+
+<p>Hey [CLIENT],</p>
+
+<p>I've been thinking about everything we talked about - your shoulder instability, the way your left lat won't fire properly, that right ankle that still gives you trouble from the fibula break. You're dealing with a lot of movement issues, but you're also 19 and ready to build muscle. Most coaches would tell you to fix everything first, then build. But that's not what you want, right? You want to fix imbalances AND gain muscle simultaneously.</p>
+
+<p>Here's what I see: you're incredibly aware of your body. You can tell me exactly which muscles aren't activating, which movements hurt, which patterns feel off. That level of awareness is rare, especially at 19. But I also noticed something else - that same analytical mind that helps you identify problems also creates problems. When you told me about how "one bad decision" with food turns into eating an entire container of cookies because the day is already "ruined" - that's your perfectionist brain sabotaging you.</p>
+
+<p>Your shoulder situation worries me, especially since you won't see a doctor. I get it, I really do. But we need to be smart about this. Every exercise in your program is going to work around that instability while still letting you push hard and grow. No overhead external rotation, no heavy internal rotation loading. We're going to build muscle while respecting your body's current limitations.</p>
+
+<p>The fact that you're drinking 1.5-2 gallons of water daily tells me you're committed. Maybe too committed sometimes - that all-or-nothing thinking shows up everywhere. But we can use that drive. We just need to channel it better.</p>
+
+<p>Your timeline is perfect for what we're doing. You're young, you recover well, and you've got the work ethic. In 8-12 weeks, we can make real progress on both muscle gain and movement quality. This isn't about perfection. It's about systematic improvement while building the physique you want.</p>
+
+<p>Let's get to work.</p>
+
+<p>[COACH], Team AM</p>
+
+<div class="divider"></div>
+
+<h2 class="sub-header">Table of Contents</h2>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Where You Are Right Now</li>
+<li><span class="li-num">2.</span> Your Phase and Game Plan</li>
+<li><span class="li-num">3.</span> Your Numbers</li>
+<li><span class="li-num">4.</span> Your Nutrition System</li>
+<li><span class="li-num">5.</span> Your Training Program</li>
+<li><span class="li-num">6.</span> Your Supplements and Hydration</li>
+<li><span class="li-num">7.</span> Your Recovery System</li>
+<li><span class="li-num">8.</span> Your Mindset and Operating Rules</li>
+<li><span class="li-num">9.</span> Your Daily System</li>
+<li><span class="li-num">10.</span> Your Roadmap</li>
+</ul>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">01</span><div><div class="step-title">Where You Are Right Now</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">Here's What I See</div>
+<p>You're a 19-year-old guy with 2-5 years of training experience who knows exactly what's wrong but struggles to fix it. When you told me you can feel that your left lat won't activate properly, that your right adductor is weak, that your left shoulder is constantly unstable - that's not normal beginner awareness. You've developed this incredible mind-muscle connection, but it's almost working against you because you're hyper-aware of every imbalance and limitation.</p>
+
+<div class="section-label">What's Working For You</div>
+<ul>
+<li>You track your food and know your maintenance (2400 calories)</li>
+<li>You train 5x/week consistently despite the pain</li>
+<li>Your sleep is solid (7-8 hours, quality 8/10)</li>
+<li>You're already supplementing intelligently</li>
+<li>You have full gym access and use it</li>
+</ul>
+
+<div class="section-label">What's Holding You Back</div>
+<ul>
+<li>Multiple movement compensations from injury history</li>
+<li>All-or-nothing mindset that turns one cookie into a binge</li>
+<li>Refusing medical help for legitimate injuries</li>
+<li>Strength levels way below what 2-5 years should produce</li>
+</ul>
+
+<div class="section-label">The Biggest Thing Holding You Back</div>
+<p><strong>Your left shoulder instability is derailing every upper body session.</strong> External rotation overhead causes pain. Internal rotation causes pain. This isn't just limiting your bench press (which is stuck at one plate after years of training) - it's creating compensation patterns that affect your entire upper body development.</p>
+
+<div class="section-label">The Second Biggest Thing</div>
+<p><strong>Your perfectionist mindset creates failure cycles.</strong> One bad food choice becomes "the day is ruined" which becomes eating an entire container of cookies. This same pattern probably shows up in training when you can't hit perfect form or the weight feels off.</p>
+
+<div class="section-label">Your Body Right Now</div>
+<p>At 5'8" and 158 lbs, you're relatively lean (13-15% body fat) with room to grow. You're not carrying excess fat that would slow down muscle gain. Your body is primed to build, we just need to work around the mechanical issues.</p>
+
+<div class="section-label">Your Recovery</div>
+<p>Recovery capacity is actually solid. Good sleep, low alcohol consumption (none), moderate stress. Your body can handle the work. The limitation is mechanical (injuries) not systemic (recovery).</p>
+
+<div class="section-label">Your Digestion and Hydration</div>
+<p>You're drinking 1.5-2 gallons daily with Ekkolyte for electrolytes. No reported digestive issues. Using aloe vera juice suggests you're proactive about gut health.</p>
+
+<div class="section-label">Ignore This For Now</div>
+<p>Stop obsessing over perfect muscle activation on every rep. Yes, your left lat doesn't fire like your right. Yes, your right adductor is weak. We'll address these, but not by analyzing every single rep. That's paralysis by analysis.</p>
+
+<div class="section-label">What This Means For Your Plan</div>
+<p>We're building a corrective muscle gain approach that respects your injuries while pushing for growth. Every exercise will be selected for shoulder safety first, muscle building second. Your nutrition will have built-in flexibility to prevent binge cycles. This is about progress, not perfection.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">02</span><div><div class="step-title">Your Phase and Game Plan</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">Your Current Phase</div>
+<p><strong>CORRECTIVE MUSCLE GAIN</strong></p>
+
+<div class="section-label">Why We're Here</div>
+<p>You told me exactly what you want: to "fix imbalances AND gain muscle simultaneously." Most people your age just want to get big or get lean. You want to get big while fixing movement patterns. That takes a different approach. At 19, your recovery capacity is through the roof. We can push muscle gain while systematically addressing each movement limitation. This isn't rehab disguised as training - this is intelligent muscle building that happens to correct imbalances along the way.</p>
+
+<div class="section-label">Your Priority Ranking</div>
+<ul class="numbered">
+<li><span class="li-num">1.</span> <strong>Build muscle with shoulder-safe exercise selection</strong> - Every upper body movement protects that shoulder</li>
+<li><span class="li-num">2.</span> <strong>Create flexible nutrition structure</strong> - No restriction that triggers binges</li>
+<li><span class="li-num">3.</span> <strong>Systematically correct movement imbalances</strong> - Targeted work for lat, adductor, ankle</li>
+<li><span class="li-num">4.</span> <strong>Consistent progressive overload</strong> - Track everything, beat the logbook weekly</li>
+<li><span class="li-num">5.</span> <strong>Optimize recovery and sleep</strong> - You're already good here, just maintain</li>
+</ul>
+
+<div class="section-label">The One Thing That Matters Most</div>
+<p>Build muscle while keeping your shoulder stable and pain-free. If we can do this, everything else falls into place.</p>
+
+<div class="section-label">Visual Phase Timeline</div>
+
+<p><strong>Weeks 1-4: Foundation Phase</strong></p>
+<ul>
+<li>Establish shoulder-safe movement patterns</li>
+<li>Dial in nutrition without triggering binges</li>
+<li>Build consistent tracking habits</li>
+</ul>
+
+<p><strong>Weeks 5-8: Progressive Loading</strong></p>
+<ul>
+<li>Push weights on safe movements</li>
+<li>Add targeted activation work</li>
+<li>See first visible muscle gains</li>
+</ul>
+
+<p><strong>Weeks 9-12: Corrective Integration</strong></p>
+<ul>
+<li>Test previously painful patterns</li>
+<li>Integrate bilateral movements</li>
+<li>Reassess for next phase</li>
+</ul>
+
+<p><strong>Beyond Week 12:</strong></p>
+<ul>
+<li>Full reassessment</li>
+<li>New blueprint based on progress</li>
+<li>Potentially more aggressive loading</li>
+</ul>
+
+<div class="section-label">What's Slowing You Down</div>
+
+<p><strong>1. Left Shoulder Complex (Instability + Impingement)</strong></p>
+<ul>
+<li>Do Now: Modify all pressing to neutral or decline angles</li>
+<li>Do Next: Add daily band work for rotator cuff</li>
+<li>Do Later: Gradually test overhead positions</li>
+</ul>
+
+<p><strong>2. All-or-Nothing Food Mindset</strong></p>
+<ul>
+<li>Do Now: Build in daily "flex" calories</li>
+<li>Do Next: Practice "next meal reset" when you slip</li>
+<li>Do Later: Address deeper perfectionist patterns</li>
+</ul>
+
+<p><strong>3. Multiple Movement Asymmetries</strong></p>
+<ul>
+<li>Do Now: Unilateral exercise emphasis</li>
+<li>Do Next: Activation drills pre-training</li>
+<li>Do Later: Film form for self-assessment</li>
+</ul>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">03</span><div><div class="step-title">Your Numbers</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">Your Daily Calories</div>
+<p><strong>2,950 calories</strong> - This puts you 300 calories above your maintenance for lean muscle gain.</p>
+
+<div class="section-label">Your Estimated Maintenance</div>
+<p><strong>2,650 calories</strong> - Based on your current stats and very active lifestyle (5x training + work).</p>
+
+<div class="section-label">Protein</div>
+<p><strong>158g daily</strong> (1g per pound bodyweight)</p>
+<p>This is perfect for muscle gain at your age. Spread it across your meals for best muscle protein synthesis.</p>
+
+<div class="section-label">Carbs</div>
+<p><strong>438g daily</strong></p>
+<p>These fuel your training and recovery. At 19, your carb tolerance is excellent. Use it.</p>
+
+<div class="section-label">Fat</div>
+<p><strong>63g daily</strong> (0.4g per pound)</p>
+<p>Enough for hormone production without taking away from your carb budget.</p>
+
+<div class="section-label">Calorie Cycling Structure</div>
+<p><strong>Flat intake</strong> - Same calories every day. With your tendency toward all-or-nothing thinking, consistency beats complexity. Eat the same amount daily and remove decision fatigue.</p>
+
+<div class="section-label">Supporting Targets</div>
+<ul>
+<li><strong>Fiber:</strong> 30g daily for digestion</li>
+<li><strong>Fluids:</strong> 105 oz base (you're already way above this)</li>
+<li><strong>Sodium:</strong> 5,750mg (scaled to YOUR actual water intake)</li>
+<li><strong>Potassium:</strong> 5,750mg (matches sodium)</li>
+</ul>
+
+<div class="section-label">How To Think About Your Data</div>
+<p>The scale will jump 2-3 lbs overnight sometimes. That's water, glycogen, and food volume - not fat. Look at weekly averages, not daily numbers. In a muscle gain phase, expect 0.5-1 lb per week on average. Some weeks nothing, some weeks 2 lbs. If you're gaining more than 3 lbs in a week consistently, we'll pull calories back slightly.</p>
+
+<div class="section-label">Why I Chose These Numbers</div>
+<p>You estimated your maintenance at 2,400, but with your activity level, it's likely higher - around 2,650. I'm starting you at 2,950 to support muscle gain without excessive fat accumulation. Your protein is set at the standard for muscle gain. Carbs are high because you're young, active, and need the fuel. Fat is moderate to keep hormones best while maximizing carbs for performance.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">04</span><div><div class="step-title">Your Nutrition System</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">LAYER 1: YOUR DAILY REFERENCE</div>
+
+<p><strong>Your Meal Schedule</strong></p>
+<ul>
+<li><strong>7:00 AM - Breakfast</strong> (600 calories): 30g protein, 75g carbs, 12g fat</li>
+<li>3 whole eggs + 3 egg whites with spinach</li>
+<li>1.5 cups white rice or 2 large bagels</li>
+<li>1 cup berries</li>
+</ul>
+
+<ul>
+<li><strong>11:00 AM - Lunch</strong> (650 calories): 35g protein, 85g carbs, 14g fat</li>
+<li>5 oz chicken breast or 93/7 ground turkey</li>
+<li>300g white or sweet potato</li>
+<li>Large mixed salad with olive oil</li>
+</ul>
+
+<ul>
+<li><strong>3:00 PM - Pre-Workout</strong> (550 calories): 30g protein, 90g carbs, 8g fat</li>
+<li>Protein shake with banana</li>
+<li>2 cups white rice or large bagel</li>
+<li>Rice cakes with honey</li>
+</ul>
+
+<ul>
+<li><strong>6:30 PM - Post-Workout Dinner</strong> (750 calories): 40g protein, 100g carbs, 15g fat</li>
+<li>6 oz lean beef or salmon</li>
+<li>350g potato or 2 cups pasta</li>
+<li>Steamed vegetables</li>
+</ul>
+
+<ul>
+<li><strong>9:00 PM - Evening</strong> (400 calories): 23g protein, 88g carbs, 14g fat</li>
+<li>Greek yogurt parfait with granola and fruit</li>
+<li>OR 2 bowls of cereal with whole milk</li>
+<li>OR whatever treats you want within macros</li>
+</ul>
+
+<div class="section-label">Your Flexible Eating Slot</div>
+<p>That evening meal? That's your buffer. Want cookies? Work them in here. Craving ice cream? Go for it. As long as you hit your protein target first, use those carbs however you want. This prevents the "I ruined my diet" spiral.</p>
+
+<div class="section-label">Why This Rhythm Works For You</div>
+<p>You're already eating every 3-4 hours, so this maintains your natural pattern. Pre and post-workout meals are carb-heavy to fuel performance and recovery. The evening flexibility means you never feel restricted, which stops binge triggers before they start.</p>
+
+<div class="section-label">LAYER 2: THE SYSTEM BEHIND IT</div>
+
+<div class="section-label">Protein Foundations</div>
+<p><strong>Tier 1 Anchors:</strong> Whole eggs, beef (any cut), salmon</p>
+<p><strong>Tier 2 Supporting:</strong> Chicken breast, turkey, Greek yogurt, cottage cheese</p>
+<p><strong>Tier 3 Convenience:</strong> Whey protein, deli turkey (minimal processing)</p>
+
+<div class="section-label">Carb Base</div>
+<p>White rice, potatoes (any type), pasta, oats, bagels, fruit, rice cakes, cereal. Yes, cereal. You're 19 and building muscle. Don't overthink it.</p>
+
+<div class="section-label">Fat Sources</div>
+<p>Whole eggs, olive oil, avocado, nuts, fatty fish, cheese. Most fats come naturally from protein sources.</p>
+
+<div class="section-label">Nutrient-Dense Vegetables</div>
+<p>Spinach, broccoli, bell peppers, carrots, green beans. Get some color on your plate but don't stress about hitting exact vegetable servings.</p>
+
+<div class="section-label">How To Build A Plate When You Can't Track</div>
+<ul>
+<li>1/2 plate: Carb source (rice, potato, pasta)</li>
+<li>1/4 plate: Protein (palm-sized portion = ~30-40g)</li>
+<li>1/4 plate: Vegetables</li>
+<li>Thumb-sized fat serving (oil, nuts, avocado)</li>
+</ul>
+
+<div class="section-label">Meal Prep Strategy</div>
+<p>Sunday: Cook all rice, prep 3 days of chicken/beef, cut vegetables</p>
+<p>Wednesday: Second protein prep, refresh vegetables</p>
+<p>Keep it simple. Batch cooking prevents decision fatigue.</p>
+
+<div class="section-label">Grocery Framework</div>
+<ul>
+<li>Proteins: Buy 3-4 sources weekly</li>
+<li>Carbs: Stock rice, potatoes, oats, bread</li>
+<li>Convenience: Protein powder, Greek yogurt always on hand</li>
+<li>Flex items: Whatever treats you want that week</li>
+</ul>
+
+<div class="section-label">Eating Out Strategy</div>
+<p>Order protein + carb base (grilled chicken and rice, steak and potato). Ask for sauces on the side. Estimate portions, log your best guess, move on. One meal out doesn't ruin anything.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">05</span><div><div class="step-title">Your Training Program</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">Weekly Split Overview</div>
+
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Session Type</th><th>Primary Muscle Groups</th></tr></thead><tbody>
+<tr><td>, -</td><td>, , , -</td><td>, , , , , ,</td></tr>
+<tr><td>Monday</td><td>Push A</td><td>Chest, Shoulders, Triceps</td></tr>
+<tr><td>Tuesday</td><td>Pull A</td><td>Back, Biceps</td></tr>
+<tr><td>Wednesday</td><td>Legs A</td><td>Quads, Glutes, Calves</td></tr>
+<tr><td>Thursday</td><td>Rest</td><td>Active recovery (walking)</td></tr>
+<tr><td>Friday</td><td>Push B</td><td>Chest, Shoulders, Triceps</td></tr>
+<tr><td>Saturday</td><td>Pull B + Posterior</td><td>Back, Biceps, Hamstrings</td></tr>
+<tr><td>Sunday</td><td>Rest</td><td>Full rest</td></tr>
+</tbody></table></div>
+
+<div class="section-label">Per-Session Exercise List</div>
+
+<p><strong>Push A (Shoulder-Safe Chest Focus)</strong></p>
+<ul>
+<li>Decline Barbell Press (protects shoulder)</li>
+<li>Neutral-Grip DB Press (flat)</li>
+<li>Cable Fly (mid-level, 12-15 reps @ RPE 8)</li>
+<li>Lateral Raise Machine</li>
+<li>Rope Tricep Extension</li>
+<li>Overhead Cable Extension (single arm if needed)</li>
+</ul>
+
+<p><strong>Pull A (Lat Activation Focus)</strong></p>
+<ul>
+<li>Neutral-Grip Pulldown (target left lat)</li>
+<li>Chest-Supported Row (removes stability requirement)</li>
+<li>Cable Row (wide grip)</li>
+<li>Straight-Arm Pulldown (lat isolation)</li>
+<li>Barbell Curl</li>
+<li>Hammer Curl</li>
+</ul>
+
+<p><strong>Legs A (Unilateral Emphasis)</strong></p>
+<ul>
+<li>Bulgarian Split Squat (address imbalances)</li>
+<li>Leg Press (control depth based on ankle)</li>
+<li>Walking Lunges</li>
+<li>Leg Curl</li>
+<li>Single-Leg Calf Raise</li>
+<li>Leg Raise</li>
+</ul>
+
+<p><strong>Push B (Shoulder-Safe Volume)</strong></p>
+<ul>
+<li>DB Press (decline angle)</li>
+<li>Machine Press (neutral grip)</li>
+<li>Pec Deck</li>
+<li>Rear Delt Fly</li>
+<li>Close-Grip Press (if comfortable) or Dips</li>
+<li>Single-Arm Cable Extension</li>
+</ul>
+
+<p><strong>Pull B + Posterior</strong></p>
+<ul>
+<li>T-Bar Row (supported)</li>
+<li>Single-Arm DB Row (fix left lat)</li>
+<li>Wide-Grip Cable Row</li>
+<li>Face Pull (15-20 reps @ RPE 7-8)</li>
+<li>Romanian Deadlift (hip hinge pattern)</li>
+<li>Preacher Curl</li>
+<li>Cable Curl</li>
+</ul>
+
+<div class="section-label">Sets and Rep Targets</div>
+<ul>
+<li>Compound movements: 2 working sets, 6-8 reps</li>
+<li>Secondary compounds: 2 working sets, 8-10 reps</li>
+<li>Isolation movements: 1-2 working sets, 12-15 reps</li>
+<li>All working sets at RPE 8-9</li>
+</ul>
+
+<div class="section-label">Intensity Guidelines</div>
+<p>Push each set to 1-2 reps from failure. On isolation work, the last set can go to true failure. Your shoulder might limit load on pressing - that's fine. Focus on perfect execution and mind-muscle connection instead of weight.</p>
+
+<div class="section-label">Progression Model</div>
+<p>When you hit the top of the rep range with good form, add weight next session:</p>
+<ul>
+<li>Barbell movements: 5-10 lbs</li>
+<li>Dumbbell movements: 2.5-5 lbs per side</li>
+<li>Cables: Smallest increment available</li>
+</ul>
+
+<div class="section-label">Training Log Expectations</div>
+<p>Track exercise, weight, reps, and RPE for every working set. Note any pain or discomfort. Note which side feels weaker on unilateral work. This data drives decisions.</p>
+
+<div class="section-label">When A Lift Stalls</div>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Check sleep quality that week</li>
+<li><span class="li-num">2.</span> Check nutrition compliance</li>
+<li><span class="li-num">3.</span> Check total stress load</li>
+<li><span class="li-num">4.</span> Try a different angle or grip</li>
+<li><span class="li-num">5.</span> Only then consider exercise swap</li>
+</ul>
+
+<div class="section-label">Deload Protocol</div>
+<p>No scheduled deloads. If you need one, something else is off (recovery, nutrition, stress). Fix the cause, not the symptom.</p>
+
+<div class="section-label">Why This Split</div>
+<p>This split avoids all painful shoulder positions while still hitting every muscle group twice weekly. Unilateral work addresses your imbalances. Exercise order puts priority movements first when you're fresh. The extra posterior chain work on Saturday helps balance all the pressing.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">06</span><div><div class="step-title">Your Supplements and Hydration</div></div></div>
+<div class="step-bar"></div>
+
+<p><strong>Safety note:</strong> You're currently taking several supplements including a multivitamin (3 tablets daily) and magnesium. Because I don't know the exact products and ingredient lists, verify with me that nothing in your current stack overlaps or conflicts with the recommendations below. Also, regarding your shoulder: you've chosen not to pursue medical evaluation, and I respect that. My exercise recommendations in Step 05 are designed to work around your limitations, but they are coaching guidance, not medical advice. If pain worsens or changes character, please reconsider seeing a professional.</p>
+
+<div class="section-label">SECTION 1: YOUR SUPPLEMENTS</div>
+
+<div class="section-label">Essential (Tier 1)</div>
+<div class="data-line"><strong>Creatine Monohydrate:</strong> 9.5g daily (not 5g), anytime</div>
+<p>You're bigger than average, so you need more than the standard dose. This supports strength and muscle gain.</p>
+
+<p><strong>Whey Protein:</strong> As needed to hit 158g daily</p>
+<p>Fill gaps when whole food isn't practical.</p>
+
+<div class="data-line"><strong>Vitamin D3 + K2:</strong> 3,000 IU + 100mcg daily with food</div>
+<p>Essential for hormone optimization and bone health.</p>
+
+<p><strong>Magnesium Glycinate:</strong> Keep your current 3 tablets before bed</p>
+<p>Supports recovery and sleep quality.</p>
+
+<div class="section-label">Recommended (Tier 2)</div>
+<p><strong>Omega-3:</strong> Keep your current 3 capsules daily</p>
+<p>Anti-inflammatory support for all those movement issues.</p>
+
+<p><strong>Digestive Enzymes:</strong> With larger meals if needed</p>
+<p>Since you're eating 2,950 calories, this helps with nutrient absorption.</p>
+
+<div class="section-label">Optional (Tier 3)</div>
+<div class="data-line"><strong>Keep your current glutamine:</strong> 5g daily is fine</div>
+<div class="data-line"><strong>Keep your ACV and aloe vera:</strong> 1 oz each is fine</div>
+<p>These aren't game-changers but if you like them, continue.</p>
+
+<div class="section-label">Don't Waste Your Money On</div>
+<p>Fat burners, testosterone boosters, BCAAs, exotic pre-workouts</p>
+
+<div class="section-label">Why These Supplements</div>
+<p>[CLIENT], you're already taking a solid stack. I just optimized your creatine dose for your body weight and added D3+K2 which you're missing. Everything else supports muscle gain and recovery without overcomplicating things.</p>
+
+<div class="section-label">SECTION 2: YOUR HYDRATION SYSTEM</div>
+
+<div class="section-label">Daily Fluids</div>
+<p><strong>YOUR target: 192-256 oz</strong> (what you already drink)</p>
+<p>Don't reduce this. Your body is adapted to this intake.</p>
+
+<div class="section-label">Sodium</div>
+<p><strong>YOUR target: 5,750mg daily</strong></p>
+<p>This is WAY higher than most people need because you drink way more water than most people. Without enough sodium, all that water just passes through without hydrating your muscles.</p>
+
+<div class="section-label">Potassium</div>
+<p><strong>YOUR target: 5,750mg daily</strong></p>
+<p>Matches sodium 1:1 for proper cellular function.</p>
+
+<p><strong>Coach override (electrolytes scaled to actual water intake):</strong> You're drinking 1.5-2 gallons daily. The standard calculation based on your bodyweight would be 3,100mg sodium, but that's for someone drinking 105oz. At your actual water intake of 192-256oz, you NEED 5,750mg sodium and potassium or you risk dilutional hyponatremia, which means your cells are drowning in plain water without enough electrolytes to function.</p>
+
+<div class="section-label">Around Your Training</div>
+<ul>
+<li>30-60 min before: 16 oz water + pinch of salt</li>
+<li>During: Sip as needed (you probably already do this)</li>
+<li>After: 24-32 oz + electrolytes within an hour</li>
+</ul>
+
+<div class="section-label">How Carbs Affect Your Water</div>
+<p>With 438g carbs daily, you'll hold more water. Each gram of carb stores 3-4g of water. This is good - fuller muscles, better pumps, more strength. Don't freak out if the scale jumps 3-4 lbs when you start. That's glycogen and water filling your muscles.</p>
+
+<div class="section-label">How Alcohol Affects Hydration</div>
+<p>You don't drink, so this isn't an issue. Keep it that way during this muscle-building phase.</p>
+
+<div class="section-label">Symptom Adjustment Guide</div>
+<ul>
+<li><strong>Feeling flat/weak:</strong> Add 500mg more sodium</li>
+<li><strong>Puffy/bloated:</strong> Check potassium first, likely too low</li>
+<li><strong>Cramping:</strong> Potassium is definitely too low</li>
+<li><strong>Headaches:</strong> Both electrolytes too low for your water intake</li>
+</ul>
+
+<div class="section-label">Why This Hydration Setup</div>
+<p>Your extreme water intake (which is fine, don't change it) requires extreme electrolyte intake to match. Think of sodium and potassium as the conductors that help all that water actually get INTO your muscle cells instead of just passing through. Without adequate electrolytes at your hydration level, you're basically diluting your blood and cellular fluid, which kills performance and can be dangerous.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">07</span><div><div class="step-title">Your Recovery System</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">Recovery Check Hierarchy</div>
+<ul class="numbered">
+<li><span class="li-num">1.</span> <strong>Sleep</strong> → Are you getting 7.5-8 hours?</li>
+<li><span class="li-num">2.</span> <strong>Hydration</strong> → Did you hit electrolyte targets?</li>
+<li><span class="li-num">3.</span> <strong>Sodium</strong> → Specifically 5,750mg (not just "some salt")</li>
+<li><span class="li-num">4.</span> <strong>Food</strong> → Did you hit calorie and protein targets?</li>
+<li><span class="li-num">5.</span> <strong>Stress</strong> → Is work/school load manageable?</li>
+</ul>
+
+<p>When something feels off, run through this list in order.</p>
+
+<div class="section-label">Sleep Section</div>
+<div class="data-line"><strong>Target:</strong> 7.5-8 hours nightly</div>
+<p><strong>Window:</strong> Keep consistent bedtime and wake time (you're already good here)</p>
+<p><strong>Evening routine:</strong> You mentioned morning training - keep pre-bed consistent</p>
+<p><strong>Caffeine rule:</strong> Stop 8 hours before bed</p>
+
+<p>You're already sleeping well. Don't change what's working.</p>
+
+<div class="section-label">Hydration Checkpoint</div>
+<p>Covered extensively in Step 6. Hit those electrolyte numbers daily or your extreme water intake works against you.</p>
+
+<div class="section-label">Stress Management</div>
+<p>Your stress is moderate (5/10). With school and work, some stress is normal. Channel it through training. When overwhelmed, take a 10-minute walk instead of reaching for food. Physical movement breaks the stress-eating connection.</p>
+
+<div class="section-label">Daily Movement</div>
+<p><strong>Current:</strong> ~10,000 steps</p>
+<p><strong>Target:</strong> Maintain 10,000 steps minimum</p>
+<p><strong>Progression:</strong> If fat gain becomes excessive, add 2,000 steps before touching calories</p>
+
+<p>Walking is recovery. It doesn't interfere with muscle gain but helps with nutrient partitioning and mental clarity.</p>
+
+<div class="section-label">Why This Recovery Setup</div>
+<p>Recovery is where muscle is actually built. You're training with multiple movement limitations, which means recovery becomes even more critical. Your sleep is solid, hydration needs adjustment for your intake level, and maintaining those daily steps keeps everything flowing while you grow.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">08</span><div><div class="step-title">Your Mindset and Operating Rules</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">Your Strengths</div>
+<p>You have incredible body awareness. When you told me you can pinpoint that your "left lat doesn't fire properly" and your "right adductor is weak" - most people can't feel that level of detail. You track your food, you train consistently despite pain, you're analytical about everything. This awareness is a superpower when channeled correctly.</p>
+
+<div class="section-label">Your Traps</div>
+<p>That same analytical mind creates paralysis. You overthink every imperfection until "one bad decision" becomes permission to quit for the day. You know exactly what's wrong with your body but refuse to get help. You're so focused on perfect that you miss good enough.</p>
+
+<div class="section-label">Your Identity Shift</div>
+<p>From: "I'm broken and need to be perfect to make progress"</p>
+<p>To: "I'm building muscle intelligently while my movement quality improves"</p>
+
+<p>You're not a rehab patient. You're an athlete who happens to have some issues to work around.</p>
+
+<div class="section-label">Your Operating Rules</div>
+<p><strong>Train with confidence:</strong> That shoulder instability is there. So what? You have a plan that works around it. Execute with intent.</p>
+
+<p><strong>Focus during sets:</strong> When you lift, think about the target muscle working, not what's wrong with your form.</p>
+
+<p><strong>Track objectively:</strong> Numbers don't have feelings. They're just data points to guide decisions.</p>
+
+<div class="section-label">When You Have A Bad Day</div>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Stop immediately when you realize what's happening</li>
+<li><span class="li-num">2.</span> Text me: "Had a rough day, ate X calories over target"</li>
+<li><span class="li-num">3.</span> Log it in your app anyway - data is data</li>
+<li><span class="li-num">4.</span> Next meal goes back to plan - no restriction, no "making up for it"</li>
+<li><span class="li-num">5.</span> Tomorrow's calories stay exactly the same</li>
+</ul>
+
+<p>The damage from one binge is minimal. The damage from the guilt-restrict-binge cycle is massive.</p>
+
+<div class="section-label">What You Must Not Do</div>
+<ul>
+<li>Try to "burn off" a binge with extra cardio</li>
+<li>Skip meals the next day to "balance out"</li>
+<li>Test painful shoulder positions to see if they're "better yet"</li>
+<li>Change the plan because you had one bad day</li>
+<li>Compare your strength to others (you're working around major limitations)</li>
+</ul>
+
+<p>[CLIENT], if tracking ever makes the binge episodes worse, tell me immediately. We'll switch to portion-based eating. Your mental health matters more than perfect data.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">09</span><div><div class="step-title">Your Daily System</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">PHASE 1: YOUR DAILY SYSTEM</div>
+
+<div class="section-label">Tracking Setup</div>
+<p><strong>Primary app:</strong> MacroFactor (best algorithms for your analytical mind)</p>
+<p><strong>Backup option:</strong> Cronometer (if you prefer more detail)</p>
+<p>Set your targets to match the numbers from Step 3.</p>
+
+<div class="section-label">Tracking Level</div>
+<p>Track everything for the first 4 weeks. After that, if it's triggering perfectionist spirals, we'll switch to just tracking protein and calories.</p>
+
+<div class="section-label">Track Daily</div>
+<ul>
+<li>All food (weigh portions when possible, estimate when out)</li>
+<li>Protein hitting 158g</li>
+<li>Morning bodyweight (after bathroom, before eating)</li>
+<li>Water intake (just confirm you hit your normal 1.5-2 gallons)</li>
+<li>Steps via phone or watch</li>
+<li>Training log (every set, weight, reps, RPE)</li>
+</ul>
+
+<div class="section-label">Track Biweekly</div>
+<ul>
+<li>Waist measurement (at navel, relaxed)</li>
+<li>Progress photos (front, side, back, same lighting)</li>
+<li>Energy level (1-10)</li>
+<li>Sleep quality (1-10)</li>
+<li>How shoulder feels (1-10)</li>
+<li>Mood around food (1-10)</li>
+</ul>
+
+<div class="section-label">Scale Protocol</div>
+<p>Weigh daily, look at weekly averages only. In muscle gain phase, expect 2-4 lb fluctuations. If the daily number messes with your head, switch to 2x per week immediately.</p>
+
+<div class="section-label">How To Keep Tracking Sustainable</div>
+<ul>
+<li>Pre-log your standard meals</li>
+<li>Use recent foods feature</li>
+<li>Estimate when eating out rather than skipping logging</li>
+<li>If you miss a day, estimate and move on</li>
+<li>Perfect data < consistent data</li>
+</ul>
+
+<div class="section-label">Communication Expectations</div>
+<ul>
+<li>Check-in form every 2 weeks (I'll send the link)</li>
+<li>Text me via iMessage for urgent questions</li>
+<li>Save non-urgent questions for check-ins</li>
+<li>If you binge, text me that day (no shame, just data)</li>
+</ul>
+
+<div class="section-label">PHASE 2: YOUR LAUNCH SEQUENCE (Weeks 1-2)</div>
+
+<div class="section-label">Top 5 Priorities This Week</div>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Set up MacroFactor with your targets</li>
+<li><span class="li-num">2.</span> Nail your protein target every single day (158g)</li>
+<li><span class="li-num">3.</span> Complete all 5 training sessions with the new split</li>
+<li><span class="li-num">4.</span> Hit 5,750mg sodium daily (your water intake demands it)</li>
+<li><span class="li-num">5.</span> Pre-prep at least 3 days of meals</li>
+</ul>
+
+<div class="section-label">Change Right Now</div>
+<ul>
+<li>Increase creatine from 5g to 9.5g</li>
+<li>Add vitamin D3+K2 to your morning supplements</li>
+<li>Start logging training in detail (not just weight but RPE)</li>
+<li>Set up your Sunday meal prep routine</li>
+</ul>
+
+<div class="section-label">Ignore For Now</div>
+<ul>
+<li>Perfect form on every rep</li>
+<li>Whether your left lat is firing perfectly</li>
+<li>Small daily weight fluctuations</li>
+<li>best meal timing</li>
+</ul>
+
+<div class="section-label">7-Day Starter Version</div>
+<p>Week 1 only: If 2,950 feels like too much food, start at 2,750 and build up. Better to undereat slightly than trigger a binge from feeling too full.</p>
+
+<div class="section-label">What To Monitor This Week</div>
+<ul>
+<li>Energy levels in training</li>
+<li>Shoulder pain (should stay same or improve, not worsen)</li>
+<li>Fullness after meals</li>
+<li>Sleep quality</li>
+<li>Any urge to binge</li>
+</ul>
+
+<div class="section-label">What A Successful Week 1 Looks Like</div>
+<ul>
+<li>Hit protein 6 out of 7 days</li>
+<li>Completed all planned workouts</li>
+<li>No increase in shoulder pain</li>
+<li>Tracked everything (even if imperfect)</li>
+<li>No binge episodes</li>
+</ul>
+
+<div class="section-label">Week 2 Instructions</div>
+<p>Identical to Week 1. Don't change anything. Let your body adapt to the new structure before making adjustments.</p>
+
+<div class="section-label">First Check-In: Day 14</div>
+<p>I'll send you the form on day 13. Have your measurements, photos, and average weight ready. We'll review everything and make small adjustments if needed.</p>
+
+<div class="divider"></div>
+
+<div class="step-break"></div>
+<div class="step-header"><span class="step-num">10</span><div><div class="step-title">Your Roadmap</div></div></div>
+<div class="step-bar"></div>
+
+<div class="section-label">Your Full Program Timeline</div>
+
+<p><strong>Start: December 19, 2024</strong></p>
+
+<p><strong>Phase 1: Foundation (Weeks 1-4)</strong></p>
+<ul>
+<li>Establish nutrition rhythm</li>
+<li>Learn new exercise selection</li>
+<li>Build tracking consistency</li>
+<li>Check-in #1: January 2, 2025</li>
+<li>Check-in #2: January 16, 2025</li>
+</ul>
+
+<p><strong>Phase 2: Progressive Loading (Weeks 5-8)</strong></p>
+<ul>
+<li>Push weights on safe movements</li>
+<li>Add targeted activation work</li>
+<li>Expect first visible gains</li>
+<li>Check-in #3: January 30, 2025</li>
+<li>Check-in #4: February 13, 2025</li>
+</ul>
+
+<p><strong>Phase 3: Integration (Weeks 9-12)</strong></p>
+<ul>
+<li>Test previously painful ranges</li>
+<li>Integrate more bilateral work</li>
+<li>Assess movement improvement</li>
+<li>Check-in #5: February 27, 2025</li>
+<li>Check-in #6: March 13, 2025</li>
+</ul>
+
+<p><strong>Full Reassessment: Week 12 (March 17, 2025)</strong></p>
+<ul>
+<li>New body composition data</li>
+<li>Movement quality testing</li>
+<li>Decision on next 12-week phase</li>
+<li>New blueprint generation</li>
+</ul>
+
+<div class="section-label">The Check-In Process</div>
+<p>Every 2 weeks you'll get a form. Fill it out with your average weight, measurements, how you're feeling, what's working, what's challenging. I review everything and make small adjustments. You'll get a response within 24-48 hours with any changes.</p>
+
+<div class="section-label">The One Adjustment Principle</div>
+<p>We change one thing at a time. If multiple things need work, we prioritize what matters most. This prevents the overwhelm that triggers your all-or-nothing response.</p>
+
+<div class="section-label">Your 8-12 Week Refresh</div>
+<p>After 12 weeks on any plan, we rebuild from scratch. New exercises, new food targets based on your progress, new phase based on what your body needs. You'll never run the same blueprint twice.</p>
+
+<div class="section-label">Graduation Criteria</div>
+<p>You'll be ready to self-manage when:</p>
+<ul class="numbered">
+<li><span class="li-num">1.</span> Movement quality issues resolved or properly managed</li>
+<li><span class="li-num">2.</span> Can adjust nutrition without triggering binges</li>
+<li><span class="li-num">3.</span> Consistent training for 6+ months without injury flares</li>
+<li><span class="li-num">4.</span> Understand your individual recovery needs</li>
+<li><span class="li-num">5.</span> Can troubleshoot plateaus independently</li>
+</ul>
+
+<div class="section-label">Closing Thoughts</div>
+<p>[CLIENT], you're 19 with huge potential. In 12 weeks, you'll have more muscle, better movement patterns, and most importantly - a system that works WITH your analytical mind instead of against it. This is just the beginning.</p>
+
+<div class="divider"></div>
+
+<p>Hey [CLIENT],</p>
+
+<p>We've laid out a complete corrective muscle gain system that respects your shoulder issues while pushing for real growth. Every exercise was chosen to work around your limitations. Every nutrition target has flexibility built in to prevent those binge cycles. Every tracking metric serves a purpose.</p>
+
+<p>You mentioned wanting to "fix imbalances AND gain muscle simultaneously" - that's exactly what this does. Not through magic, but through intelligent exercise selection and patient progression. Your shoulder might limit your bench press today, but it won't limit your results if we're smart about it.</p>
+
+<p>The next 12 weeks aren't about perfection. They're about consistent progress within your current abilities. Some days will be harder than others. That's fine. What matters is showing up, hitting your numbers, and trusting the process.</p>
+
+<p>Your youth, your awareness, and your work ethic are huge advantages. Use them. Let's build some muscle while we fix what needs fixing.</p>
+
+<p>[COACH], Team AM</p>
+</div>
+</body>
+</html>

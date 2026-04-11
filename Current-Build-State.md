@@ -14,6 +14,7 @@ Phase 5 open — two tracks active.
 
 - **Track A:** Inter-AI communication scripts — parked pending Grok pressure-test review.
 - **Track B:** Obsidian vault build — structure locked, two-vault architecture v3.1 approved and built.
+- **Track C:** Website launch — launch-day copy review complete. Stripe live. Jotform tiers matched. GitHub Pages activation is the final step.
 
 ## Completed Phases
 
@@ -52,17 +53,20 @@ Phase 5 open — two tracks active.
 
 team-am-os live at https://github.com/titanwidjaja-ui/team-am-os. Branch protection active on main. Governance stop hook live. GSD v1.30.0, Superpowers, and Canva MCP installed. Operations vault at ~/team-am-ops/ built and handed off to Claude Code.
 
-## Tomorrow's Punch List
+## Launch Checklist
 
-1. Add Templater folder mapping for `07-Onboarding` in Obsidian Settings
-2. Add branding to Jotform (logo, colors) when assets are ready
-3. Test intake form with dummy submission — verify data hits Google Sheets
-4. Trial run protocol — Claude to draft when ready
-5. Revoke exposed Jotform API key and create a fresh one
+1. ✅ Stripe live with updated pricing (AM $50, AM Pro $150, AM Elite $400)
+2. ✅ Jotform tier options match website pricing
+3. ✅ Website copy reviewed and all vague/internal language fixed
+4. ✅ Secondary "Text me" CTAs added for clients not ready to apply
+5. ⏳ **Enable GitHub Pages** on team-am-site repo (Settings > Pages > Deploy from branch > main / root)
+6. ⏳ **Enforce HTTPS** in GitHub Pages settings
+7. ⏳ Add GA4 measurement ID to website (code is in place, commented out)
+8. ⏳ Test pipeline end-to-end with a test client submission
 
 ## Next Approved Move
 
-Complete tomorrow's punch list items, then assess Track A (inter-AI communication scripts) readiness based on Grok review status.
+Enable GitHub Pages and HTTPS. Site goes live immediately after.
 
 ## Out of Scope Right Now
 

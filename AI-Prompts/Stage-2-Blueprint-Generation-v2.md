@@ -289,7 +289,7 @@ After generating the full blueprint, verify:
 4. **Priority threading:** Each step (3-9) must open by connecting to the client's #1 or #2 priority from Step 02.
 5. **Step 09 containment:** Step 09 may ONLY reference actions from Steps 3-8. No new recommendations.
 6. **Single maintenance number:** Step 03 anchors ONE maintenance estimate. All subsequent steps reference it, never recalculate.
-7. **Biweekly consistency:** All check-in references say "every two weeks." First check-in is Day 14. Step 10 title is "Your Roadmap."
+7. **Biweekly consistency:** All check-in references say "every two weeks." First check-in is Day 14. Step 10 title is "The Roadmap."
 
 ---
 
@@ -353,7 +353,7 @@ After each step, perform:
 
 ---
 
-## Step 01. Where You Are Right Now
+## Step 01. The Assessment
 
 Fields to populate:
 - Here's What I See (synthesize who they are from intake and call. Must include at least one Client Voice Bank quote.)
@@ -369,7 +369,7 @@ Fields to populate:
 
 ---
 
-## Step 02. Your Phase and Game Plan
+## Step 02. The Strategy
 
 Fields to populate:
 - Your Current Phase (with phase badge color)
@@ -381,7 +381,7 @@ Fields to populate:
 
 ---
 
-## Step 03. Your Numbers
+## Step 03. The Engine
 
 Fields to populate (ALL values from pre-computed targets):
 - Your Daily Calories (with relationship to maintenance)
@@ -400,7 +400,7 @@ Fields to populate (ALL values from pre-computed targets):
 
 ---
 
-## Step 04. Your Nutrition System
+## Step 04. The Fuel System
 
 This step has TWO LAYERS. Generate them in this order:
 
@@ -427,7 +427,7 @@ Apply Dietary Restriction Override Protocol if applicable.
 
 ---
 
-## Step 05. Your Training Program
+## Step 05. The Protocol
 
 NOTE: Exercise selection, split design, and progression logic are DETERMINISTIC. They come from KB Domain 7 and the coaching brief's training assessment. Do NOT invent programming.
 
@@ -454,7 +454,7 @@ If the coaching brief does not include training assessment data, write:
 
 ---
 
-## Step 06. Your Supplements and Hydration
+## Step 06. The Support Stack
 
 This step has TWO SECTIONS. Hydration gets EQUAL OR GREATER visual weight than supplements.
 
@@ -479,7 +479,7 @@ Fields to populate (ALL values from pre-computed targets):
 
 ---
 
-## Step 07. Your Recovery System
+## Step 07. The Recovery Check
 
 CRITICAL: This step LEADS with the Recovery Check Hierarchy.
 
@@ -494,7 +494,7 @@ Fields to populate:
 
 ---
 
-## Step 08. Your Mindset and Operating Rules
+## Step 08. The Operating System
 
 TIER OVERRIDE: Always personal and conversational regardless of content tier.
 
@@ -510,7 +510,7 @@ Sensitive clients: lead with emotional safety.
 
 ---
 
-## Step 09. Your Daily System
+## Step 09. The Daily Engine
 
 This step has TWO PHASES clearly separated:
 
@@ -538,7 +538,7 @@ This step may ONLY reference actions from Steps 3-8.
 
 ---
 
-## Step 10. Your Roadmap
+## Step 10. The Roadmap
 
 Fields to populate:
 - Visual Phase Timeline (full program with milestones and check-in numbers)
